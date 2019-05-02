@@ -1,0 +1,10 @@
+
+$ qstat
+tells you what jobs are currently running under your username
+
+$ qstat -u \*
+tells you what jobs are currently in the quese under all usernames:
+
+$ qstat - j jobID will display more details for that job
+
+

@@ -1,0 +1,14 @@
+" Tabs
+
+:tabedit file2 
+
+will open a new tab and take you to edit file2
+To navigate between these tabs, you can be in normal mode and type 
+
+:gt 
+
+or 
+
+:gT
+(to go backwards)
+

@@ -1,0 +1,78 @@
+[[From]]: https://wiki.bash-hackers.org/syntax/pe
+
+A few examples: 
+
+$ A="aardvaark"
+$ B="bonobo"
+$ X="A"
+echo $X
+A
+echo ${!X}
+aardvaark
+echo ${!X:$B}
+aardvaark
+echo $B
+bonobo
+echo ${Y:-$B}
+bonobo
+
+$ S="A very common sentence"
+$ echo ${S:3:13}
+ery common se
+
+$ echo ${#S}
+22
+# ^ the length of the string
+
+$ echo ${S/common/rare}
+A very rare sentence
+
+${!PREFIX*}
+${!PREFIX@}
+This expands to a list of all set variable names beginning with the string [[PREFIX]]
+
+MYSTRING="Be liberal in what you accept, and conservative in what you send"
+
+Simple usage
+$PARAMETER
+${PARAMETER}
+Indirection
+${!PARAMETER}
+Case modification
+${PARAMETER^}
+${PARAMETER^^}
+${PARAMETER,}
+${PARAMETER,,}
+${PARAMETER~}
+${PARAMETER~~}
+Variable name expansion
+${!PREFIX*}
+${!PREFIX@}
+Substring removal (also for filename manipulation!)
+${PARAMETER#PATTERN}
+${PARAMETER##PATTERN}
+${PARAMETER%PATTERN}
+${PARAMETER%%PATTERN}
+Search and replace
+${PARAMETER/PATTERN/STRING}
+${PARAMETER//PATTERN/STRING}
+${PARAMETER/PATTERN}
+${PARAMETER//PATTERN}
+String length
+${#PARAMETER}
+Substring expansion
+${PARAMETER:OFFSET}
+${PARAMETER:OFFSET:LENGTH}
+Use a default value
+${PARAMETER:-WORD}
+${PARAMETER-WORD}
+Assign a default value
+${PARAMETER:=WORD}
+${PARAMETER=WORD}
+Use an alternate value
+${PARAMETER:+WORD}
+${PARAMETER+WORD}
+Display error if null or unset
+${PARAMETER:?WORD}
+${PARAMETER?WORD}
+

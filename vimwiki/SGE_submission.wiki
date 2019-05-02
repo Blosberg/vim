@@ -1,0 +1,41 @@
+
+#!/bin/bash
+#$ -cwd
+#$ -m eas
+#$ -l h_vmem=500M,s_rt=10:0:0
+#$ -q TH-CL-DOLLY,TH-CL-GHOLA
+#$ -t 1-1
+#
+# The lines above are instructions to SGE.
+# 
+# Just copy this sample script to a directory where you have write
+# permission (e. g., a sub-directory of your home-directory).
+# Then edit it to suit your needs.
+#
+# Start batch jobs via:
+# qsub ./myjob.sh
+
+WORKDIR=/data/$USER/job${JOB_ID}.${SGE_TASK_ID}
+
+# create a local directory for this job only
+if [ ! -e $WORKDIR ]; then
+    mkdir -p $WORKDIR 
+else
+    # this should never happen
+    echo "Clean up /data/$USER/ directory on $HOSTNAME"\
+        | mail -s "SGE-error" $USER
+    exit 1
+fi
+
+# create a local copy of the program and start the job
+OLDDIR=`pwd`
+
+cp Chou_scan.mpl $WORKDIR/
+cd $WORKDIR
+maple Chou_scan.mpl > Chou_scan.stdout 2> Chou_scan.stderr
+
+# copy all output files back to your home directory
+# and clean up
+cp -R $WORKDIR/ $OLDDIR && rm -r $WORKDIR
+
+

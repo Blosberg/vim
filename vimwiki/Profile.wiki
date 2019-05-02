@@ -1,0 +1,11 @@
+how to change the profile appearance of terminal:
+
+go here and download whatever theme you like the most:
+
+https://github.com/Mayccoll/Gogh
+
+
+and set your default in edit -> preferences.
+
+basically amounts to the shell command:
+bash -c  "$(wget -qO- https://git.io/vQgMr)"

@@ -1,0 +1,33 @@
+ 
+Adding and subtracting ~
+							*CTRL-A*
+CTRL-A			Add [count] to the number or alphabetic character at
+			or after the cursor.  {not in Vi}
+
+							*v_CTRL-A*
+{Visual}CTRL-A		Add [count] to the number or alphabetic character in
+			the highlighted text.  {not in Vi}
+
+v_g_CTRL-A*
+{Visual}g CTRL-A	Add [count] to the number or alphabetic character in
+			the highlighted text. If several lines are
+		        highlighted, each one will be incremented by an
+			additional [count] (so effectively creating a
+			[count] incrementing sequence).  {not in Vi}
+			For Example, if you have this list of numbers:
+				1. ~
+				1. ~
+				1. ~
+				1. ~
+			Move to the second "1." and Visually select three
+			lines, pressing g CTRL-A results in:
+				1. ~
+				2. ~
+				3. ~
+				4. ~
+
+							*CTRL-X*
+CTRL-X			Subtract [count] from the number or alphabetic
+			character at or after the cursor.  {not in Vi}
+
+

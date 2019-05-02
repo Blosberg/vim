@@ -1,0 +1,13 @@
+'Greedy' means match longest possible string.
+'Lazy' means match shortest possible string.
+
+For example, the greedy h.+l matches 'hell' in 'hello' but the lazy h.+?l matches 'hel'. More examples:
+
+Quant	Legend				Example	Sample Match
++	The + (one or more) is "greedy"	\d+	12345
+?	Makes quantifiers "lazy"	\d+?	1 in 12345
+*	The * (zero or more) is "greedy"	A*	AAA
+?	Makes quantifiers "lazy"	A*?	empty in AAA
+{2,4}	Two to four times, "greedy"	\w{2,4}	abcd
+?	Makes quantifiers "lazy"	\w{2,4}?	ab in abcd
+

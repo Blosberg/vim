@@ -1,31 +1,27 @@
-" Bren Osbergs vimrc file (copied from Lana) 
-
 " =========== navigation +appearance ===== {{{1
 " set ruler
 " set number
 set fileencodings=en_US.UTF-8
 
-set foldcolumn=3
-set foldmethod=marker
+" set foldcolumn=3
+" set foldmethod=marker
 
 let mapleader=","
 nnoremap <leader>TRW :TRWS<cr>
 nnoremap <leader>b   :bp<cr>
 nnoremap <leader>n   :bn<cr>
 
-nnoremap <leader>ut  :UndotreeToggle<cr>
-nnoremap <leader>nt  :NERDTreeToggle<cr>
-nnoremap <leader>cy  :Calendar -view=year -split=vertical -width=27<cr>
-nnoremap <leader>cm  :Calendar -view=month<cr>
-
-
-
 " set foldnestmax=10
 " set nofoldenable
 " set foldlevel=2
+set nonumber norelativenumber
+set nu! rnu!
+
 
 set wrap lbr " prevents line breaks from interupting the middle of a word
 syntax on
+set expandtab
+
 colorscheme darkblue
 set hlsearch
 
@@ -66,10 +62,13 @@ call minpac#init()
 call minpac#add('mbbill/undotree')
 set undofile
 set undodir=~/.vim/undodir
+nnoremap <leader>ut  :UndotreeToggle<cr>
 
 " --- NERDtree --- {{{2
 call minpac#add('scrooloose/nerdtree')
 let g:NERDTreeDirArrows=0
+
+nnoremap <leader>nt  :NERDTreeToggle<cr>
 
 " --- lightline.vim --- {{{2
 call minpac#add('itchyny/lightline.vim')
@@ -78,15 +77,26 @@ if !has('gui_running')
 endif
 set laststatus=2
 
+" --- easy-align: --- {{{2
+" call minpac#add('junegunn/vim-easy-align')
+
 " --- calendar.vim --- {{{2
-call minpac#add('itchyny/calendar.vim')
+" call minpac#add('itchyny/calendar.vim')
 
 " --- vimwiki: --- {{{2
+
 call minpac#add('vimwiki/vimwiki')
 let g:vimwiki_list = [{'path':'~/.vim/vimwiki/'}]
 
 " --- git-gutter: --- {{{2
-call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
+" call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
+
+" --- sendtoterm: --- {{{2
+" call minpac#add('habamax/vim-sendtoterm')
+
+" nmap <C-T> <Plug>(SendToTermLine)
+" vmap <C-CR> <Plug>(SendToTerm)
+" nmap <C-T> <Plug>(SendToTermLine)j:call search('^\S')<CR>
 
 
 " =========== COMMANDS  ================== {{{1

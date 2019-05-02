@@ -1,0 +1,16 @@
+
+for f in [regex_match] ; do echo mv "$f" "{$f/[old]/[new]};"; done
+
+This makes use of the search-and-replace feature of Bash's [[Parameteri_expansion]].
+see: https://wiki.bash-hackers.org/syntax/pe
+
+
+
+
+$ touch test_1 test_2 test_3 test_4
+LanasMBP:temp lana$ ls
+test_1	test_2	test_3	test_4
+LanasMBP:temp lana$ for f in test_? ; do mv "$f" "${f/test/jam}"; done
+LanasMBP:temp lana$ ls
+jam_1	jam_2	jam_3	jam_4
+

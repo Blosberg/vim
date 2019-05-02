@@ -1,0 +1,29 @@
+given this file:
+
+fooVal1Bar;
+
+fooVal^2Bar;
+
+fooVal3Bar;
+
+
+running this command in vim 
+:%s/foo\(\w\+\)Bar/& = \1 + \1\Old/  
+
+produces this:
+
+fooVal1Bar = Val1 + Val1Old;
+
+fooVal2Bar = Val2 + Val2Old;
+
+fooVal3Bar = Val3 + Val3Old;
+
+
+ ^ % == range of operation (whole file = equivalent to 1,$
+  ^s/x/y/  == search for x, replace it with y:
+  
+the \w there is a regex wildcard (see  [[Wildcards]] wiki link)   
+   
+
+
+

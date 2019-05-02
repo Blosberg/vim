@@ -1,0 +1,7 @@
+0	move to the start of the line
+yt=	yank from cursor position up to (but not including) the `=` sign
+A	move to end of line and switch to Insert mode
+<C-r>=	dial up the expression register
+<C-r>"	paste the contents of the default register into the command line
+<CR>	evaluate the expression register and insert the result into the document
+<Esc>	return to Normal mode

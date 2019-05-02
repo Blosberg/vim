@@ -1,0 +1,37 @@
+
+guix manual is here:
+https://www.gnu.org/software/guix/manual/html_node/
+
+install a specific package:
+
+$/gnu/remote/bin/guixr package -i snakemake
+$/gnu/remote/bin/guixr package -i bowtie
+
+list all packages available:
+$/gnu/remote/bin/guixr package -A  [string to search for]
+
+Create your own profile like this:
+ /gnu/remote/bin/guixr environment -r $HOME/guix_profiles/ChIPseq/.guix-profile -l guix.scm
+or like this:
+/gnu/remote/bin/guixr package -p [target_dir]/.guix-profile -m manifest.scm
+
+Add packages to this profile:
+/gnu/remote/bin/guixr  package -p [target_profile]  --install [desired_package]
+
+
+if you have locale issues:
+add "glibc-locales" to my manifest file, then re-package, and then do `$export GUIX_LOCPATH=$GUIX_PROFILE/lib/locale`, and then these warnings will go away
+
+
+load a "pure" environment from a scheme file (and leave out everything else)
+$/gnu/remote/bin/guixr   environment --pure -l guix.scm
+
+Re-enter this profile like this:
+$ bash # to go into a sub shell so that env variables only get defined within the scope of that shell
+$ source  ~/guix_profiles/ChIPseq/.guix-profile/etc/profile # this adds env variables to your current environment 
+# it evaluates the contents of this file
+(you can also use "." for source
+
+
+
+

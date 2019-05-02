@@ -1,0 +1,2 @@
+Enigmail, by default uploads to the keyservers at :
+pool.sks-keyservers.net

@@ -1,0 +1,20 @@
+
+Open/close:
+
+e.g. File: ~/.vimrc
+
+With the cursor on that filename, type:
+
+gf       To open the file in a new buffer 
+<C-W>f   To open the file in a horizontal split. 
+<C-W>gf  To open the file in a new tab
+
+--in principle <C-W><C-F> is supposed to open the file in a vertical split, but I haven't found that works. ... dunno why, maybe post the answer to that here later.
+
+While in insert mode, when typing the name of a file, type <C-X><C-F> to open a list of ins-completions: 
+<C-Y> selects the highlighted option
+
+~/Desktop/Science/postdoc_MDC/administration_logistics/
+
+
+

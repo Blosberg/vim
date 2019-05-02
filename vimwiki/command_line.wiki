@@ -1,0 +1,18 @@
+  
+[Ctrl][A] == moves to the beginning of the current line
+[Ctrl[E]  == moves to the end of the current line 
+
+
+[Alt][F]  == Moves the cursor forward one word on the current line.
+[Alt][B]  == Moves the cursor backwards one word on the current line. 
+
+  
+[Ctrl][U] == clears the characters on the line before the current cursor position and 
+[Ctrl][K] == clears the characters on the line after the current cursor position. 
+
+Bash and zsh work slightly different here. In zsh, 
+[Ctrl][U] clears the entire line instead.
+
+[Ctrl][W]  == To delete the word in front of the cursor, use 
+[Alt][D]   == To delete the word after the cursor, use 
+

@@ -1,0 +1,52 @@
+
+
+short summary: access your encrypted files with:
+
+$ encfs ~/.encrypted ~/visible
+
+close (or umnount) ~/visible directory using following command.
+
+fusermount -u ~/visible
+
+-----------------------more details below: -----------------------------------
+
+here is a guide to your encrypted data.
+
+If you want to provide extra security to some very important content on ubuntu then follow these steps to password protect those content.
+
+1) You have to install a utility called "encfs".
+
+ For that fire this command:
+
+sudo apt-get install encfs
+
+2) After successful completion of above command we are ready to create encrypted directory.
+
+The utility encfs will create one directory which contains the encrypted files and one directory where the files are unlocked and accessible.
+The syntax for encfs is: encfs <path to encrypted directory> <path to visible directory>
+
+For example, I wish to have a directory in my home directory called visible and another one called encrypted. Therefore I could write:
+encfs ~/.encrypted ~/visible  
+
+
+Above command will ask for password to encrypt data.  
+Make sure you remember this password because if you will forget this password then even you will not be able to access your very important data.
+
+3) After entering password ~/visible directory will be mounted and you can drop in your important data to this directory.
+
+4) Now once you have stored your data to ~/visible directory you can close (or umnount) ~/visible directory using following command.
+
+fusermount -u ~/visible
+
+Now after unmounting ~/visible directory you will not be able to see any data in visible directory. But you can find encrypted version of that data on ~/.encrypted directory (.encrypted is a hidden directory so to see this directory enable "show hidden files" option from nautilus preferences). 
+ 
+5) Now if you want to show the data in ~/visible directory then you may fire following command which will again mount ~/visible directory.(Yeah of-course it will ask for password to decrypt data. :) )
+
+encfs ~/.encrypted ~/visible
+
+#------------------------- MY NOTES -----------------------------
+
+the password is 
+
+$Tainick$HMsMDQinurorder
+

@@ -1,0 +1,12 @@
+
+# First, find out the location of your drive (in this e.g. lets say it's sda2)
+# 
+# mount a drive to a given folder (provided that folder already exists):
+sudo mount -t auto -o rw /dev/sda2 /media/old_HD_internal
+
+# then add write permissions:
+sudo mount -o remount,rw  /dev/sda2 /media/old_HD_internal
+
+# unmount:
+sudo umount /dev/sda2
+

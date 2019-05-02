@@ -1,0 +1,55 @@
+
+from: http://cs.ecs.baylor.edu/~donahoo/tools/valgrind/
+
+Valgrind is a memory mismanagement detector. It shows you memory leaks, deallocation errors, etc. Actually, Valgrind is a wrapper around a collection of tools that do many other things (e.g., cache profiling); however, here we focus on the default tool, memcheck. Memcheck can detect:
+
+    Use of uninitialised memory
+    Reading/writing memory after it has been free'd
+    Reading/writing off the end of malloc'd blocks
+    Reading/writing inappropriate areas on the stack
+    Memory leaks -- where pointers to malloc'd blocks are lost forever
+    Mismatched use of malloc/new/new [] vs free/delete/delete []
+    Overlapping src and dst pointers in memcpy() and related functions
+    Some misuses of the POSIX pthreads API 
+
+To use this on our example program, test.c, try 
+
+#---------------------------test.c-----------------------------------
+#include <stdio.h>
+
+int main()
+{
+  char *p;
+
+  // Allocation #1 of 19 bytes
+  p = (char *) malloc(19);
+
+  // Allocation #2 of 12 bytes
+  p = (char *) malloc(12);
+  free(p);
+
+  // Allocation #3 of 16 bytes
+  p = (char *) malloc(16);
+
+  return 0;
+}
+
+#--------------------------------------------------------------------
+
+gcc -o test -g test.c
+
+This creates an executable named test. To check for memory leaks during the execution of test, try
+
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./test
+
+
+Additionally, if you want to profile your code, compile it with the flag -pg, and then run
+
+$ valgrind --tool=callgrind  ./program_name.x  [command line args]
+
+this will generate a file called callgrind.out.[process ID] . You can then enter
+
+$ kcachegrind callgrind.out.[process ID]
+
+To get a visual map of the calling hierarchy. Handy if you want to see where your program is spending its time.
+
