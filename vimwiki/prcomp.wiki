@@ -1,0 +1,17 @@
+  # if you do pca <- prcomp ( A )
+  # Then pca$rotation will be an orthonormal rotation matrix.
+  # and  pca$x        will be the rotated data, with the same dimensionality as A
+   
+  # You can then do the following:
+         
+  # A_copy <- pca$rotation %*% t(pca$x) 
+  # ^ gives you back the original value "A"
+
+  # to get the matrix that performs the forward operation (i.e. rotates from original space _into_ PCA space):
+  # rot_in2_pca_mat = solve ( pca$rotation )
+  # ("solve" in R means "invert", because R is terrible.)
+
+  # pcax_copy <- t( rot_in2_pca_mat %*% t( ROI_dat_lin ) )
+  # ^ This will be equal to pca$x (within machine tolerance)
+
+The problem is almost always transposing at the right times

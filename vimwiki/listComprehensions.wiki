@@ -1,0 +1,16 @@
+
+list comprehensions:
+
+Standard syntax
+[ expression for item in list if conditional ]
+
+e.g. list the even numbers between 5 and 9 in a string:
+
+>>> [ "Here is charnum "+str(i)+" in a string " for i in range(5,9) if i%2==0 ]
+['Here is charnum 6 in a string ', 'Here is charnum 8 in a string ']
+
+multiple lists:
+
+>>> [ "Here is charnum "+str(i)+" and "+ str(x) +" in a string " for i in range(5,9) for x in range(2,6) if i%2==0 and x%2==1 ]
+['Here is charnum 6 and 3 in a string ', 'Here is charnum 6 and 5 in a string ', 'Here is charnum 8 and 3 in a string ', 'Here is charnum 8 and 5 in a string ']
+

@@ -4,16 +4,20 @@
 set fileencodings=en_US.UTF-8
 
 " set foldcolumn=3
-" set foldmethod=marker
+" set foldmethod=expr
+" set foldnestmax=10
+" set nofoldenable
+" set foldlevel=2
+set foldmethod=marker
+" default for the .vimrc file. Change this as needed.
+
 
 let mapleader=","
 nnoremap <leader>TRW :TRWS<cr>
 nnoremap <leader>b   :bp<cr>
 nnoremap <leader>n   :bn<cr>
 
-" set foldnestmax=10
-" set nofoldenable
-" set foldlevel=2
+
 set nonumber norelativenumber
 set nu! rnu!
 
@@ -77,6 +81,9 @@ if !has('gui_running')
 endif
 set laststatus=2
 
+" call minpac#add('itchyny/vim-gitbranch')
+" call minpac#add('tpope/vim-fugitive')
+
 " --- easy-align: --- {{{2
 " call minpac#add('junegunn/vim-easy-align')
 
@@ -98,6 +105,10 @@ let g:vimwiki_list = [{'path':'~/.vim/vimwiki/'}]
 " vmap <C-CR> <Plug>(SendToTerm)
 " nmap <C-T> <Plug>(SendToTermLine)j:call search('^\S')<CR>
 
+" --- nvim-R: --- {{{2
+call minpac#add('jalvesaq/Nvim-R', {'type': 'opt'} )
+let R_in_buffer=1
+let R_assign = 2
 
 " =========== COMMANDS  ================== {{{1
 
@@ -119,7 +130,7 @@ if has("autocmd")
  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 endif
 
-" example function 
+" example function
 function! Test(x,y)
   echo "x=" a:x
   echo "y=" a:y

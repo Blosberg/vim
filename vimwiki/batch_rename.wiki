@@ -6,11 +6,10 @@ see: https://wiki.bash-hackers.org/syntax/pe
 
 
 
-
 $ touch test_1 test_2 test_3 test_4
-LanasMBP:temp lana$ ls
+$ ls
 test_1	test_2	test_3	test_4
-LanasMBP:temp lana$ for f in test_? ; do mv "$f" "${f/test/jam}"; done
-LanasMBP:temp lana$ ls
+$ for f in test_? ; do mv "$f" "${f/test/jam}"; done
+$ ls
 jam_1	jam_2	jam_3	jam_4
 

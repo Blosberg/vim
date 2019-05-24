@@ -1,0 +1,24 @@
+dmesg gives you info about a task run on a local machine.
+
+$ dmesg |less
+
+You can scroll to eventually reach the following line:
+
+[2663245.244313] [ pid ]   uid  tgid total_vm      rss nr_ptes swapents oom_score_adj name
+[2663245.254781] [22540]     0 22540    25278    13420      55        0             0 systemd-journal
+[2663245.266280] [22570]     0 22570    68072      315      32        0             0 lvmetad
+...
+
+If you know your jobs PID (e.g. 33207), then:
+
+$ dmesg -H | grep 33207
+[  +0.010391] [33207] 23982 33207  1507999  1401856    2785        0             0 R
+[  +0.011124] [33207] 23982 33207  5475270  5361289   10521        0             0 R
+[  +0.009497] [33207] 23982 33207  7135487  6782953   13300        0             0 R
+[  +0.009415] [33207] 23982 33207 10119381 10012973   19611        0             0 R
+[  +0.009420] [33207] 23982 33207 11487196 11380816   22278        0             0 R
+[  +0.009392] [33207] 23982 33207 14450446 14320898   28022        0             0 R
+[  +0.009425] [33207] 23982 33207 19097814 18991434   37142        0             0 R
+[  +0.009662] Out of memory: Kill process 33207 (R) score 72 or sacrifice child
+[  +0.008645] Killed process 33207 (R) total-vm:76391256kB, anon-rss:75965736kB, file-rss:0kB, shmem-rss:0kB
+

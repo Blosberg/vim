@@ -1,0 +1,3 @@
+get the amount of disk space taken up by the contents of the current directory.
+
+$ du -h

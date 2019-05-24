@@ -2,26 +2,32 @@
 guix manual is here:
 https://www.gnu.org/software/guix/manual/html_node/
 
-install a specific package:
+Create your own profile from a manifest like this:
+/gnu/remote/bin/guixr package -p [target_dir]/.guix-profile -m manifest.scm
++ Example of what a [[manifest]] file should look like.
 
+install a specific package:
 $/gnu/remote/bin/guixr package -i snakemake
 $/gnu/remote/bin/guixr package -i bowtie
 
-list all packages available:
+list all packages available on guix:
 $/gnu/remote/bin/guixr package -A  [string to search for]
 
-Create your own profile like this:
+Create your own profile like this
  /gnu/remote/bin/guixr environment -r $HOME/guix_profiles/ChIPseq/.guix-profile -l guix.scm
 or like this:
-/gnu/remote/bin/guixr package -p [target_dir]/.guix-profile -m manifest.scm
 
 Add packages to this profile:
 /gnu/remote/bin/guixr  package -p [target_profile]  --install [desired_package]
 
+List the currently available packages on your profile:
+guix package -p $GUIX_PROFILE/ -I
+
+List the recent changes made to your profile:
+guix package -p $GUIX_PROFILE/ -l
 
 if you have locale issues:
 add "glibc-locales" to my manifest file, then re-package, and then do `$export GUIX_LOCPATH=$GUIX_PROFILE/lib/locale`, and then these warnings will go away
-
 
 load a "pure" environment from a scheme file (and leave out everything else)
 $/gnu/remote/bin/guixr   environment --pure -l guix.scm

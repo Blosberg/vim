@@ -1,0 +1,12 @@
+(define packages (list "vim"
+                       "neovim"
+                       "git"
+                       "gdb"
+                       "tree"
+                       "snakemake"
+                       "nss-certs"
+                       "r-minimal"
+                       "glibc-locales"
+                       "r-colorout"
+))
+(specifications->manifest packages)

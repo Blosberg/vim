@@ -1,0 +1,4 @@
+To get the current values of leader, localleader, etc.
+
+:echo get(g:, 'mapleader', '\')
+:echo get(g:, 'maplocalleader', '\')
