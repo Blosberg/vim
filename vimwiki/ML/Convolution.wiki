@@ -1,0 +1,14 @@
+Convolutional layers preserve relationships between neighbourhoods of pixels.
+They establish translational invariance to your network 
+
+
+Starting with a 4x4 input:
+ ___________________          And a 3x3 filter:     We get an output
+| 2  | 0  | 1  | 1  |         ______________        of products:
+|----+----|----+----|        |  1 |  0 |  1 |         _________
+|  0 |  1 |  0 |  0 |        |----+----|----+        |  3 |  2 |
+|----+----+----+----|   x    |  0 |  0 |  0 |   ->   |----+----|
+|  0 |  0 |  1 |  0 |        |----+----+----+        |  3 |  1 |
+|----+----+----+----|        |  0 |  1 |  0 |        +----+----+
+|  0 |  3 |  0 |  0 |        +----+----+----+                        
++-------------------+ 

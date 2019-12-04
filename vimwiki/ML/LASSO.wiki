@@ -1,0 +1,9 @@
+LASSO stands for "Least absolute shrinkage and selection operator"
+
+It is one machine-learning model. Alternatives include:
+
+Linear_Regression
+Gradient_boosting
+[[Random_forest]]
+
+

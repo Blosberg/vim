@@ -1,0 +1,7 @@
+$ pip help
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.

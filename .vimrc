@@ -1,45 +1,25 @@
-" =========== navigation +appearance ===== {{{1
-" set ruler
-" set number
-set fileencodings=en_US.UTF-8
+" =========== Cursor Movement ================= {{{1
 
-" set foldcolumn=3
-" set foldmethod=expr
-" set foldnestmax=10
-" set nofoldenable
-" set foldlevel=2
-set foldmethod=marker
-" default for the .vimrc file. Change this as needed.
-
-
-let mapleader=","
-nnoremap <leader>TRW :TRWS<cr>
-nnoremap <leader>b   :bp<cr>
-nnoremap <leader>n   :bn<cr>
-
-
-set nonumber norelativenumber
-set nu! rnu!
-
-
-set wrap lbr " prevents line breaks from interupting the middle of a word
+filetype plugin indent on
 syntax on
 set expandtab
 
-colorscheme darkblue
-set hlsearch
-
-" The next 2 lines are the Default settings
-" set nocompatible
-filetype plugin indent on
-
+set wrap lbr " prevents line breaks from interupting the middle of a word
 " ensure that 2 extra lines are always shown above and below cursor to provide
 " context
 set scrolloff=2
 
-" =========== SPLITS ===================== {{{1
+set nocompatible
+set mouse+=a
+set noeol
+set backspace=2
 
-" speed up navigating and resizing splits
+" set foldcolumn=3
+" Over-write this to make custom folds
+
+" =========== SPLITS ===================== {{{2
+
+" speed up navigating and resizing splits:
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -53,9 +33,37 @@ nnoremap + <C-W>+
 set splitright
 set splitbelow
 
-set noeol
-set backspace=2
+" =========== General Remappings ============== {{{1
+" (Plugin-specific remappings are placed under the corresponding plugin)
+let mapleader=","
+nnoremap <leader>TRW :TRWS<cr>
+"^ trim trailing white space from lines
+" (see function below)
 
+nnoremap <leader>b   :bp<cr>
+nnoremap <leader>n   :bn<cr>
+"^ navigate tabs quickly
+
+vnoremap <C-X>      "*x
+vnoremap <C-C>      "*y
+nnoremap <leader>yy "*yy
+nnoremap <leader>p  "*p
+nnoremap <leader>P  "*P
+"^ copy/paste directly to/from clipboard.
+
+" set foldnestmax=10
+" set nofoldenable
+" set foldlevel=2
+
+" =========== Appearance ================= {{{1
+set ruler
+set nonumber norelativenumber
+set nu! rnu!
+set fileencodings=en_US.UTF-8
+
+set foldmethod=marker
+colorscheme darkblue
+set hlsearch
 
 " =========== PLUGINS ==================== {{{1
 
@@ -74,41 +82,38 @@ let g:NERDTreeDirArrows=0
 
 nnoremap <leader>nt  :NERDTreeToggle<cr>
 
-" --- lightline.vim --- {{{2
-call minpac#add('itchyny/lightline.vim')
-if !has('gui_running')
-  set t_Co=256
-endif
-set laststatus=2
+" --- vim-airline --- {{{2
+call minpac#add('vim-airline/vim-airline')
 
-" call minpac#add('itchyny/vim-gitbranch')
-" call minpac#add('tpope/vim-fugitive')
-
-" --- easy-align: --- {{{2
-" call minpac#add('junegunn/vim-easy-align')
-
-" --- calendar.vim --- {{{2
-" call minpac#add('itchyny/calendar.vim')
 
 " --- vimwiki: --- {{{2
 
 call minpac#add('vimwiki/vimwiki')
 let g:vimwiki_list = [{'path':'~/.vim/vimwiki/'}]
 
-" --- git-gutter: --- {{{2
+" --- fugitive:   --- {{{2
+call minpac#add('tpope/vim-fugitive')
+" call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
+" set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+
+" --- Plugins not being used (for the moment): {{{2
+
+" --- git-gutter: --- {{{3
 " call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
 
-" --- sendtoterm: --- {{{2
+" --- easy-align: --- {{{3
+" call minpac#add('junegunn/vim-easy-align')
+
+" --- calendar.vim --- {{{3
+" call minpac#add('itchyny/calendar.vim')
+
+" --- sendtoterm: --- {{{3
 " call minpac#add('habamax/vim-sendtoterm')
 
 " nmap <C-T> <Plug>(SendToTermLine)
 " vmap <C-CR> <Plug>(SendToTerm)
 " nmap <C-T> <Plug>(SendToTermLine)j:call search('^\S')<CR>
 
-" --- nvim-R: --- {{{2
-call minpac#add('jalvesaq/Nvim-R', {'type': 'opt'} )
-let R_in_buffer=1
-let R_assign = 2
 
 " =========== COMMANDS  ================== {{{1
 
@@ -117,26 +122,24 @@ command! -range=% TRWS let b:wv = winsaveview() |
             \ keeppattern <line1>,<line2>s/\s\+$// |
             \ call winrestview(b:wv)
 
-" =========== MAPPINGS  ================== {{{1
-
+" =========== Templace vimscript: ============= {{{1
 " set list
 " set listchars=tab:▸\ ,eol:¬
 
 " make whitespace visible
 
-
-" Source the vimrc file after saving it
-if has("autocmd")
- autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
-endif
-
-" example function
-function! Test(x,y)
-  echo "x=" a:x
-  echo "y=" a:y
-  return a:x+a:y
-endfunction
-
-" Set the mksessions option so that session options are stored in local path (and therefore accessible from multiple machines)
-set sessionoptions=buffers,curdir,folds,tabpages
+" " Source the vimrc file after saving it
+" if has("autocmd")
+"  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
+" endif
+" 
+" " example function 
+" function! Test(x,y)
+"   echo "x=" a:x
+"   echo "y=" a:y
+"   return a:x+a:y
+" endfunction
+" 
+" " Set the mksessions option so that session options are stored in local path (and therefore accessible from multiple machines)
+" set sessionoptions=buffers,curdir,folds,tabpages
 

@@ -1,0 +1,7 @@
+Ensemble database
+https://www.ensembl.org/info/data/ftp/index.html
+
+Genomes here:
+ftp://ftp.ensembl.org/pub/release-96/fasta/homo_sapiens/dna/
+
+

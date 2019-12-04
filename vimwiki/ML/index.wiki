@@ -1,0 +1,11 @@
+  =Types of layers=
+        * [[Convolution]]     
+        * [[Feed-Forward]]
+        * [[Flattening]]
+  = Algorithms =
+        * [[Bagging]] --bootstrap aggregating
+  
+  = Genomics =
+  
+        * [[one-hot-encoding]]
+  

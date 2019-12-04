@@ -1,0 +1,12 @@
+
+
+
+It is one machine-learning model. Alternatives include:
+Alternatives include:
+
+[[LASSO]]
+Linear_Regression
+Gradient_boosting
+[[Random_forest]]
+
+

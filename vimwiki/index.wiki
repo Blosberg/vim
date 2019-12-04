@@ -1,8 +1,11 @@
 = Hardware =
     * [[Mounting]] -- how to mount/unmount a drive in Unix
-
+= OSX =
+    * [[shortcut_keys]]
 = vim  =
     * [[File_management]]
+    * [[macros]]
+    * [[g_command]]
     * [[tabs]]    -- open and navigate tabs in vim 
     * [[Mappings]]
     * -- Text manipulation --
@@ -20,21 +23,14 @@
     * [[awk]]     -- some handy one-liners
     * [[sed]]     -- regex manipulation in bash
     * [[cut]]     -- remove parts of a string
-    * [[command_line]] -- move back and forth and delete text in the middle of typing
+    * [[command_line]] -- move back and forth, delete text while typing
     * [[batch_rename]] -- change the names of multiple files/folders
     * [[Parameter_expansion]]: variable referencing, indirect referencing, etc.     
-      
-    * [[guix]] -- how to manage environments+manifests, etc.
+    * [[tmux]]
 
-= programming =
-
-    = python =   
-         * [[listComprehensions]] -- basic syntax and implementation     
-    = R =
-         * [[eval]]    -- evaluate strings as expressions 
-         * [[prcomp]]  -- the usual principle-components script
 = Resource management =
 
+    * [[guix]] -- how to manage environments+manifests, etc.
     * [[valgrind]] -- profile your c++ code 
     * [[dmesg]] -- Get info about a task submitted on a local machine (without SGE queueing), find out why it died, etc. 
     * [[du]]    -- disk usage
@@ -47,6 +43,24 @@
     * [[encfs]] -- set up the vault
     * [[othertips]] -- spooky shit
     * [[PGP]]       -- how to use pgp
+
+= programming =
+    = python =   
+         * [[pdb]]:           -- debugger for python 
+         * [[listComprehensions]] -- basic syntax and implementation     
+         * [[pip]]
+    = R =
+         * [[eval]]    -- evaluate strings as expressions 
+         * [[prcomp]]  -- the usual principle-components script
+
+= Machine learning =
+    = [[Max_pooling]] =
+    = [[Convolution]] =
+    = [[Flattening]]  =
+    = [[Dropout]] =
+
 = git =
-   
     * [[Tutorials]]
+= Bioinformatics =
+    * http://rosalind.info/problems/locations/
+    * [[Datasets]]

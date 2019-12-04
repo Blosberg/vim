@@ -1,0 +1,6 @@
+https://vim.fandom.com/wiki/Power_of_g
+
+
+:[range]g/pattern/cmd
+
+

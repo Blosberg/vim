@@ -1,0 +1,13 @@
+# Code for quickkeys on OSX:
+
+⌘  -- Command key
+⌥  -- Option (alt) key 
+⌃  -- Control key
+⇧  -- Shift key
+⇪  -- Caps lock key
+fn -- function key
+⎋  -- escape (esc)
+⇥  -- tab
+
+
+

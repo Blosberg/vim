@@ -1,0 +1,1 @@
+L2 reg penalizes models with large weights, thus encouraging simpler, more generalizable models.
