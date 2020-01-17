@@ -1,0 +1,6 @@
+default scikit learn data sets are sent to:
+/usr/local/homebrew/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/datasets/images
+
+I've started installing my own in:
+/Users/lana/Documents/longterm_projects/ML_practice_learning/datasets
+

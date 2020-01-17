@@ -28,3 +28,4 @@ x  kill pane
 <prefix> { (Move the current pane left)
 <prefix> } (Move the current pane right)
 <prefix> z toggle pane zoom
+

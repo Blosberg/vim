@@ -4,7 +4,7 @@
 = OSX =
     * [[shortcut_keys]]
 
-= vim  =
+= vim =
     * [[vimdiff]]
     * [[File_management]]
     * [[macros]]
@@ -54,11 +54,15 @@
          * [[pdb]]:           -- debugger for python
          * [[listComprehensions]] -- basic syntax and implementation
          * [[pip]]
+         * [[venv]]
+         * [[FILE_access]]
+
     = R =
          * [[eval]]    -- evaluate strings as expressions
          * [[prcomp]]  -- the usual principle-components script
 
 = Machine learning =
+    = [[data_sets]]   =
     = [[Max_pooling]] =
     = [[Convolution]] =
     = [[Flattening]]  =

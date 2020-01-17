@@ -1,0 +1,20 @@
+# Create a virtual environment:
+        
+python3 -m venv [name of venv]
+# good style to create the folder named "venv" within the folder for your project
+source pyML_sandbox_venv/bin/activate
+
+# output the current packages being used in your environment:
+( venv ) pip freeze
+certifi==2019.11.28
+chardet==3.0.4
+...
+
+# (pipe this to a requirements.txt file to create a list of dependencies for your current project)
+# You can import this list of requirements with
+pip install -r requirements.txt
+
+# leave the environment:
+( venv ) $ deactivate
+$
+

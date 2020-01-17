@@ -1,0 +1,39 @@
+Mode options of open(filepath, mode='r')
+mode=one of ‘r’ / ‘w’ / ‘x’ / ‘a’+‘+’ or nothing+‘b’ or nothing
+
+base 	r 	open for reading (default option), seek to the beginning of the file
+        w 	open for writing, delete existing content
+        x 	open for writing, fail if file exists
+        a 	open for writing, seek to the end of the file
+optional 
+        R+W 	+ 	open for read+write; otherwise as above
+optional binary 
+        b 	binary mode (instead of text mode); otherwise as above
+Notes:
+
+    f.read() sets the read position after the byte last read.
+    f.read() sets the write position to the end of the file in Python 3. [test]
+    f.write() sets the read and write position to the end of the written content.
+    f.seek() sets both the read and write positions.
+
+
+The default mode is 'r' (open for reading text, synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
+
+# -------------------------------------------------------
+# e.g.:
+
+# The following example uses the dir_fd parameter of the os.open() 
+# function to open a file relative to a given directory:
+
+>>>
+>>> import os
+>>> dir_fd = os.open('somedir', os.O_RDONLY)
+>>> def opener(path, flags):
+...     return os.open(path, flags, dir_fd=dir_fd)
+...
+>>> with open('spamspam.txt', 'w', opener=opener) as f:
+...     print('This will be written to somedir/spamspam.txt', file=f)
+...
+>>> os.close(dir_fd)  # don't leak a file descriptor
+
+

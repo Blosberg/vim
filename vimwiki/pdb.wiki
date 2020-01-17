@@ -16,6 +16,7 @@ w(here)                 print current position (including stack trace)
 l(ist)                  list 11 lines of code around the current line
 l(ist) first,last       list from first to last line number 
 a(rgs)                  print the args of the current function
+vars( struct )          print the var(iables) (i.e. members) of a class
 
 Movement
 <ENTER>                 repeat the last command
@@ -25,6 +26,8 @@ r(eturn)                continue execution until the current function returns
 c(ontinue)              continue execution until a breakpoint is encountered
 u(p)                    move one level up in the stack trace
 d(own)                  move one level down in the stack trace
+
+b [File]:line, condition Set a breakpoint
 
 Manipulation
 !stmt                   treat stmt as a Python statement instead of a pdb command
