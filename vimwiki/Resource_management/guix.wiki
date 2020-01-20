@@ -39,5 +39,18 @@ $ source  ~/guix_profiles/ChIPseq/.guix-profile/etc/profile # this adds env vari
 (you can also use "." for source
 
 
+Here is an example manifest:
 
 
+(define packages (list "vim"
+                       "neovim"
+                       "git"
+                       "gdb"
+                       "tree"
+                       "snakemake"
+                       "nss-certs"
+                       "r-minimal"
+                       "glibc-locales"
+                       "r-colorout"
+))
+(specifications->manifest packages)

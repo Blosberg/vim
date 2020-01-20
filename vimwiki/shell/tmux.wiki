@@ -17,6 +17,7 @@ f  find window
 Panes (splits)
 %  vertical split
 "  horizontal split
+: resize-pane -[U/D/L/R]  N
 
 o  swap panes
 q  show pane numbers

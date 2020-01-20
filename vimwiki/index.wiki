@@ -1,6 +1,3 @@
-= Hardware =
-    * [[Mounting]] -- how to mount/unmount a drive in Unix
-
 = OSX =
     * [[OSX/shortcut_keys|shortcut_keys]]
 
@@ -17,7 +14,7 @@
     * [[vim/Expression_Register|Expression_Register]]
     * Math
 
-= [[Regex]] =
+= [[Regex/regex|Regex]] = tutorial on general regex
     * [[Regex/Wildcards|Wildcards]]
     * [[Regex/Regex_Quantifiers|Regex_Quantifiers]] --
     * [[Regex/Greedy_vs_lazy|Greedy_vs_lazy]]
@@ -33,16 +30,15 @@
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
     * [[shell/tmux|tmux]]
 
-= Resource management =
-    * [[guix]] -- how to manage environments+manifests, etc.
-    * [[valgrind]] -- profile your c++ code
-    * [[dmesg]] -- Get info about a task submitted on a local machine (without SGE queueing), find out why it died, etc.
-    * [[du]]    -- disk usage
-
-= Cluster =
-
-    * [[SGE_submission]]  -- example script
-    * [[check_cluster_status]]
+= Resource_management =
+    * [[Resource_management/Mounting|Mounting]] -- Hardware: how to mount/unmount a drive in Unix
+    * [[Resource_management/guix|guix]] -- how to manage environments+manifests, etc.
+    * [[Resource_management/valgrind|valgrind]] -- profile your c++ code
+    * [[Resource_management/dmesg|dmesg]] -- Get info about a task submitted on a local machine (without SGE queueing), find out why it died, etc.
+    * [[Resource_management/du|du]]    -- disk usage
+    = Cluster =
+    * [[Resource_management/SGE_submission|SGE_submission]]  -- example script
+    * [[Resource_management/check_cluster_status|check_cluster_status]]
 
 = privacy =
     * [[privacy/encfs|encfs]] -- set up the vault
@@ -70,7 +66,8 @@
     = [[ML/Dropout|Dropout]] =
 
 = git =
-    * [[Tutorials]]
+    * [[git/Tutorials|Tutorials]]
+    
 = Bioinformatics =
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]
