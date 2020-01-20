@@ -1,0 +1,14 @@
+
+phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
+for name, number in phonebook.items():
+    print("Phone number of %s is %d" % (name, number))
+    
+
+phonebook.pop("John")
+does the same thing as 
+del phonebook["John"]
+
+# It may also be useful to load data structures from strings with 
+json.loads(json_string)
+# if the parentheses are part of the whole string, like, e.g.:
+# "{ "key":val,"key2":val2...}"

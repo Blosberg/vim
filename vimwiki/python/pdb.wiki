@@ -31,3 +31,16 @@ b [File]:line, condition Set a breakpoint
 
 Manipulation
 !stmt                   treat stmt as a Python statement instead of a pdb command
+
+Code inspection commands:
+hasattr( Class,"Attribute_name")
+
+help()
+dir() 
+hasattr() 
+id() 
+type() 
+repr() 
+callable() 
+issubclass() 
+isinstance() 

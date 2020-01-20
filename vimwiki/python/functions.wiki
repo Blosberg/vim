@@ -1,0 +1,56 @@
+# Template func: default values must come at the the end. 
+
+def my_func( non_default1, non_default2, default="default_value", default2="other_defval"):
+    print("Hello, %s , From My Function!, I wish you %s"%(non_default1, non_default2, defaulted))
+    return()
+
+ --- Function object    :{{{1
+>>> A=my_func
+# (Without the brackets) sets A equal to the function object my_func.
+>>> A()
+# will then initiate execution.
+
+ --- Defaults           :{{{1
+>>> my_func( non_default1, non_default2 )
+or
+>>> my_func( non_default1, non_default2, default )
+or
+>>> my_func( non_default1, non_default2, default2="something_else" )
+
+point being: the non-defaulted are provided in order. The defaulted _can_ follow order, or can be directly specified.
+
+ --- Multiple args      :{{{1
+https://www.learnpython.org/en/Multiple_Function_Arguments
+
+def foo(first, second, third, *therest):
+   return(len(therest) )
+                
+len( foo(1,2,3,4,5) ) --> 2
+
+Here, "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. **IN ORDER**
+
+If you want to make these options order-independent, then provide an additional asterix:
+
+def bar(first, second, third, **options):
+    if options.get("action") == "sum":
+            print("The sum is: %d" %(first + second + third))
+            
+    if options.get("number") == "first":
+            return first
+                        
+result = bar(1, 2, 3, action = "sum", number = "first")
+print("Result: %d" %(result))
+
+ --- Partial functions  :{{{1
+These are the opposite, in a sense that you want to derive a simpler function from a more complex one, by fixing the input values (from left to right)
+
+from functools import partial
+
+def multiply3(x,y,z):
+        return x * y * z
+        
+# create a new function that multiplies by 2
+dbl = partial(multiply3, 1.5, 4)
+# The x value is now always 1.5, and the y value is fixed at 4
+# you must supply the z val.
+# print(dbl(4))

@@ -2,3 +2,5 @@
 
 https://www.rexegg.com/regex-quickstart.html
 
+Regex in python:
+https://docs.python.org/3/howto/regex.html#regex-howto

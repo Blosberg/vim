@@ -1,0 +1,11 @@
+Sets are like iterables, but have unique elements
+
+a = set(["Jake", "John", "Eric"])
+b = set(["John", "Jill"])
+
+print(a.intersection(b))
+print(b.intersection(a))
+
+print(a.symmetric_difference(b))
+print(a.difference(b))
+print(a.union(b))
