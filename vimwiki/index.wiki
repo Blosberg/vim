@@ -2,36 +2,36 @@
     * [[Mounting]] -- how to mount/unmount a drive in Unix
 
 = OSX =
-    * [[shortcut_keys]]
+    * [[OSX/shortcut_keys|shortcut_keys]]
 
 = vim =
-    * [[vimdiff]]
-    * [[File_management]]
-    * [[macros]]
-    * [[g_command]]
-    * [[tabs]]    -- open and navigate tabs in vim
-    * [[Mappings]]
+    * [[vim/vimdiff|vimdiff]]
+    * [[vim/File_management|File_management]]
+    * [[vim/macros|macros]]
+    * [[vim/g_command|g_command]]
+    * [[vim/tabs|tabs]]    -- open and navigate tabs in vim
+    * [[vim/Mappings|Mappings]]
     * -- Text manipulation --
-    * [[search_and_replace]]
-    * [[Incrementing]] -- numbers +/-
-    * [[Expression_Register]]
+    * [[vim/search_and_replace|search_and_replace]]
+    * [[vim/Incrementing|Incrementing]] -- numbers +/-
+    * [[vim/Expression_Register|Expression_Register]]
     * Math
 
 = [[Regex]] =
-    * [[Wildcards]]
-    * [[Regex_Quantifiers]] --
-    * [[Greedy_vs_lazy]]
-    * [[Lookarounds]]
+    * [[Regex/Wildcards|Wildcards]]
+    * [[Regex/Regex_Quantifiers|Regex_Quantifiers]] --
+    * [[Regex/Greedy_vs_lazy|Greedy_vs_lazy]]
+    * [[Regex/Lookarounds|Lookarounds]]
 
 = shell + packaging =
-    * [[Profile]] -- change look/colorscheme/etc. of terminal
-    * [[awk]]     -- some handy one-liners
-    * [[sed]]     -- regex manipulation in bash
-    * [[cut]]     -- remove parts of a string
-    * [[command_line]] -- move back and forth, delete text while typing
-    * [[batch_rename]] -- change the names of multiple files/folders
-    * [[Parameter_expansion]]: variable referencing, indirect referencing, etc.
-    * [[tmux]]
+    * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
+    * [[shell/awk|awk]]     -- some handy one-liners
+    * [[shell/sed|sed]]     -- regex manipulation in bash
+    * [[shell/cut|cut]]     -- remove parts of a string
+    * [[shell/command_line|command_line]] -- move back and forth, delete text while typing
+    * [[shell/batch_rename|batch_rename]] -- change the names of multiple files/folders
+    * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
+    * [[shell/tmux|tmux]]
 
 = Resource management =
     * [[guix]] -- how to manage environments+manifests, etc.
@@ -45,9 +45,9 @@
     * [[check_cluster_status]]
 
 = privacy =
-    * [[encfs]] -- set up the vault
-    * [[othertips]] -- spooky shit
-    * [[PGP]]       -- how to use pgp
+    * [[privacy/encfs|encfs]] -- set up the vault
+    * [[privacy/othertips|othertips]] -- spooky shit
+    * [[privacy/PGP|PGP]]       -- how to use pgp
 
 = programming =
     = python =
@@ -63,14 +63,14 @@
          * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
 
 = Machine learning =
-    = [[data_sets]]   =
-    = [[Max_pooling]] =
-    = [[Convolution]] =
-    = [[Flattening]]  =
-    = [[Dropout]] =
+    = [[ML/data_sets|data_sets]]   =
+    = [[ML/Max_pooling|Max_pooling]] =
+    = [[ML/Convolution|Convolution]] =
+    = [[ML/Flattening|Flattening]]  =
+    = [[ML/Dropout|Dropout]] =
 
 = git =
     * [[Tutorials]]
 = Bioinformatics =
     * http://rosalind.info/problems/locations/
-    * [[Datasets]]
+    * [[BioInfo/Datasets|Datasets]]

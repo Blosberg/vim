@@ -1,5 +1,3 @@
-
-
 cut -f[n] -d"[x]"
 assumes your string is limited by characters "X", and you want to extract field n from it.
 
