@@ -1,5 +1,6 @@
 " =========== Cursor Movement ================= {{{1
 
+set autoindent
 filetype plugin indent on
 syntax on
 set expandtab
@@ -9,8 +10,7 @@ set wrap lbr " prevents line breaks from interupting the middle of a word
 " context
 set scrolloff=2
 
-set nocompatible
-set mouse+=a
+" set mouse+=a
 set noeol
 set backspace=2
 
@@ -55,17 +55,22 @@ nnoremap <leader>P  "*P
 " set nofoldenable
 " set foldlevel=2
 
-" =========== Appearance ================= {{{1
+" =========== Appearance ====================== {{{1
 set ruler
 set nonumber norelativenumber
 set nu! rnu!
 set fileencodings=en_US.UTF-8
 
-set foldmethod=marker
-colorscheme darkblue
+" set foldmethod dependent on filetype. Default is manual
+autocmd FileType vim     setlocal foldmethod=marker foldenable
+autocmd FileType vimwiki setlocal foldmethod=marker foldenable
+"
+" colorscheme darkblue
+" colorscheme delek
+colorscheme dichromatic 
 set hlsearch
 
-" =========== PLUGINS ==================== {{{1
+" =========== PLUGINS ========================= {{{1
 
 packadd minpac
 call minpac#init()
@@ -88,8 +93,8 @@ call minpac#add('vim-airline/vim-airline')
 
 " --- vimwiki: --- {{{2
 
-call minpac#add('vimwiki/vimwiki')
-let g:vimwiki_list = [{'path':'~/.vim/vimwiki/'}]
+" call minpac#add('vimwiki/vimwiki')
+" let g:vimwiki_list = [{'path':'~/.vim/vimwiki/'}]
 
 " --- fugitive:   --- {{{2
 call minpac#add('tpope/vim-fugitive')
@@ -97,6 +102,7 @@ call minpac#add('tpope/vim-fugitive')
 " set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
 
 " --- Plugins not being used (for the moment): {{{2
+" call minpac#add('vim/killersheep')
 
 " --- git-gutter: --- {{{3
 " call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
@@ -115,12 +121,20 @@ call minpac#add('tpope/vim-fugitive')
 " nmap <C-T> <Plug>(SendToTermLine)j:call search('^\S')<CR>
 
 
-" =========== COMMANDS  ================== {{{1
+" =========== COMMANDS  ======================= {{{1
 
-" Command to trim trailing white space at the end of lines
+" --- Trim trailing white space at the end of lines: {{{2
 command! -range=% TRWS let b:wv = winsaveview() |
             \ keeppattern <line1>,<line2>s/\s\+$// |
             \ call winrestview(b:wv)
+
+" --- Source the vimrc file after saving it: {{{2
+if has('autocmd') " ignore this section if your vim does not support autocommands
+    augroup reload_vimrc
+        autocmd!
+        autocmd! BufWritePost $MYVIMRC,$MYGVIMRC nested source %
+    augroup END
+endif
 
 " =========== Templace vimscript: ============= {{{1
 " set list
@@ -128,10 +142,6 @@ command! -range=% TRWS let b:wv = winsaveview() |
 
 " make whitespace visible
 
-" " Source the vimrc file after saving it
-" if has("autocmd")
-"  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
-" endif
 " 
 " " example function 
 " function! Test(x,y)
