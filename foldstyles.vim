@@ -4,8 +4,18 @@
 " setlocal foldmethod=expr
 " setlocal foldexpr=MarkdownFolds()
 
-" {{{1
-function! FoldPythonFuncdefs()
+function! FoldVimwiki() "{{{1
+  let thisline = getline(v:lnum)
+  if match(thisline, '^=.*=') >= 0
+    return ">1"
+  elseif match( thisline, '^ *\* ') >=0
+    return ">2"
+  else
+    return "="
+  endif
+endfunction
+
+function! FoldPythonFuncdefs() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '^def .*:') >= 0
     return ">1"
@@ -14,8 +24,7 @@ function! FoldPythonFuncdefs()
   endif
 endfunction
 
-" {{{1
-function! FoldPythonMain()
+function! FoldPythonMain() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '^# --- \w\+') >= 0
     return ">1"
@@ -26,9 +35,7 @@ function! FoldPythonMain()
   endif
 endfunction
 
-
-" {{{1
-function! FoldSnakemake()
+function! FoldSnakemake() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '^rule .*:') >= 0
     return ">1"
@@ -41,8 +48,7 @@ function! FoldSnakemake()
   endif
 endfunction
 
-" {{{1
-function! FoldRmarkdown()
+function! FoldRmarkdown() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, 'title:') >= 0
     return ">1"
@@ -53,8 +59,7 @@ function! FoldRmarkdown()
   endif
 endfunction
 
-" {{{1
-function! FoldRfuncs()
+function! FoldRfuncs() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '\w\+ *<- *function(') >= 0
     return ">1"
@@ -63,8 +68,7 @@ function! FoldRfuncs()
   endif
 endfunction
 
-" {{{1
-function! FoldJson()
+function! FoldJson() "{{{1
   let thisline = getline(v:lnum)
   if thisline == 1
     return 0
