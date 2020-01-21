@@ -1,6 +1,6 @@
 https://www.learnpython.org/en/Map%2C_Filter%2C_Reduce
 
-# --- map(func, *iterables)  {{{1
+ = map(func, *iterables) =
 apply function to each element in iterables*
 
 >>> my_pets = ['alfred', 'tabitha', 'william', 'arla']
@@ -14,7 +14,7 @@ result       = list(map(round, circle_areas, range(1,3)))
 
 # will produce a list as long as the shortest input.
 
-# --- filter(func, iterable) {{{1
+ = filter(func, iterable) =
 # filter() requires the function to return boolean values  and then passes
 # elements corresponding to a "True" result, "filtering" away those that are
 # false.
@@ -24,7 +24,7 @@ result       = list(map(round, circle_areas, range(1,3)))
 >>> palindromes = list(filter(lambda word: word == word[::-1], dromes))
 >>> print(palindromes)
 
-# --- reduce(func, iterable[, initial]) {{{1
+ = reduce(func, iterable[, initial]) =
 #  
 >>> from functools import reduce
 >>> numbers = [3, 4, 6, 9, 34, 12]

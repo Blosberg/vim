@@ -1,6 +1,8 @@
-
-
-Generators are iterators, a kind of iterable you can only iterate over once. Generators do not store all the values in memory, they generate the values on the fly: they are intrinsically "lazy-loaded"
+#  GENERATORS IN PYTHON: 
+# 
+# Generators are iterators, a kind of iterable you can only iterate over once.
+# Generators do not store all the values in memory, they generate the values on
+# the fly: they are intrinsically "lazy-loaded"
 
 >>> mygenerator = (x*x for x in range(3))
 >>> for i in mygenerator:
@@ -8,7 +10,6 @@ Generators are iterators, a kind of iterable you can only iterate over once. Gen
 0
 1
 4
-
 
 yield is a keyword that is used like return, except the function will return a generator.
 
@@ -25,10 +26,18 @@ yield is a keyword that is used like return, except the function will return a g
 
 
 
-To master yield, you must understand that when you call the function, the code you have written in the function body does not run. The function only returns the generator object
+To master yield, you must understand that when you call the function, the code
+you have written in the function body does not run. The function only returns
+the generator object
 
-Your code will continue from where it left off each time for uses the generator.
+Your code will continue from where it left off each time for uses the
+generator.
 
-for calls the generator object created from your function, it will run the code in your function from the beginning until it hits yield, whatever is "yielded" is the next value returned from this function to the series that is the current object of the loop. This continues until there is no value to return (either because you "break" out of it, or the function reaches the end.
+for calls the generator object created from your function, it will run the code
+in your function from the beginning until it hits yield, whatever is "yielded"
+is the next value returned from this function to the series that is the current
+object of the loop. This continues until there is no value to return (either
+because you "break" out of it, or the function reaches the end.
 
-The generator is considered empty once the function runs, but does not hit yield anymore. 
+The generator is considered empty once the function runs, but does not hit
+yield anymore. 

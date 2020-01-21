@@ -4,13 +4,13 @@ def my_func( non_default1, non_default2, default="default_value", default2="othe
     print("Hello, %s , From My Function!, I wish you %s"%(non_default1, non_default2, defaulted))
     return()
 
-# --- Function object    :{{{1
+ = Function object: = 
 >>> A=my_func
 # (Without the brackets) sets A equal to the function object my_func.
 >>> A()
 # will then initiate execution.
 
-# --- Defaults           :{{{1
+ = Defaults: =
 >>> my_func( non_default1, non_default2 )
 or
 >>> my_func( non_default1, non_default2, default )
@@ -19,7 +19,7 @@ or
 
 point being: the non-defaulted are provided in order. The defaulted _can_ follow order, or can be directly specified.
 
-# --- Multiple args      :{{{1
+ = Multiple args: =
 https://www.learnpython.org/en/Multiple_Function_Arguments
 
 def foo(first, second, third, *therest):
@@ -41,8 +41,9 @@ def bar(first, second, third, **options):
 result = bar(1, 2, 3, action = "sum", number = "first")
 print("Result: %d" %(result))
 
-# --- Partial functions  :{{{1
-These are the opposite, in a sense that you want to derive a simpler function from a more complex one, by fixing the input values (from left to right)
+ = Partial functions: =
+# These are the opposite, in a sense that you want to derive a simpler function
+# from a more complex one, by fixing the input values (from left to right)
 
 from functools import partial
 
@@ -55,7 +56,7 @@ dbl = partial(multiply3, 1.5, 4)
 # you must supply the z val.
 # print(dbl(4))
 
-# --- Methods            :{{{1
+ = Methods: =
 # Methods are like functions but confined to within classes:
 class Pet(object):
    def my_method(self):
@@ -67,7 +68,7 @@ cat.my_method()
 # Methods can also modify the object’s state. 
 # Python functions generally don't modify class objects passed to it.
 
-# --- Decorators         :{{{1
+ = Decorators: =
 # Don't yet know why these are useful, but here's a template:
 @decorator
 def functions(arg):

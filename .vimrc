@@ -1,3 +1,5 @@
+"vimrc:
+
 " =========== Cursor Movement ================= {{{1
 
 set autoindent
@@ -62,8 +64,8 @@ set nu! rnu!
 set fileencodings=en_US.UTF-8
 
 " set foldmethod dependent on filetype. Default is manual
-autocmd FileType vim     setlocal foldmethod=marker foldenable
-autocmd FileType vimwiki setlocal foldmethod=marker foldenable
+" set foldmethod=manual
+autocmd fileType vim     setlocal foldmethod=marker foldenable
 "
 " colorscheme darkblue
 " colorscheme delek
@@ -93,8 +95,9 @@ call minpac#add('vim-airline/vim-airline')
 
 " --- vimwiki: --- {{{2
 
-" call minpac#add('vimwiki/vimwiki')
-" let g:vimwiki_list = [{'path':'~/.vim/vimwiki/'}]
+call minpac#add('vimwiki/vimwiki')
+let g:vimwiki_list    = [{'path':'~/.vim/vimwiki/'}]
+let g:vimwiki_folding = 'expr'
 
 " --- fugitive:   --- {{{2
 call minpac#add('tpope/vim-fugitive')

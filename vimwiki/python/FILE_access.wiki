@@ -9,7 +9,7 @@ optional
         R+W 	+ 	open for read+write; otherwise as above
 optional binary 
         b 	binary mode (instead of text mode); otherwise as above
-Notes:
+= Notes: =
 
     f.read() sets the read position after the byte last read.
     f.read() sets the write position to the end of the file in Python 3. [test]
@@ -19,7 +19,7 @@ Notes:
 
 The default mode is 'r' (open for reading text, synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
 
-# -------------------------------------------------------
+= EXAMPLE:=
 # e.g.:
 
 # The following example uses the dir_fd parameter of the os.open() 

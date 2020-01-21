@@ -1,5 +1,5 @@
-#Template:
-
+# Exceptions in PYTHON:
+# Template:
 try:
     do_somethingi_that_might_go_wrong()
     perhaps_over_multiple_lines
@@ -8,7 +8,7 @@ except DefinedError1:
 except DefinedError2:
     do_alt_2
     
-# Define your own exceptions: {{{1
+ = Define your own exceptions:  =
 class Custom_error(BaseException):
     pass
 # or:
@@ -23,7 +23,7 @@ class ValueTooLargeError(Error):
    pass
 
 
-# Then use them as follows: {{{1
+ = Then use them as follows:  =
 # 
 # user guesses a number until he/she gets it right
 # you need to guess this number
@@ -44,7 +44,7 @@ while True:
        print()
 print("Congratulations! You guessed it correctly.")
 
-# Assertions: {{{1
+ = Assertions:  =
 # hard breaks can also be established with assertions. e.g.:
 # assert [Condition], "Error message"
 

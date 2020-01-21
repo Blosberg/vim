@@ -1,6 +1,6 @@
 Brendans vimwiki: Everyone else use at your own risk.
 
-= shell + packaging = {{{1
+= shell + packaging = 
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
     * [[shell/awk|awk]]     -- some handy one-liners
     * [[shell/sed|sed]]     -- regex manipulation in bash
@@ -10,7 +10,7 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
     * [[shell/tmux|tmux]]
 
-= vim = {{{1
+= vim = 
     * [[vim/vimdiff|vimdiff]]
     * [[vim/File_management|File_management]]
     * [[vim/macros|macros]]
@@ -23,60 +23,64 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[vim/Expression_Register|Expression_Register]]
     * Math
 
-= programming = {{{1
-    = python: https://docs.python.org/ www.learnpython.org=
-         * [[python/strings|strings]]
-         * [[python/functions|functions]]
-         * [[python/Classes|Classes]]
-         * [[python/dictionaries|dictionaries]]
-         * [[python/Generators|Generators]]
-         * [[python/List_Comprehensions|List_Comprehensions]] -- basic syntax and implementation
-         * [[python/Exceptions|Exceptions]]
-         * [[python/Sets|Sets]]
-         * [[python/batch_operations|batch_operations]] --map,filter,reduce
-         * [[python/pdb|pdb]]:           -- debugger for python
-         * [[python/pip|pip]]
-         * [[python/venv|venv]]
-         * [[python/FILE_access|FILE_access]]
+= Programming =
+    * https://www.codecademy.com/
+    = python =
+         - https://docs.python.org/ 
+         - www.learnpython.org
+         - [[python/strings|strings]]
+         - [[python/functions|functions]]
+         - [[python/Classes|Classes]]
+         - [[python/dictionaries|dictionaries]]
+         - [[python/Generators|Generators]]
+         - [[python/List_Comprehensions|List_Comprehensions]] -- basic syntax and implementation
+         - [[python/Exceptions|Exceptions]]
+         - [[python/Sets|Sets]]
+         - [[python/batch_operations|batch_operations]] --map,filter,reduce
+         - [[python/pdb|pdb]]:           -- debugger for python
+         - [[python/pip|pip]]
+         - [[python/venv|venv]]
+         - [[python/FILE_access|FILE_access]]
 
     = R =
          * [[R_language/eval|eval]]    -- evaluate strings as expressions
          * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
 
-= OSX = {{{1
+= OSX = 
     * [[OSX/shortcut_keys|shortcut_keys]]
 
-= [[Regex/regex|Regex]] = tutorial on general regex
+= Regex =
+    * [[Regex/Tutorials|Tutorials]]
     * [[Regex/Wildcards|Wildcards]]
     * [[Regex/Regex_Quantifiers|Regex_Quantifiers]] --
     * [[Regex/Greedy_vs_lazy|Greedy_vs_lazy]]
     * [[Regex/Lookarounds|Lookarounds]]
 
-= Resource_management = {{{1
+= Resource_management =
     * [[Resource_management/Mounting|Mounting]] -- Hardware: how to mount/unmount a drive in Unix
     * [[Resource_management/guix|guix]] -- how to manage environments+manifests, etc.
     * [[Resource_management/valgrind|valgrind]] -- profile your c++ code
     * [[Resource_management/dmesg|dmesg]] -- Get info about a task submitted on a local machine (without SGE queueing), find out why it died, etc.
     * [[Resource_management/du|du]]    -- disk usage
     = Cluster =
-    * [[Resource_management/SGE_submission|SGE_submission]]  -- example script
-    * [[Resource_management/check_cluster_status|check_cluster_status]]
+        - [[Resource_management/SGE_submission|SGE_submission]]  -- example script
+        - [[Resource_management/check_cluster_status|check_cluster_status]]
 
-= privacy = {{{1
+= privacy = 
     * [[privacy/encfs|encfs]] -- set up the vault
     * [[privacy/othertips|othertips]] -- spooky shit
     * [[privacy/PGP|PGP]]       -- how to use pgp
 
-= Machine learning = {{{1
-    = [[ML/data_sets|data_sets]]   =
-    = [[ML/Max_pooling|Max_pooling]] =
-    = [[ML/Convolution|Convolution]] =
-    = [[ML/Flattening|Flattening]]  =
-    = [[ML/Dropout|Dropout]] =
+= Machine learning =
+    * [[ML/data_sets|data_sets]] 
+    * [[ML/Max_pooling|Max_pooling]]
+    * [[ML/Convolution|Convolution]]
+    * [[ML/Flattening|Flattening]] 
+    * [[ML/Dropout|Dropout]]
 
-= git = {{{1
+= git = 
     * [[git/Tutorials|Tutorials]]
     
-= Bioinformatics = {{{1
+= Bioinformatics = 
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]

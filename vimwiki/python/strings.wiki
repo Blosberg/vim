@@ -1,5 +1,6 @@
+# ------ STRINGS IN PYTHON ---------
 
-# --- Strings as arrays of characters: {{{1
+ = Strings as arrays of characters: =
 >>> astring = "Hello world!"
 >>> astring[1:-4:2] # [start:stop:step]
 'el o'
@@ -8,7 +9,7 @@
 >>> astring.index("w")
 6
 
-# --- Some convenient functions: {{{1
+ = Some convenient functions: =
 >>> print(astring.startswith("Hello"))
 True
 >>> print(astring.endswith("asdfasdfasdf"))
@@ -16,7 +17,7 @@ False
 
 twowords = astring.split(" ")
 
-# --- Formatting, printing:  {{{1
+ = Formatting, printing: =
 
 name = "world"
 print("Hello, %s" % name)
@@ -33,7 +34,7 @@ Harry met Tommy
 >>> print ( ("{H} met {T}").format(H="Houdini", T="Torino") )
 Houdini met Torino
 
-# --- Values for the % operator: {{{1
+ = Values for the % operator: =
 %s - String (or any object with a string representation, like numbers)
 %d - Integers
 %f - Floating point numbers

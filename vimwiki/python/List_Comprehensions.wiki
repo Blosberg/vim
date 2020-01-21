@@ -1,5 +1,4 @@
-
-list comprehensions:
+LIST COMPREHENSIONS IN PYTHON:
 
 Standard syntax
 [ expression for item in list if conditional ]

@@ -4,12 +4,12 @@ start pdb from the commandline:
 python -m pdb  <file.py>
 
 
-BASICS:
+= BASICS: =
 h(elp)                  print available commands
 h(elp) command          print help about commandq
 (quit)                  quit debugger
 
-Examine
+= Examine =
 p(rint) expr            print the value of expr 
 pp expr                 pretty-print the value of expr 
 w(here)                 print current position (including stack trace)
@@ -18,7 +18,7 @@ l(ist) first,last       list from first to last line number
 a(rgs)                  print the args of the current function
 vars( struct )          print the var(iables) (i.e. members) of a class
 
-Movement
+= Movement =
 <ENTER>                 repeat the last command
 n(ext)                  execute the current statement (step over)  
 s(tep)                  execute and step into function
@@ -32,7 +32,7 @@ b [File]:line, condition Set a breakpoint
 Manipulation
 !stmt                   treat stmt as a Python statement instead of a pdb command
 
-Code inspection commands:
+= Code inspection commands: =
 hasattr( Class,"Attribute_name")
 
 help()
