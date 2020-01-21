@@ -1,0 +1,44 @@
+https://www.learnpython.org/en/Map%2C_Filter%2C_Reduce
+
+# --- map(func, *iterables)  {{{1
+apply function to each element in iterables*
+
+>>> my_pets = ['alfred', 'tabitha', 'william', 'arla']
+>>> uppered_pets = list(map(str.upper, my_pets))
+
+# it produces a generator and stops when it runs out of elements
+# Likewise if it has more than one iterable:
+
+circle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]
+result       = list(map(round, circle_areas, range(1,3)))
+
+# will produce a list as long as the shortest input.
+
+# --- filter(func, iterable) {{{1
+# filter() requires the function to return boolean values  and then passes
+# elements corresponding to a "True" result, "filtering" away those that are
+# false.
+# Takes only one iterable
+
+>>> dromes = ("demigod", "rewire", "madam", "freer", "anutforajaroftuna", "kiosk")
+>>> palindromes = list(filter(lambda word: word == word[::-1], dromes))
+>>> print(palindromes)
+
+# --- reduce(func, iterable[, initial]) {{{1
+#  
+>>> from functools import reduce
+>>> numbers = [3, 4, 6, 9, 34, 12]
+>>> def custom_sum(first, second):
+>>>     return first + second
+>>>     
+>>> result = reduce(custom_sum, numbers, -10)
+>>> print(result)
+
+# reduce takes the first and second elements in numbers and passes them to
+# custom_sum respectively. custom_sum computes their sum and returns it to
+# reduce. reduce then takes that result and applies it as the first element to
+# custom_sum and takes the NEXT element (third) in numbers as the second element
+# to custom_sum.
+# It does this continuously (cumulatively) until numbers is exhausted and outputs the final result
+# 
+

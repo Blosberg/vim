@@ -1,0 +1,44 @@
+
+# --- Strings as arrays of characters: {{{1
+>>> astring = "Hello world!"
+>>> astring[1:-4:2] # [start:stop:step]
+'el o'
+>>> astring[::-1]
+'!dlrow olleH'
+>>> astring.index("w")
+6
+
+# --- Some convenient functions: {{{1
+>>> print(astring.startswith("Hello"))
+True
+>>> print(astring.endswith("asdfasdfasdf"))
+False
+
+twowords = astring.split(" ")
+
+# --- Formatting, printing:  {{{1
+
+name = "world"
+print("Hello, %s" % name)
+
+age = 6000000000
+print("Hello, %s, you are %d years old" %(name,age))
+
+
+>>> H="Harry"
+>>> T="Tommy"
+>>> print (f"{H} met {T}")
+Harry met Tommy
+>>>
+>>> print ( ("{H} met {T}").format(H="Houdini", T="Torino") )
+Houdini met Torino
+
+# --- Values for the % operator: {{{1
+%s - String (or any object with a string representation, like numbers)
+%d - Integers
+%f - Floating point numbers
+%.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.
+%x/%X - Integers in hex representation (lowercase/uppercase)
+
+
+

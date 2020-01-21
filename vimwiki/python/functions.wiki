@@ -4,13 +4,13 @@ def my_func( non_default1, non_default2, default="default_value", default2="othe
     print("Hello, %s , From My Function!, I wish you %s"%(non_default1, non_default2, defaulted))
     return()
 
- --- Function object    :{{{1
+# --- Function object    :{{{1
 >>> A=my_func
 # (Without the brackets) sets A equal to the function object my_func.
 >>> A()
 # will then initiate execution.
 
- --- Defaults           :{{{1
+# --- Defaults           :{{{1
 >>> my_func( non_default1, non_default2 )
 or
 >>> my_func( non_default1, non_default2, default )
@@ -19,7 +19,7 @@ or
 
 point being: the non-defaulted are provided in order. The defaulted _can_ follow order, or can be directly specified.
 
- --- Multiple args      :{{{1
+# --- Multiple args      :{{{1
 https://www.learnpython.org/en/Multiple_Function_Arguments
 
 def foo(first, second, third, *therest):
@@ -41,7 +41,7 @@ def bar(first, second, third, **options):
 result = bar(1, 2, 3, action = "sum", number = "first")
 print("Result: %d" %(result))
 
- --- Partial functions  :{{{1
+# --- Partial functions  :{{{1
 These are the opposite, in a sense that you want to derive a simpler function from a more complex one, by fixing the input values (from left to right)
 
 from functools import partial
@@ -54,3 +54,40 @@ dbl = partial(multiply3, 1.5, 4)
 # The x value is now always 1.5, and the y value is fixed at 4
 # you must supply the z val.
 # print(dbl(4))
+
+# --- Methods            :{{{1
+# Methods are like functions but confined to within classes:
+class Pet(object):
+   def my_method(self):
+      print("I am a Cat")
+cat = Pet()
+cat.my_method()
+
+# because the method is called on an object, it can access the data within it.
+# Methods can also modify the object’s state. 
+# Python functions generally don't modify class objects passed to it.
+
+# --- Decorators         :{{{1
+# Don't yet know why these are useful, but here's a template:
+@decorator
+def functions(arg):
+    return "value"
+# is equivalent to:
+def function(arg):
+    return "value"
+function = decorator(function) 
+
+# A more fully fleshed-out template:
+from functools import wraps
+def a_new_decorator(a_func):
+    @wraps(a_func)
+    def wrapTheFunction():
+       print("Before executing a_func()")
+       a_func()
+       print("After executing a_func()")
+    return wrapTheFunction
+    
+@a_new_decorator
+def a_function_requiring_decoration():
+    """Hey you! Decorate me!"""
+    print("I am a function that needs decoration")

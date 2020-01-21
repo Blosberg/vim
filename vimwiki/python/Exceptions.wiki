@@ -8,10 +8,10 @@ except DefinedError1:
 except DefinedError2:
     do_alt_2
     
-    
-    
-    
-# Define your own exceptions:
+# Define your own exceptions: {{{1
+class Custom_error(BaseException):
+    pass
+# or:
 class Error(Exception):
    """Base class for other exceptions"""
    pass
@@ -23,7 +23,7 @@ class ValueTooLargeError(Error):
    pass
 
 
-# And then use them as follows:
+# Then use them as follows: {{{1
 # 
 # user guesses a number until he/she gets it right
 # you need to guess this number
@@ -43,3 +43,11 @@ while True:
        print("This value is too large, try again!")
        print()
 print("Congratulations! You guessed it correctly.")
+
+# Assertions: {{{1
+# hard breaks can also be established with assertions. e.g.:
+# assert [Condition], "Error message"
+
+assert (Temperature >= 0), "Colder than absolute zero!"
+
+# If condition is false, then an AssertionError exception is raised.k

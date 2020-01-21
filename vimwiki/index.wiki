@@ -24,8 +24,8 @@ Brendans vimwiki: Everyone else use at your own risk.
     * Math
 
 = programming = {{{1
-    = python =
-         * www.learnpython.org
+    = python: https://docs.python.org/ www.learnpython.org=
+         * [[python/strings|strings]]
          * [[python/functions|functions]]
          * [[python/Classes|Classes]]
          * [[python/dictionaries|dictionaries]]
@@ -33,6 +33,7 @@ Brendans vimwiki: Everyone else use at your own risk.
          * [[python/List_Comprehensions|List_Comprehensions]] -- basic syntax and implementation
          * [[python/Exceptions|Exceptions]]
          * [[python/Sets|Sets]]
+         * [[python/batch_operations|batch_operations]] --map,filter,reduce
          * [[python/pdb|pdb]]:           -- debugger for python
          * [[python/pip|pip]]
          * [[python/venv|venv]]
