@@ -1,0 +1,9 @@
+optimize SVM classifier by tuning hyperplane parameters
+randomly:
+
+from sklearn.linear_model import SGDClassifier
+
+sgd_clf = SGDClassifier(max_iter=5, tol=-np.infty, random_state=42)
+sgd_clf.fit(X_train, y_train_5)
+
+
