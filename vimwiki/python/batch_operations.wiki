@@ -25,12 +25,12 @@ result       = list(map(round, circle_areas, range(1,3)))
 >>> print(palindromes)
 
  = reduce(func, iterable[, initial]) =
-#  
+#
 >>> from functools import reduce
 >>> numbers = [3, 4, 6, 9, 34, 12]
 >>> def custom_sum(first, second):
 >>>     return first + second
->>>     
+>>>
 >>> result = reduce(custom_sum, numbers, -10)
 >>> print(result)
 
@@ -40,5 +40,20 @@ result       = list(map(round, circle_areas, range(1,3)))
 # custom_sum and takes the NEXT element (third) in numbers as the second element
 # to custom_sum.
 # It does this continuously (cumulatively) until numbers is exhausted and outputs the final result
-# 
+#
+ = enumerate( iterable, startpoint) =
+
+my_list = ['apple', 'banana', 'grapes', 'pear']
+for c, value in enumerate(my_list, 5):
+    print(c, value)
+5 apple
+6 banana
+7 grapes
+8 pear
+
+ = numpy.random.permutation(N) =
+# shuffles values of range(N)
+#
+numpy.random.permutation(6)
+array([0, 1, 5, 2, 4, 3])
 
