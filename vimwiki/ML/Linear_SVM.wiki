@@ -1,0 +1,12 @@
+Support vector machines. Binary classifier
+
+Define hyperplane separating two types of data
+
+
+Hand-written lab notes:
+{{file:SVR/images/SVR_1.png|page_1}}
+{{file:SVR/images/SVR_2.png|page_2}}
+{{file:SVR/images/SVR_3.png|page_3}}
+
+
+{{file:../math_stats/images/Lagrange_Mult_2_workedex.png|lagrange_multipliers}}
