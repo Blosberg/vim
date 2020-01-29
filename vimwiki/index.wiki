@@ -2,6 +2,7 @@ Brendans vimwiki: Everyone else use at your own risk.
 
 = shell + packaging = 
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
+        - [[shell/prompt_values|prompt_values]] --PS1, PS2, etc. the characters that appear before the "$" prompt on terminal
     * [[shell/awk|awk]]     -- some handy one-liners
     * [[shell/sed|sed]]     -- regex manipulation in bash
     * [[shell/cut|cut]]     -- remove parts of a string
@@ -77,6 +78,9 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[ML/Convolution|Convolution]]
     * [[ML/Flattening|Flattening]] 
     * [[ML/Dropout|Dropout]]
+    = Classifiers =
+       * [[ML/Linear_SVM|Linear_SVM]] -- define a plane separating two types
+       * [[ML/SGD_classifier|SGD_classifier]]-- 
 
 = git = 
     * [[git/Tutorials|Tutorials]]

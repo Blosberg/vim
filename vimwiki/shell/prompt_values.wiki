@@ -1,0 +1,48 @@
+taken from: 
+https://linoxide.com/how-tos/change-bash-prompt-variable-ps1/
+
+1) Change the bash prompt PS1
+PS1 is the default prompt we see every time when we log in the console. For the most news Linux systems, the defaults values have \u@\h:\w\$ which show the username, hostname, the current working directory and the user privilege. These are just examples of different values it can take. There are some other values that we will see later. Let’s take a look at the PS1 prompt default value on the terminal
+
+# echo $PS1 
+  \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
+  
+  The parts that include debian_chroot indicate that if you are operating in a change root environment, the prompt will be modified to remind you. Look below to have a complete idea for the rest of the prompt:
+  Options:
+  \a The ASCII bell character (you can also type \007)
+  \d Date in “Sat Sep 04″ format
+  \e ASCII escape character (you can also type \033)
+  \h First part of hostname (such as “mybox”)
+  \H Full hostname (such as “mybox.mydomain.com”)
+  \j The number of processes you’ve suspended in this shell by hitting ^Z
+  \l The name of the shell’s terminal device (such as “ttyp4″)
+  \n Newline
+  \r Carriage return
+  \s The name of the shell executable (such as “bash”)
+  \t Time in 24-hour format (such as “23:59:59″)
+  \T Time in 12-hour format (such as “11:59:59″)
+  \@ Time in 12-hour format with am/pm
+  \u Your username
+  \v Version of bash (such as 2.04)
+  \V Bash version, including patchlevel
+  \w Current working directory (such as “/home/koithara”)
+  \W The “basename” of the current working directory (such as “koithara”)
+  \! Current command’s position in the history buffer
+  \# Command number (this will count up at each prompt, as long as you type something)
+  \$ If you are not root, inserts a “$”; if you are root, you get a “#”
+  \xxx Inserts an ASCII character based on three-digit number xxx (replace unused digits with zeros, such as “\007″)
+  \\ A backslash
+  \[ This sequence should appear before a sequence of characters that don’t move the cursor (like color escape sequences). This allows bash to calculate word wrapping correctly.
+  \] This sequence should appear after a sequence of non-printing characters.
+  
+  We will do some examples but before manipulating the value of theses variables, we need to save the file which contains all. It will help to switch back to our original prompt easier in case we make a mistake or without having to log out and back in again.
+  
+  $ cp ~/.bashrc ~/.bashrc-backup
+  
+  Example 1: Display only the username and the hostname with the separation character “-”:
+  
+  user01@server01:~$ export PS1="\u - \h$ "
+  user01 - server01$ echo $PS1
+  \u - \h$
+  
+  We can see immediately the change on our console. Note that after the equals sign, we use the double quote ("") to use the \u and \h values. If we use another annotation, the shell will consider all after the equal sign as the value and we will not have the result we attend.
