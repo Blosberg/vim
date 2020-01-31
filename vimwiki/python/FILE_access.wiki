@@ -5,9 +5,9 @@ base 	r 	open for reading (default option), seek to the beginning of the file
         w 	open for writing, delete existing content
         x 	open for writing, fail if file exists
         a 	open for writing, seek to the end of the file
-optional 
+optional
         R+W 	+ 	open for read+write; otherwise as above
-optional binary 
+optional binary
         b 	binary mode (instead of text mode); otherwise as above
 = Notes: =
 
@@ -18,11 +18,23 @@ optional binary
 
 
 The default mode is 'r' (open for reading text, synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
+= csv read =
+import csv
+# ...
+with open(FILE_path_string) as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter='\t')
+    party_ind  = 0
+    for row in csv_reader:
+        test = row[0] + row[2] - row[3]
+        #
+        array.append(test)
+
+
 
 = EXAMPLE:=
 # e.g.:
 
-# The following example uses the dir_fd parameter of the os.open() 
+# The following example uses the dir_fd parameter of the os.open()
 # function to open a file relative to a given directory:
 
 >>>
