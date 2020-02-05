@@ -1,3 +1,15 @@
+MUCH SIMPLER SOLUTION: use the package "rename"
+$ sudo apt-get install rename
+
+$ rename "s/[old]/[new]/g" *__*
+          ^ sed script
+                        ^ global (all occurances)
+                           ^ list of files over which to perform operation
+                          
+                          
+Way easier than writing it out.
+but if you want to do it the painfully manual way ....
+
 
 for f in [regex_match] ; do echo mv "$f" "{$f/[old]/[new]};"; done
 
