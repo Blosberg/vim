@@ -1,0 +1,47 @@
+math_stats wiki on PCA:
+
+{{file:images/PCA.jpg|PCA_notes}}
+
+
+{{file:images/PCA-Tutorial-Intuition_jp.pdf|PCA_tutorial}}
+
+import numpy as np
+from sklearn.decomposition import PCA
+>>> a=np.array([[ -1,  -1  ],
+                [  0,  -1  ],
+                [  1,   2  ]])
+>>> Ua, Sa, Va = np.linalg.svd( a, 
+                                full_matrices=False)
+# These are defined in such a way that we can
+# recover the original input matrix with mat mult.
+# (N.B. A @ B means np.matmul(A,B) )
+>>> Ua @ np.diag(Sa) @ Va
+array([[-1., -1.],
+       [ 0., -1.],
+       [ 1.,  2.]])
+              
+Sa are the eigenvalues; Va are the unit-norm eigenvectors, and Ua is the scaling for the individual data along the eigenvector directions (provide proper name for it later)
+
+>>> pca = PCA()
+>>> PCa = pca.fit_transform(a)
+                            
+The vectors of this are then equal to +/-  U matmul diag(Sa):
+
+>>> Ua @ np.diag(Sa)
+array([[-1.35353252,  0.40981667],
+       [-0.8816746 , -0.47185793],
+       [ 2.23520712,  0.06204125]])
+>>> PCa
+array([[-1.35353252, -0.40981667],
+       [-0.8816746 ,  0.47185793],
+       [ 2.23520712, -0.06204125]])
+>>> Ua @ np.diag(Sa) - PCa
+array([[ 0.        ,  0.81963335],
+       [ 0.        , -0.94371585],
+       [ 0.        ,  0.1240825 ]])
+>>> Ua @ np.diag(Sa) +  PCa
+array([[-2.70706505,  0.        ],
+       [-1.7633492 ,  0.        ],
+       [ 4.47041425,  0.        ]])
+
+But this only works because a is centred
