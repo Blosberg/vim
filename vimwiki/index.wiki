@@ -29,19 +29,27 @@ Brendans vimwiki: Everyone else use at your own risk.
     = python =
          - https://docs.python.org/
          - www.learnpython.org
+
+         - [[python/venv|venv]] --Virtual environment management
+         - [[python/pip|pip]] pip package management
+
          - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, etc.
          - [[python/strings|strings]]
          - [[python/functions|functions]]
          - [[python/Classes|Classes]]
+
          - [[python/dictionaries|dictionaries]]
          - [[python/Generators|Generators]]
          - [[python/List_Comprehensions|List_Comprehensions]] -- basic syntax and implementation
-         - [[python/Sets|Sets]]
-         - [[python/batch_operations|batch_operations]] --map,filter,reduce
+         - [[python/batch_operations|batch_operations]] --map,filter,reduce; operations
+                - [[python/Sets|Sets]] --intersection, difference, union, overlap
+
+         - [[python/Numpy|Numpy]]
+         - [[python/pandas|pandas]]
+         - [[python/matplotlib|matplotlib]]
+
          - [[python/Exceptions|Exceptions]]
          - [[python/pdb|pdb]]:           -- debugger for python
-         - [[python/pip|pip]]
-         - [[python/venv|venv]]
 
     = R =
          * [[R_language/eval|eval]]    -- evaluate strings as expressions
@@ -87,6 +95,7 @@ Brendans vimwiki: Everyone else use at your own risk.
 
 = Math_stats =
     * [[math_stats/Precision_recall|precision_recall]]
+    * [[math_stats/PCA_SVG|PCA_SVG]]
 
 = git =
     * [[git/Tutorials|Tutorials]]

@@ -57,3 +57,7 @@ for c, value in enumerate(my_list, 5):
 numpy.random.permutation(6)
 array([0, 1, 5, 2, 4, 3])
 
+ = argmax =
+# Return the index of the largest value
+np.argmax( pandas_dfn.iloc[n].values)
+
