@@ -45,3 +45,5 @@ array([[-2.70706505,  0.        ],
        [ 4.47041425,  0.        ]])
 
 But this only works because a is centred
+otherwise, remember to subtract off the mean before performing SVG
+
