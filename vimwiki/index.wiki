@@ -44,7 +44,7 @@ Brendans vimwiki: Everyone else use at your own risk.
          - [[python/batch_operations|batch_operations]] --map,filter,reduce; operations
                 - [[python/Sets|Sets]] --intersection, difference, union, overlap
 
-         - [[python/Numpy|Numpy]]
+         - [[python/numpy|numpy]]
          - [[python/pandas|pandas]]
          - [[python/matplotlib|matplotlib]]
 

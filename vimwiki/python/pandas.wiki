@@ -1,0 +1,34 @@
+
+
+In pandas create 1-D arrays like lists
+
+= Series =
+pop2014 = pd.Series([100,99.3,95.5,93.5,92.4,84.8,84.5,78.9,74.3,72.8],
+                    index=['Java','C','C++','Python','C#','PHP','JavaScript','Ruby','R','Matlab'])
+and index, slice, etc. the same way as lists.
+
+use loc["key1":key2]
+iloc[1:3]
+
+= Data Frames =
+There is a numpy array inside every data frame. Access it with .values
+
+To create data frames from series, you can combine series, and pandas will match the keys up for you:
+
+>>> X=pd.Series([1,2,3,4], index=["a","b","c","d"])
+>>> Y=pd.Series([5,6,7,8], index=["a","c","d","e"])
+>>> Z=pd.DataFrame({"First":X,"Second":Y})
+>>> Z
+   First  Second
+a    1.0     5.0
+b    2.0     NaN
+c    3.0     6.0
+d    4.0     7.0
+e    NaN     8.0
+# Note the missing fields in b, and e
+Z["First"] # to get a col.
+Z.index    # to get list a-f
+# To get rows:
+iloc # for numerical indices
+loc  # for values
+

@@ -1,0 +1,35 @@
+
+
+Creating arrays:
+>>> a = np.array([1,2,3])
+>>> b = np.array([(1.5,2,3), (4,5,6)], dtype = float)
+>>> c = np.array([[(1.5,2,3), (4,5,6)], [(3,2,1), (4,5,6)]], dtype = float)
+
+np.arange(initial, final, step_size)
+
+N.B. Slices create *Views* onto the same object. modifying the
+output slice WILL CHANGE THE ORIGINAL OBJECT
+
+= Stacking them with vstack =
+>>> np.zeros([2,4])
+array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.]])
+>>> a=np.zeros([2,4])
+>>> b=np.ones([2,4])
+>>> np.vstack([a,b])
+array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [1., 1., 1., 1.],
+       [1., 1., 1., 1.]])
+>>> np.hstack([a,b])
+array([[0., 0., 0., 0., 1., 1., 1., 1.],
+       [0., 0., 0., 0., 1., 1., 1., 1.]])
+
+= I/O =
+
+np.save("path", array)
+array = np.load("path")
+
+= Linear Alegebra =
+dotprod   = np.dot( vec1,   vec2)
+outerprod = np.outer( vec1, vec2)
