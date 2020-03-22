@@ -1,4 +1,6 @@
-  
+
+[Ctrl][l] == clear current output
+
 [Ctrl][A] == moves to the beginning of the current line
 [Ctrl[E]  == moves to the end of the current line 
 

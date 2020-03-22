@@ -1,3 +1,6 @@
+TODO:
+* - Figure out "Categorical Indices" in data frames --Why can't you just add one? (see "flights" problem in 06_04 exercises)
+* - How to use pd.IndexSlice to slice sub-indices (see 06_04)
 
 
 In pandas create 1-D arrays like lists
@@ -29,6 +32,6 @@ e    NaN     8.0
 Z["First"] # to get a col.
 Z.index    # to get list a-f
 # To get rows:
-iloc # for numerical indices
+[[iloc]] # for numerical indices
 loc  # for values
 
