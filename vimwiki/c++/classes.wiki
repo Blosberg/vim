@@ -1,0 +1,32 @@
+Here’s a class and the code for a member function:
+
+class MyClass {
+private:
+    int x;
+public:
+    void MyFunction(int y);
+};
+void MyClass::MyFunction(int y) {
+    x = y;
+}
+
+// ------------------------------------
+// Here’s a base class and a derived class:
+
+class MyBase {
+private:
+   // derived classes can
+   // not access this
+   int a;   
+protected:
+   // derived classes can 
+   // access this
+   int b;   
+};
+class Derived : public MyBase {
+public:
+    void test() {
+        b = 10;
+    }
+};
+
