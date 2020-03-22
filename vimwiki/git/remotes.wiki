@@ -1,0 +1,27 @@
+# replace your local version with whats on the remote
+$ git fetch
+$ git reset --hard [host]/[branch]
+
+# replace remote version with your local version
+$ git push --force (-f)
+
+git push -u makes a tracking branch, so you will have
+
+1) a branch on the remote
+2) a snapshot of the remote branch (remote tracking branch)
+3) a locally saved branch
+
+"fetch" updates 2 and keeps them on your machine.
+
+# delete local branch (3)
+git branch -d
+
+# delete remote branch (1)
+# If you do this it will automatically delete (2)
+git push --delete origin branchname
+git push -d       origin branchname
+git push origin         :branchname
+#                    ^[nothing]            
+
+# manually delete (2) if someone else deleted (1):
+git remote prune origin

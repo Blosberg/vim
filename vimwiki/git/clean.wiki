@@ -1,0 +1,7 @@
+git clean -i/n/f
+# removes untracked files interactively/dryrun/force
+
+add something to .gitignore to ignore changes to the file
+
+git rm --cached [file]
+# remove a file from the staging index but don't delete the file itself.

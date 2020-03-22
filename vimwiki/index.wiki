@@ -1,12 +1,12 @@
 Brendans vimwiki: Everyone else use at your own risk.
 
 = shell + packaging =
+    * [[shell/command_line|active command_line]] -- move back and forth, delete text while typing, clear current output
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
         - [[shell/prompt_values|prompt_values]] --PS1, PS2, etc. the characters that appear before the "$" prompt on terminal
     * [[shell/awk|awk]]     -- some handy one-liners
     * [[shell/sed|sed]]     -- regex manipulation in bash
     * [[shell/cut|cut]]     -- remove parts of a string
-    * [[shell/command_line|command_line]] -- move back and forth, delete text while typing
     * [[shell/batch_rename|batch_rename]] -- change the names of multiple files/folders
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
     * [[shell/tmux|tmux]]
@@ -55,6 +55,11 @@ Brendans vimwiki: Everyone else use at your own risk.
          * [[R_language/eval|eval]]    -- evaluate strings as expressions
          * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
 
+    = c++ =
+         * [[c++/vectors|vectors]] -- cheat sheet for vectors in c++
+         * [[c++/classes|classes]] -- define/derive classes, syntax
+         * [[c++/switch|switch]] -- switch statement
+
 = OSX =
     * [[OSX/shortcut_keys|shortcut_keys]]
 
@@ -98,7 +103,12 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[math_stats/PCA_SVG|PCA_SVG]]
 
 = git =
+    * [[git/setup|setup]] -- settings, config, etc.
+    * [[git/diff|diff]]
+    * [[git/commits|commits]] --history, branching, trees of commits
+    * [[git/remotes|remotes]] --pushing and pulling with remotes
     * [[git/Tutorials|Tutorials]]
+    * [[git/clean|clean]] -- keep things tidy
 
 = Bioinformatics =
     * http://rosalind.info/problems/locations/

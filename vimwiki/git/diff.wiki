@@ -1,0 +1,7 @@
+Options:
+git diff --staged (diff between repo and staged)
+git diff --color-words
+
+while in diff 
+-S chops long lines off
+

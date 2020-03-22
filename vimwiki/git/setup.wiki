@@ -1,0 +1,12 @@
+
+the site:https://github.com/git/git/ --> contrib --> completion/
+contains the git-prompt and git-completion.sh files that you need to source
+in your ~/.bash_myconfig
+
+== config settings ==
+# e.g. to set global variables
+git config [--global] merge.tool vimdiff
+
+
+
+That's where I export my PS1 value to make the prompt show the current branch

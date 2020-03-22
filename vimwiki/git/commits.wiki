@@ -1,0 +1,61 @@
+
+git commit -am "Commit message"
+# the a option stages and commits all changes to tracked files.
+
+git show [shaID]
+# shows all changes made in a commit
+
+== Ancestry ==
+
+HEAD^ shows the parent of head
+sed123C^ is the parent of the commit with that SHA1
+# Grandparents: ^^==~2; ^^^==~3, etc
+HEAD^^ = HEAD~2 
+
+== Branchs ==
+git checkout -b [new_branch_name] [starting_point]
+
+-u sets the tracking option with set-upstream... look more into this later.
+
+== Stash ==
+git stash save 
+pop
+apply
+drop 
+clear
+
+== merging ==
+in the middle of a merge --once conflicts are resolved, just git commit if you've fixed the conflicts manually.
+
+git mergetool --tool=<tool>
+
+
+
+git branch --merged 
+# shows you only the branches whose tips are included in the ancestry of the current branch
+git branch --no-merged 
+# The opposite (unmerged)
+git branch -m [oldname] newname
+#rename "m"==move
+
+real merge (i.e. not a fast-forward merge) is when there are intermediate commits to be reconciled.
+
+
+== Review ==
+git show [commit] --> changes
+git ls-tree [tree-ish ob] [pattern matching]
+
+git log --since(after)=YYYY-MM-DD --until(before)=YYYY-MM-DD
+        --since=3.days "5 weeks ago"
+        --author="Bre"
+        --grep="stringtomatch"
+        134hva..HEAD # from commit 1234hva up to HEAD
+        README # (just changes that affected README)
+        --stat #(stats on changes) 
+git log --oneline --graph --all --decorate
+
+== resets ==
+get reset --...
+--soft just moves HEAD; doesn't change staging tree or cwd
+--mixed undoes whatever is staged, replaces it with repo. Doesn't affect the cwd. (default)
+--hard moves HEAD, and changes both staging and cwd to match repo at that time. MAKE EVERYTHING LIKE IT WAS THEN.
