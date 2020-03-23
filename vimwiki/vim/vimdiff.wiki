@@ -1,3 +1,5 @@
+== vimdiff file1 file2 ==
+
 :diffupdate (to remove leftover spacing issues)
 :only (once you’re done reviewing all conflicts, this shows only the middle/merged file)
 :wq (save and quit)
@@ -15,4 +17,19 @@ dp          - diff put
 zo          - open folded text
 zc          - close folded text
 :diffupdate - re-scan the files for differences
+
+== Mergetool == 
+
+After using git mergetool (assuming you've set merge.tool vimdiff)
+you'll get this:
+
+    +--------------------------------+
+    | LOCAL  |     BASE     | REMOTE |
+    +--------------------------------+
+    |             MERGED             |
+    +--------------------------------+
+
+the top to are buffers 1,2,3 respectively, so within the merged, you can type: 1do,2do, 3do to "obtain" the diffs from buffers 1,2,3 respectively.
+
+
 

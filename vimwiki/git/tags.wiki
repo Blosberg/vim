@@ -1,0 +1,27 @@
+Tags are Shorthand to refer to some important point in development
+
+# Add a lightweight tag:
+git tag issue126 [SHA]
+
+# Add an annotated tag:
+git tag -a v1.1 -m "version 1.0" [SHA]
+
+# list tags
+git tag [--list | (-l)]
+git tag -l "v2*"  # <-- regex
+-n (see annotation lines default just one)
+
+# work with them just like SHAs from there.
+# e.g. git diff v1.0..v1.1
+
+# delete
+git tag -d tagname
+
+= Remotes =
+
+tags are fetched by default, but does not push by default. must be pushed explicitly
+
+git push origin v1.1   
+git push origin --tags # push _all_ tags
+
+# delete remote tags like remote branches

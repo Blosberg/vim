@@ -1,4 +1,16 @@
+== Staging ==
 
+# stage interactively, and can lead to patch more where you select only certain lines:
+git add [--interactive | -i]
+
+also git add [ -p | --patch ]
+
+git stash -p
+git reset [[-p]]
+git checkout -p
+git commit -p
+
+== Commits ==
 git commit -am "Commit message"
 # the a option stages and commits all changes to tracked files.
 
@@ -8,7 +20,7 @@ git show [shaID]
 == Ancestry ==
 
 HEAD^ shows the parent of head
-sed123C^ is the parent of the commit with that SHA1
+<SHA>^ is the parent of the commit <SHA>
 # Grandparents: ^^==~2; ^^^==~3, etc
 HEAD^^ = HEAD~2 
 
@@ -17,19 +29,7 @@ git checkout -b [new_branch_name] [starting_point]
 
 -u sets the tracking option with set-upstream... look more into this later.
 
-== Stash ==
-git stash save 
-pop
-apply
-drop 
-clear
-
 == merging ==
-in the middle of a merge --once conflicts are resolved, just git commit if you've fixed the conflicts manually.
-
-git mergetool --tool=<tool>
-
-
 
 git branch --merged 
 # shows you only the branches whose tips are included in the ancestry of the current branch
@@ -38,8 +38,12 @@ git branch --no-merged
 git branch -m [oldname] newname
 #rename "m"==move
 
-real merge (i.e. not a fast-forward merge) is when there are intermediate commits to be reconciled.
+In a real merge (i.e. not a fast-forward merge) intermediate commits need to be reconciled, and conflicts are possible.
 
+You can fix them manually and then git commit once conflicts are resolved.
+Alternatively, git mergetool [--tool=<tool>]
+
+This will, by default, launch [[../vim/vimdiff#Mergetool|vimdiff]] to resolve the conflict(s).
 
 == Review ==
 git show [commit] --> changes

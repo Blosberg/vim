@@ -1,0 +1,14 @@
+== Stash ==
+# git help stash
+# Stash, by default, does not stash untracked changes.
+# -u is the option for including untracked
+
+git stash save "<name>"  # sends current (unstaged) changes to tracked files to stash 
+git stash show -p stash{0}
+
+git stash pop            # pops a stash out of the list (by default the  most recent in position stash@{0})
+apply                    # "" same as above but keep the stash stack. 
+drop                     # drop an item from the stash stack
+clear                    # clear the entire stash stack
+
+

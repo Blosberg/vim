@@ -107,6 +107,7 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[git/diff|diff]]
     * [[git/commits|commits]] --history, branching, trees of commits
     * [[git/remotes|remotes]] --pushing and pulling with remotes
+    * [[git/stash|stash]]
     * [[git/Tutorials|Tutorials]]
     * [[git/clean|clean]] -- keep things tidy
 

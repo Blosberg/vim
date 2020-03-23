@@ -5,3 +5,4 @@ git diff --color-words
 while in diff 
 -S chops long lines off
 
+
