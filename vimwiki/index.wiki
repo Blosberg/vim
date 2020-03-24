@@ -106,7 +106,7 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[git/setup|setup]] -- settings, config, etc.
     * [[git/diff|diff]]
     * [[git/commits|commits]] --history, branching, trees of commits
-    * [[git/remotes|remotes]] --pushing and pulling with remotes
+    * [[git/sharing|sharing]] --pushing and pulling with remotes; sending patches, diffs, etc.
     * [[git/stash|stash]]
     * [[git/Tutorials|Tutorials]]
     * [[git/clean|clean]] -- keep things tidy
