@@ -1,7 +1,7 @@
 Tags are Shorthand to refer to some important point in development
 
 # Add a lightweight tag:
-git tag issue126 [SHA]
+git tag <tagname>  [SHA]
 
 # Add an annotated tag:
 git tag -a v1.1 -m "version 1.0" [SHA]

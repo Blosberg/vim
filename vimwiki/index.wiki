@@ -108,6 +108,7 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[git/commits|commits]] --history, branching, trees of commits
     * [[git/sharing|sharing]] --pushing and pulling with remotes; sending patches, diffs, etc.
     * [[git/stash|stash]]
+    * [[git/tags|tags]]
     * [[git/Tutorials|Tutorials]]
     * [[git/clean|clean]] -- keep things tidy
 
