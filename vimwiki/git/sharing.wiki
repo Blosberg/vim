@@ -1,4 +1,8 @@
+
+== Remotes ==
+
 # replace your local version with whats on the remote
+# 
 $ git fetch
 $ git reset --hard [host]/[branch]
 
@@ -25,3 +29,7 @@ git push origin         :branchname
 
 # manually delete (2) if someone else deleted (1):
 git remote prune origin
+
+== diff patches  ==
+
+see [[diff|diff]]

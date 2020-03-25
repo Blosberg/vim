@@ -1,35 +1,34 @@
-== Staging ==
+git show [commit] --> changes
+git ls-tree [tree-ish ob] [pattern matching]
+
+= Interactive Staging =
 
 # stage interactively, and can lead to patch more where you select only certain lines:
 git add [--interactive | -i]
 
-also git add [ -p | --patch ]
+s - split a hunk by lines
+e - edit a hunk with +/- lines for staging
 
+# p-option also applied to other procedures...
+git add [ -p | --patch ]
 git stash -p
 git reset [[-p]]
 git checkout -p
 git commit -p
 
-== Commits ==
+= Commits =
 git commit -am "Commit message"
 # the a option stages and commits all changes to tracked files.
 
 git show [shaID]
 # shows all changes made in a commit
 
-== Ancestry ==
-
-HEAD^ shows the parent of head
-<SHA>^ is the parent of the commit <SHA>
-# Grandparents: ^^==~2; ^^^==~3, etc
-HEAD^^ = HEAD~2 
-
-== Branchs ==
+= Branchs =
 git checkout -b [new_branch_name] [starting_point]
 
 -u sets the tracking option with set-upstream... look more into this later.
 
-== merging ==
+= Merging =
 
 git branch --merged 
 # shows you only the branches whose tips are included in the ancestry of the current branch
@@ -45,21 +44,41 @@ Alternatively, git mergetool [--tool=<tool>]
 
 This will, by default, launch [[../vim/vimdiff#Mergetool|vimdiff]] to resolve the conflict(s).
 
-== Review ==
-git show [commit] --> changes
-git ls-tree [tree-ish ob] [pattern matching]
+= Rebasing =
 
-git log --since(after)=YYYY-MM-DD --until(before)=YYYY-MM-DD
-        --since=3.days "5 weeks ago"
-        --author="Bre"
-        --grep="stringtomatch"
-        134hva..HEAD # from commit 1234hva up to HEAD
-        README # (just changes that affected README)
-        --stat #(stats on changes) 
-git log --oneline --graph --all --decorate
+git rebase <new_base_branch> [branch you want to rebase | default=current branch]
 
-== resets ==
-get reset --...
+# Return commit where branch diverges
+git merge-base master new_feature
+
+# rebase it onto something else that it didn't even branch off of.
+git rebase [ --onto <branch> ] <new_base> <branch>
+git rebase --help and look for "onto" for clarification
+
+# Undo a rebase
+git reset --hard ORIG_HEAD
+or
+git rebase --onto <original parent commit> <upstream> <branch>
+
+# can be done in conjunction with pull
+git pull [--rebase | -r] [=interactive]
+
+ == interactive ==
+ * -i 
+# Modify the commits as they are being replayed --change commit messages, change order, etc..
+(e)dit the commits themselves
+(r)eword the commit messages
+# rebase the last 3 commits onto the *same branch* but with the opportunity to modify them
+# (rewrite history)
+git rebase -i HEAD~3
+
+ pick --apply this change
+ == Squashing ==
+ squash --combine change sets into the one above it, concatenate messages
+ fixup  --combine change sets, discard message
+ 
+= Resets =
+git reset --...
 --soft just moves HEAD; doesn't change staging tree or cwd
 --mixed undoes whatever is staged, replaces it with repo. Doesn't affect the cwd. (default)
 --hard moves HEAD, and changes both staging and cwd to match repo at that time. MAKE EVERYTHING LIKE IT WAS THEN.

@@ -2,7 +2,52 @@ Options:
 git diff --staged (diff between repo and staged)
 git diff --color-words
 
-while in diff 
+while in diff
 -S chops long lines off
 
+= Diff files =
 
+# Create a diff file of specific changes
+git diff <fromcommitSHA> <tocommitSHA>  > output.diff
+
+# import it and apply it to your local repo
+git apply input.diff
+# N.B. Doesn't commit. Use the SHA *before* the commit you want (check this)
+# It will need to be compatible with the current state of the working dir or
+# you will get patch failed.
+
+
+= Format patches =
+
+git format-patch <from-comit>..<to-commit>
+# leaving out either range: HEAD is implied
+
+# or export all commits on current branch since it diverged from master git
+git format-patch master
+# HEAD is implied as the second range, otherwise, add # works its way backwards
+# until it gets to master
+
+ == options ==
+-1 signifies single commit
+-o <directory>
+--stdout > feature.patch
+
+ == application ==
+ 
+ # Author, message and changes are extracted from message
+ git am <dir>/0001-some-name.patch
+ git am <dir>*.patch # apply them all.
+ 
+ # Unlike git apply, changes are committed.
+
+= Cherry picking =
+
+git cherry-pick <SHA1>[..<SHA2>]
+# apply just the changes of this commit to the current state of the repo
+# if a conflict is encountered mergetool will resolve it just like a merge conflict
+ 
+ == options ==
+ *  --edit # change the commit message 
+ --continue # after resolving conflic
+ 
+ 

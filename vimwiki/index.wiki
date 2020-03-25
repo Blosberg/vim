@@ -104,14 +104,14 @@ Brendans vimwiki: Everyone else use at your own risk.
 
 = git =
     * [[git/setup|setup]] -- settings, config, etc.
-    * [[git/diff|diff]]
+    * [[git/diff|diff]] -- diffs, cherry picking, formatted patches
     * [[git/commits|commits]] --history, branching, trees of commits
     * [[git/sharing|sharing]] --pushing and pulling with remotes; sending patches, diffs, etc.
     * [[git/stash|stash]]
     * [[git/tags|tags]]
-    * [[git/Tutorials|Tutorials]]
-    * [[git/clean|clean]] -- keep things tidy
+    * [[git/inspect|inspect]] -- review and tidy up repo. blame, log, bisect, clean etc.
 
+    * [[git/Tutorials|Tutorials]]
 = Bioinformatics =
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]

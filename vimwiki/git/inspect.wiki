@@ -1,0 +1,54 @@
+= Ancestry =
+
+HEAD^ shows the parent of head
+<SHA>^ is the parent of the commit <SHA>
+# Grandparents: ^^==~2; ^^^==~3, etc
+HEAD^^ = HEAD~2 
+
+= Review =
+
+git show [commit] --> changes
+git ls-tree [tree-ish ob] [pattern matching]
+
+   == blame ==
+# show an annotated version of the file with
+# who editted this section of code
+git blame -L 100,110 filename.txt 
+git blame -L 100,+4  filename.txt
+
+   == bisect ==
+   
+   # track down where problems started 
+   # through binary search and checking problems
+   $git bisect start
+   $git bisect bad/old <treeish>
+   $git bisect good/new <>
+   # set things back to the HEAD from before you started bisect
+   $git bisect reset  
+   
+   == log ==
+
+git log --since(after)=YYYY-MM-DD --until(before)=YYYY-MM-DD
+        --since=3.days "5 weeks ago"
+        --author="Bre"
+        --grep="stringtomatch"
+        134hva..HEAD # from commit 1234hva up to HEAD
+        README # (just changes that affected README)
+        --stat #(stats on changes) 
+git log --oneline --graph --all --decorate
+
+# Show "patch" changes
+git log -p |--patch
+
+# show commits that affect certain lines in file filename.txt
+git log -L 100,150:filename.txt 
+
+
+= clean =
+git clean -i/n/f
+# removes untracked files interactively/dryrun/force
+
+add something to .gitignore to ignore changes to the file
+
+git rm --cached [file]
+# remove a file from the staging index but don't delete the file itself.
