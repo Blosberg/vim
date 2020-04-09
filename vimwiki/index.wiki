@@ -107,7 +107,7 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[git/inspect|inspect]] -- review and tidy up repo. blame, diff, log, bisect, clean etc.
 
     * [[git/preset_changes|preset_changes]] -- create and apply diff files, patches, cherry pick commits
-    * [[git/commit|commit]] --check history, branching, merging, rebase, reset, trees of commits
+    * [[git/commit_tree|commit_tree]] --check history, branching, merging, rebase, reset, trees of commits
     * [[git/sharing|sharing]] --pushing and pulling with remotes; sending patches, diffs, etc.
     * [[git/stash|stash]]
     * [[git/tags|tags]]
