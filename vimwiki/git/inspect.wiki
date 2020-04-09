@@ -1,3 +1,11 @@
+= diff =
+
+git diff --staged (diff between repo and staged)
+git diff --color-words
+
+while in diff
+-S chops long lines off
+
 = Ancestry =
 
 HEAD^ shows the parent of head
@@ -48,7 +56,7 @@ git log -L 100,150:filename.txt
 git clean -i/n/f
 # removes untracked files interactively/dryrun/force
 
-add something to .gitignore to ignore changes to the file
-
 git rm --cached [file]
 # remove a file from the staging index but don't delete the file itself.
+
+N.B.: add something to .gitignore to ignore changes to the file

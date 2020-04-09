@@ -1,10 +1,4 @@
 Options:
-git diff --staged (diff between repo and staged)
-git diff --color-words
-
-while in diff
--S chops long lines off
-
 = Diff files =
 
 # Create a diff file of specific changes
@@ -41,10 +35,15 @@ git format-patch master
  # Unlike git apply, changes are committed.
 
 = Cherry picking =
+# apply the changes of a particular commit (provided as an argument) to the
+# current state of the repo You don't want to merge, because you don't want
+# the whole branch; just the changes of that one commit 
 
 git cherry-pick <SHA1>[..<SHA2>]
-# apply just the changes of this commit to the current state of the repo
-# if a conflict is encountered mergetool will resolve it just like a merge conflict
+
+# The second one creates a range if you want to apply multiple change sets
+# in series if a conflict is encountered mergetool will resolve it just 
+# like a merge conflict
  
  == options ==
  *  --edit # change the commit message 
