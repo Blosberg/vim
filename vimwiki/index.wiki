@@ -45,7 +45,9 @@ Brendans vimwiki: Everyone else use at your own risk.
                 - [[python/Sets|Sets]] --intersection, difference, union, overlap
 
          - [[python/numpy|numpy]]
+
          - [[python/pandas|pandas]]
+
          - [[python/matplotlib|matplotlib]]
 
          - [[python/Exceptions|Exceptions]]

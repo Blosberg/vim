@@ -1,6 +1,6 @@
 # ------ STRINGS IN PYTHON ---------
 
- = Strings as arrays of characters: =
+= Strings as arrays of characters: =
 >>> astring = "Hello world!"
 >>> astring[1:-4:2] # [start:stop:step]
 'el o'
@@ -16,6 +16,7 @@ True
 False
 
 twowords = astring.split(" ")
+
 
  = Formatting, printing: =
 

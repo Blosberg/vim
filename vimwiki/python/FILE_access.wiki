@@ -1,4 +1,10 @@
-Mode options of open(filepath, mode='r')
+= Basic syntax =
+f = open( <FILENAME>, [options])
+f.read()
+f.write()
+
+= Mode options open(filepath, mode='r') =
+
 mode=one of ‘r’ / ‘w’ / ‘x’ / ‘a’+‘+’ or nothing+‘b’ or nothing
 
 base 	r 	open for reading (default option), seek to the beginning of the file
@@ -28,8 +34,6 @@ with open(FILE_path_string) as csv_file:
         test = row[0] + row[2] - row[3]
         #
         array.append(test)
-
-
 
 = EXAMPLE:=
 # e.g.:
