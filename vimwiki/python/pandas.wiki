@@ -1,27 +1,44 @@
-TODO:
-* - Figure out "Categorical Indices" in data frames --Why can't you just add one? (see "flights" problem in 06_04 exercises)
-* - How to use pd.IndexSlice to slice sub-indices (see 06_04)
+import pandas as pd
+# Identify data type:
+type(var)
 
-
-In pandas create 1-D arrays like lists
+# In pandas create 1-D arrays (series) like lists
 
 = Series =
-pop2014 = pd.Series([100,99.3,95.5,93.5,92.4,84.8,84.5,78.9,74.3,72.8],
-                    index=['Java','C','C++','Python','C#','PHP','JavaScript','Ruby','R','Matlab'])
-and index, slice, etc. the same way as lists.
+S = pd.Series( [1,2,3],
+               index=["a","b","c"])
+# You can then index, slice, etc. the same way as lists.
+S.loc["a":"c"]
+S.iloc[0:2]
 
-use loc["key1":key2]
-iloc[1:3]
+   = processing data: counts, sorting, etc. =
+# check frequencies of occurance of each index
+S.value_counts()
+
+# sort
+S.sort_values( inplace = False )
+
+# str. attributes are available to every Series
+S.str.[contains/startswith/isnumeric]()
 
 = Data Frames =
-There is a numpy array inside every data frame. Access it with .values
+There is a [[numpy]] array inside every data frame.
+Access it with .values
+Alternative access:
 
+# get dimensions with:
+df.shape
+
+# get first, last n lines
+df.head(n), df.tail(n)
+
+   = build a data frame from Series =
 To create data frames from series, you can combine series, and pandas will match the keys up for you:
 
 >>> X=pd.Series([1,2,3,4], index=["a","b","c","d"])
 >>> Y=pd.Series([5,6,7,8], index=["a","c","d","e"])
->>> Z=pd.DataFrame({"First":X,"Second":Y})
->>> Z
+>>> df=pd.DataFrame({"First":X,"Second":Y})
+>>> df
    First  Second
 a    1.0     5.0
 b    2.0     NaN
@@ -29,9 +46,47 @@ c    3.0     6.0
 d    4.0     7.0
 e    NaN     8.0
 # Note the missing fields in b, and e
-Z["First"] # to get a col.
-Z.index    # to get list a-f
-# To get rows:
-[[iloc]] # for numerical indices
-loc  # for values
+
+   = Access columns =
+df["First"] or df.First
+# Latter only works if the col name has no spaces.
+
+# Access multiple cols by creating a list [ , ]
+# within the dereferencing braces -hence, double braces
+`df[["First","Second"]]`
+df.index    # to get list a-f
+
+   = Access rows (+boolean select)=
+df.loc["b"]  # gets rows (or columns) from labels.
+df.iloc[2]   # gets rows (or columns) at positions (only takes integers).
+df.ix[2,3]        # First tries to be like loc, but if it fails,
+            # it then falls back to iloc
+
+df.iloc[[0],[1]]
+df.ix[0:2,0:5]
+# N.B. ix will first try to match index explicitly (so if your indexes are
+# named 0,1,2, then this will include all three rows.) but if your indexes
+# have a different name (e.g. "first","second","third") then it wil
+# automatically switch to integer indexing and will not include the last
+# value (i.e. 0:2 = [0,1])
+
+= Boolean indexing =
+AND : &
+OR  : |
+NOT : ~
+
+df[(df.First <3.5) & (df.Fourth > 4 )]
+# also: df.colname.str.contains("substring")-->bool
+
+= Sort =
+# sort by multiple hierarchical criteria:
+df.sort_values( by=["most-important col",
+                   "Second-most-important col",
+                    ...],
+               ascending = True [default] )
+
+= TODO: =
+* - Figure out "Categorical Indices" in data frames --Why can't you just add one? (see "flights" problem in 06_04 exercises)
+* - How to use pd.IndexSlice to slice sub-indices (see 06_04)
+
 
