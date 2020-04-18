@@ -1,6 +1,10 @@
-LIST COMPREHENSIONS IN PYTHON:
+LISTS
 
-Standard syntax
+list indexing list[start:stop:stride]
+# a in reverse order
+a[::-1] 
+
+# List comprehension:
 [ expression for item in list if conditional ]
 
 e.g. list the even numbers between 5 and 9 in a string:

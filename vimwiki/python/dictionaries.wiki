@@ -1,14 +1,22 @@
 
-phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
-for name, number in phonebook.items():
+Age = {"John" : 16,"Jack" : 24,"Jill" : 30}
+for name, age in Age.items():
     print("Phone number of %s is %d" % (name, number))
-    
+
+names =Age.keys()
+vals  =Age.values()
+# you can now add entries, and these will automatically be updated
+
+# view objects:
+phonebook.keys()
+phonebook.values()
+# ^ automatically updated as entries change
 
 phonebook.pop("John")
-does the same thing as 
+does the same thing as
 del phonebook["John"]
 
-# It may also be useful to load data structures from strings with 
+# It may also be useful to load data structures from strings with
 json.loads(json_string)
 # if the parentheses are part of the whole string, like, e.g.:
 # "{ "key":val,"key2":val2...}"

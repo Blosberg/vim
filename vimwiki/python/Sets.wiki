@@ -5,7 +5,11 @@ b = set(["John", "Jill"])
 
 print(a.intersection(b))
 print(b.intersection(a))
+a & b
 
 print(a.symmetric_difference(b))
 print(a.difference(b))
+a-b
+
 print(a.union(b))
+print( a | b )
