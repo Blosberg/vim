@@ -1,0 +1,30 @@
+# get current release info:
+$cat /etc/lsb_release 
+
+# get kernel info (without "a" option, just get OSX/linux)
+uname -a
+
+# check how much memory you've got available
+$free -h
+
+# hardware info
+$cat /proc/cpuinfo 
+# (^for CPU), or:
+dmidecode -t [2-baseboard, 4-CPU, ...]
+
+# hard drive usage
+$du  [location]  -hd1
+# -h is human readable, d1 is 1 level deep (just show usage for that directory, don't worry about distribution among subdirs)
+
+# list hardware
+$ lshw
+
+# network info
+ip a
+
+    * apropos        -- looking for a command, but don't know the name of it
+
+    * file <myfile>  -- get basic info on a file
+    * stat <myfile>  -- ownership, modification, etc.
+
+
