@@ -1,6 +1,0 @@
-
-check for individual subject pseudonyms in a paired-end database
-ls *.fq.gz  | sed "s/_.\.fq\.gz//g" | uniq  | wc -l
-
-
-
