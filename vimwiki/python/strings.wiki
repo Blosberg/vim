@@ -1,6 +1,7 @@
 # ------ STRINGS IN PYTHON ---------
 
 = Strings as arrays of characters: =
+# specifically: immutable lists
 >>> astring = "Hello world!"
 >>> astring[1:-4:2] # [start:stop:step]
 'el o'

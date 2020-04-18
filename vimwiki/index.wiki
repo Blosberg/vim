@@ -1,12 +1,12 @@
 Brendans vimwiki: Everyone else use at your own risk.
 
 = shell + packaging =
+
+    * [[shell/Linux_info|Linux_info]]     -- lsb_release, free, distro info,
     * [[shell/command_line|active command_line]] -- move back and forth, delete text while typing, clear current output
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
         - [[shell/prompt_values|prompt_values]] --PS1, PS2, etc. the characters that appear before the "$" prompt on terminal
-    * [[shell/awk|awk]]     -- some handy one-liners
-    * [[shell/sed|sed]]     -- regex manipulation in bash
-    * [[shell/cut|cut]]     -- remove parts of a string
+    * [[shell/awk_sed_grep_cut|awk_sed_grep_cut]] -- one-liners
     * [[shell/batch_rename|batch_rename]] -- change the names of multiple files/folders
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
     * [[shell/tmux|tmux]]
@@ -26,32 +26,36 @@ Brendans vimwiki: Everyone else use at your own risk.
 
 = Programming =
     * https://www.codecademy.com/
-    = python =
-         - https://docs.python.org/
-         - www.learnpython.org
-
-         - [[python/venv|venv]] --Virtual environment management
-         - [[python/pip|pip]] pip package management
-
-         - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, etc.
-         - [[python/strings|strings]]
+    = [[python/python|python]] =
+         == structs and functions: Classes, functions ==
          - [[python/functions|functions]]
          - [[python/Classes|Classes]]
 
+         == System interface: venv, pip, FILE I/O ==
+         - [[python/venv|venv]] --Virtual environment management
+         - [[python/pip|pip]] pip package management
+         - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, etc.
+
+         == Containers: strings, dicts, lists, sets  ==
+         - [[python/strings|strings]]
          - [[python/dictionaries|dictionaries]]
          - [[python/Generators|Generators]]
-         - [[python/List_Comprehensions|List_Comprehensions]] -- basic syntax and implementation
+         - [[python/Lists|Lists]] -- basic syntax and implementation
+         - [[python/Sets|Sets]] --intersection, difference, union, overlap
          - [[python/batch_operations|batch_operations]] --map,filter,reduce; operations
-                - [[python/Sets|Sets]] --intersection, difference, union, overlap
 
+         == Packages: numpy, pandas, matplotlib, pdb ==
          - [[python/numpy|numpy]]
 
          - [[python/pandas|pandas]]
 
          - [[python/matplotlib|matplotlib]]
 
-         - [[python/Exceptions|Exceptions]]
+         == Debugging: pdb, Exceptions, testing ==
+
          - [[python/pdb|pdb]]:           -- debugger for python
+
+         - [[python/Exceptions|Exceptions]]
 
     = R =
          * [[R_language/eval|eval]]    -- evaluate strings as expressions

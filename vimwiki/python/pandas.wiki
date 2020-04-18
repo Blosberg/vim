@@ -5,6 +5,7 @@ type(var)
 # In pandas create 1-D arrays (series) like lists
 
 = Series =
+
 S = pd.Series( [1,2,3],
                index=["a","b","c"])
 # You can then index, slice, etc. the same way as lists.
@@ -12,16 +13,18 @@ S.loc["a":"c"]
 S.iloc[0:2]
 
    = processing data: counts, sorting, etc. =
+
 # check frequencies of occurance of each index
 S.value_counts()
 
-# sort
-S.sort_values( inplace = False )
+# sort (if hierarchical, argument becomes list)
+S.sort_values(["first","second",...] inplace = False )
 
 # str. attributes are available to every Series
 S.str.[contains/startswith/isnumeric]()
 
 = Data Frames =
+
 There is a [[numpy]] array inside every data frame.
 Access it with .values
 Alternative access:
@@ -33,6 +36,7 @@ df.shape
 df.head(n), df.tail(n)
 
    = build a data frame from Series =
+
 To create data frames from series, you can combine series, and pandas will match the keys up for you:
 
 >>> X=pd.Series([1,2,3,4], index=["a","b","c","d"])
@@ -47,7 +51,34 @@ d    4.0     7.0
 e    NaN     8.0
 # Note the missing fields in b, and e
 
+   = index of the df =
+
+# change the first column define the index of the df (previous index is lost)
+df.set_index("First", inplace=True)
+
+# reset indext to default integers
+df.reset_index()
+
+# sort it by that criteria
+df.sort_index()
+
+   = Access rows (+boolean select)=
+
+df.loc["b"]  # gets rows (or columns) from labels.
+df.iloc[2]   # gets rows (or columns) at positions (only takes integers).
+df.ix[2,3]        # First tries to be like loc, but if it fails,
+            # it then falls back to iloc
+
+df.iloc[[0,4,5],[1]]
+df.ix[0:2,0:5]
+# N.B. ix will first try to match index explicitly (so if your indexes are
+# named 0,1,2, then this will include all three rows.) but if your indexes
+# have a different name (e.g. "first","second","third") then it wil
+# automatically switch to integer indexing and will not include the last
+# value (i.e. 0:2 = [0,1])
+
    = Access columns =
+
 df["First"] or df.First
 # Latter only works if the col name has no spaces.
 
@@ -56,19 +87,50 @@ df["First"] or df.First
 `df[["First","Second"]]`
 df.index    # to get list a-f
 
-   = Access rows (+boolean select)=
-df.loc["b"]  # gets rows (or columns) from labels.
-df.iloc[2]   # gets rows (or columns) at positions (only takes integers).
-df.ix[2,3]        # First tries to be like loc, but if it fails,
-            # it then falls back to iloc
+   = Groupby =
 
-df.iloc[[0],[1]]
-df.ix[0:2,0:5]
-# N.B. ix will first try to match index explicitly (so if your indexes are
-# named 0,1,2, then this will include all three rows.) but if your indexes
-# have a different name (e.g. "first","second","third") then it wil
-# automatically switch to integer indexing and will not include the last
-# value (i.e. 0:2 = [0,1])
+# Group by values with the same ColName
+gb = df.groupby("ColName")
+# Get counts in each group:
+# Then gb is a set of tuples with the 1rst entry the ColName group label, and
+# the second being the group itself.
+
+for x,y in gb:
+   # x is the ColName label, y is the group:
+   ...
+
+# batch calculations on the groupby sets:
+gb.size()  # num entries in each group
+gb.count() # num entries preserved in cols
+
+gb.first()/last()     # first/last entry in each group
+gb.mean()/min()/max() #
+
+   == stack() ==
+# Return a taller df
+# stack Column subset --> into hierarchical index labels for rows (within  existing row index labels)
+
+   == unstack() ==
+# return a wider df
+# unstack hierarchical index labels into Column subsets
+
+# N.B. In both stacking, unstacking you can't go lower than the first set of
+# columns and rows. This is just for pivotting subgroups within those
+# columns/rows.
+
+  == agg()  ==
+
+# apply a named func to all remaining columns
+  gb.agg(["min","max",...])
+
+# Or supply a dictionary with specific funcs to each col:
+
+  gb.agg({"Colname2":["func1","func2",...], "ColName3":... })
+# OTHER cols   ^                              ^
+# various funcs         ^        ^                      ^
+# here, while groupby is grouped by ColName, you can operated on ColName2,3
+# using functions specified in the corresponding dict.
+
 
 = Boolean indexing =
 AND : &
@@ -84,7 +146,6 @@ df.sort_values( by=["most-important col",
                    "Second-most-important col",
                     ...],
                ascending = True [default] )
-
 = TODO: =
 * - Figure out "Categorical Indices" in data frames --Why can't you just add one? (see "flights" problem in 06_04 exercises)
 * - How to use pd.IndexSlice to slice sub-indices (see 06_04)
