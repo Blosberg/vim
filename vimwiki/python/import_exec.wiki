@@ -1,0 +1,11 @@
+
+= One-off files =
+# exec:
+# To execute a script "as is" (only use for fully-trusted)
+exec(open('/Full/absolute/path/to/filename').read())
+
+= import =
+
+import package as pkg
+from pkg import *
+# TODO: add to this sec

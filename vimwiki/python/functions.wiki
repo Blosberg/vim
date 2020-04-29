@@ -1,10 +1,13 @@
-# Template func: default values must come at the the end. 
+# Template func: default values must come at the the end.
 
 def my_func( non_default1, non_default2, default="default_value", default2="other_defval"):
+    """Doc string that explains useful important stuff about function...
+    can be multiple lines long...
+    """
     print("Hello, %s , From My Function!, I wish you %s"%(non_default1, non_default2, defaulted))
     return()
 
- = Function object: = 
+ = Function object: =
 >>> A=my_func
 # (Without the brackets) sets A equal to the function object my_func.
 >>> A()
@@ -24,7 +27,7 @@ https://www.learnpython.org/en/Multiple_Function_Arguments
 
 def foo(first, second, third, *therest):
    return(len(therest) )
-                
+
 len( foo(1,2,3,4,5) ) --> 2
 
 Here, "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. **IN ORDER**
@@ -34,10 +37,10 @@ If you want to make these options order-independent, then provide an additional 
 def bar(first, second, third, **options):
     if options.get("action") == "sum":
             print("The sum is: %d" %(first + second + third))
-            
+
     if options.get("number") == "first":
             return first
-                        
+
 result = bar(1, 2, 3, action = "sum", number = "first")
 print("Result: %d" %(result))
 
@@ -49,7 +52,7 @@ from functools import partial
 
 def multiply3(x,y,z):
         return x * y * z
-        
+
 # create a new function that multiplies by 2
 dbl = partial(multiply3, 1.5, 4)
 # The x value is now always 1.5, and the y value is fixed at 4
@@ -65,30 +68,28 @@ cat = Pet()
 cat.my_method()
 
 # because the method is called on an object, it can access the data within it.
-# Methods can also modify the object’s state. 
+# Methods can also modify the object’s state.
 # Python functions generally don't modify class objects passed to it.
 
  = Decorators: =
-# Don't yet know why these are useful, but here's a template:
-@decorator
-def functions(arg):
-    return "value"
-# is equivalent to:
-def function(arg):
-    return "value"
-function = decorator(function) 
+# Takes existing functions as inputs, and outputs a modified version of the function
+# to redefine the function in a systematic way n
 
-# A more fully fleshed-out template:
-from functools import wraps
-def a_new_decorator(a_func):
-    @wraps(a_func)
-    def wrapTheFunction():
-       print("Before executing a_func()")
-       a_func()
-       print("After executing a_func()")
-    return wrapTheFunction
-    
-@a_new_decorator
-def a_function_requiring_decoration():
-    """Hey you! Decorate me!"""
-    print("I am a function that needs decoration")
+# Create decorator function that operates on a func and returns a func:
+def add_extra_half_and_quarter(func_in):
+    # Define the function to be returned:
+    def func_out(x):
+        x = x+0.5
+        # Call the original func with modified arguments:
+        return (func_in(x) + 0.25)
+    return func_out
+
+@add_extra_half_and_quarter
+def add_one(x):
+    return x+1
+
+>>>
+>>> add_one(7)
+8.75
+>>>
+

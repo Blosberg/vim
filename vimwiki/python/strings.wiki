@@ -16,6 +16,7 @@ True
 >>> print(astring.endswith("asdfasdfasdf"))
 False
 
+# split "Hellow world!" into two words:
 twowords = astring.split(" ")
 
 
@@ -24,9 +25,10 @@ twowords = astring.split(" ")
 name = "world"
 print("Hello, %s" % name)
 
+
 age = 6000000000
 print("Hello, %s, you are %d years old" %(name,age))
-
+print(" %.6f" % (math.pi/4,))
 
 >>> H="Harry"
 >>> T="Tommy"

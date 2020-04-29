@@ -27,14 +27,24 @@ Brendans vimwiki: Everyone else use at your own risk.
 = Programming =
     * https://www.codecademy.com/
     = [[python/python|python]] =
-         == structs and functions: Classes, functions ==
-         - [[python/functions|functions]]
-         - [[python/Classes|Classes]]
-
          == System interface: venv, pip, FILE I/O ==
+         id(var)  returns the location of a data
+         
          - [[python/venv|venv]] --Virtual environment management
          - [[python/pip|pip]] pip package management
-         - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, etc.
+         - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, with ... as, os.walk, isdir, isfile, os.list etc.
+
+         == Packages: numpy, pandas, matplotlib, pdb ==
+         - [[python/import_exec|import_exec]]: sourcing, importing, etc.
+         - [[python/numpy|numpy]]
+         - [[python/random|random]]
+         - [[python/pandas|pandas]]
+         - [[python/matplotlib|matplotlib]]
+
+         == structs and functions: Classes, functions  datetime ==
+         - [[python/functions|functions]]
+         - [[python/Classes|Classes]]
+         - [[python/datetime|datetime]]
 
          == Containers: strings, dicts, lists, sets  ==
          - [[python/strings|strings]]
@@ -44,15 +54,7 @@ Brendans vimwiki: Everyone else use at your own risk.
          - [[python/Sets|Sets]] --intersection, difference, union, overlap
          - [[python/batch_operations|batch_operations]] --map,filter,reduce; operations
 
-         == Packages: numpy, pandas, matplotlib, pdb ==
-         - [[python/numpy|numpy]]
-
-         - [[python/pandas|pandas]]
-
-         - [[python/matplotlib|matplotlib]]
-
          == Debugging: pdb, Exceptions, testing ==
-
          - [[python/pdb|pdb]]:           -- debugger for python
 
          - [[python/Exceptions|Exceptions]]

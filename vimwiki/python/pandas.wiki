@@ -29,11 +29,24 @@ There is a [[numpy]] array inside every data frame.
 Access it with .values
 Alternative access:
 
+# -- useful df functions --
 # get dimensions with:
 df.shape
+# names of columns/rows:
+df.columns
+df.index
 
 # get first, last n lines
 df.head(n), df.tail(n)
+
+# get set of statistical info (mean, std. dev, etc.)
+df.describe()
+
+# get Pearson correlation between cols
+pd.DataFrame.corr(df)
+
+from sklearn.cluster.bicluster import SpectralCoclustering
+
 
    = build a data frame from Series =
 
@@ -78,6 +91,9 @@ df.ix[0:2,0:5]
 # value (i.e. 0:2 = [0,1])
 
    = Access columns =
+# get col names:
+list(df)
+
 
 df["First"] or df.First
 # Latter only works if the col name has no spaces.

@@ -4,6 +4,15 @@ list indexing list[start:stop:stride]
 # a in reverse order
 a[::-1] 
 
+L0=[1,2,3]
+L1=L0
+# ^ Just creates another pointer to the same position in memory. If you want another list (i.e. copy by value), then:
+L2=L0.copy()
+# or:
+L3=L0[:]
+# or
+L4=list(L0)
+
 # List comprehension:
 [ expression for item in list if conditional ]
 

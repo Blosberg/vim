@@ -1,0 +1,13 @@
+# construction for timing processes, timestamping, etc.
+#
+import datetime
+datetime.datetime.today()
+
+time_1 = datetime.datetime.today()
+time_2 = datetime.datetime.today()
+
+time_2-time_1
+
+#manipulate a str into this format:
+datetime.datetime.strptime(date_str[:-3],"%Y-%m-%d %H:%M:%S")
+#                                    ^ last 3 characters are global offsets

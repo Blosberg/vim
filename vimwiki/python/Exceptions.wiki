@@ -1,4 +1,11 @@
-# Exceptions in PYTHON:
+= Using with =
+# "with" makes it possible to factor out standard uses of try/finally statements.
+
+with EXPR as VAR:
+    BLOCK
+
+
+= Generic Exceptions in PYTHON:=
 # Template:
 try:
     do_somethingi_that_might_go_wrong()

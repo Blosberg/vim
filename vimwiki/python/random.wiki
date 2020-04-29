@@ -1,0 +1,7 @@
+# peel back the first layer of listing:
+random.choice([[]])
+# if you have a list of lists, you'll get one of those lists
+
+random.sample(range, N)
+
+

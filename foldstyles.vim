@@ -19,6 +19,8 @@ function! FoldPythonFuncdefs() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '^def .*:') >= 0
     return ">1"
+  elseif match(thisline, '^class .*:$') >= 0
+    return ">1"
   else
     return "="
   endif

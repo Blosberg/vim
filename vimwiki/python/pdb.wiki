@@ -27,6 +27,7 @@ c(ontinue)              continue execution until a breakpoint is encountered
 u(p)                    move one level up in the stack trace
 d(own)                  move one level down in the stack trace
 
+# Conditional breakpoints
 b [File]:line, condition Set a breakpoint
 
 Manipulation

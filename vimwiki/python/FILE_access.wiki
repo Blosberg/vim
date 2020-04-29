@@ -1,3 +1,17 @@
+= Common methods in os pacakge =
+
+# list all names in a given path.
+os.listdir()
+
+# disinguish between dirs and files
+os.path.isdir()/isfile()
+
+# list subdirs, files
+root, dirs, files in os.walk(".", topdown=False):
+
+# create paths, handling potential "/" separation
+path = os.path.join(basepath, fname)
+
 = Basic syntax =
 f = open( <FILENAME>, [options])
 f.read()
@@ -26,7 +40,8 @@ optional binary
 The default mode is 'r' (open for reading text, synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
 = csv read =
 import csv
-# ...
+# "with" ensures that clean-up is always employed, and handles exceptions better (see "[[Exceptions]]")
+# csv_file is automatically closed
 with open(FILE_path_string) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter='\t')
     party_ind  = 0

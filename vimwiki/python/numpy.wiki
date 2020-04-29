@@ -1,21 +1,62 @@
 
+= random sampling =
+numpy.random.choice(a, size=None, replace=True, p=None)
+https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html
 
 Creating arrays:
 >>> a = np.array([1,2,3])
 >>> b = np.array([(1.5,2,3), (4,5,6)], dtype = float)
 >>> c = np.array([[(1.5,2,3), (4,5,6)], [(3,2,1), (4,5,6)]], dtype = float)
 
+numpy.random.random((5,2,3))
+
 np.arange(initial, final, step_size)
 
 N.B. Slices create *Views* onto the same object. modifying the
 output slice WILL CHANGE THE ORIGINAL OBJECT
 
-= Stacking them with vstack =
+= arrays =
+ == initialize: ==
+np.linspace(start, stop, NumEntries)
+np.logspace( "",   ""  , "" )
+np.ones( (nrows, ncols) )
+
 >>> np.zeros([2,4])
 array([[0., 0., 0., 0.],
        [0., 0., 0., 0.]])
->>> a=np.zeros([2,4])
->>> b=np.ones([2,4])
+
+# init with random values
+numpy.random.random((nMatrices, nRows, nCols))
+
+ == linalg: transpose, reshape, invert, matrix mult ==
+np.matmul
+
+dotprod   = np.dot( vec1,   vec2)
+outerprod = np.outer( vec1, vec2)
+
+a.reshape(n,m)
+
+# transposition. Following are equivalent:
+a.transpose()
+a.T
+
+# get identity matrix:
+np.identity(4)
+
+# invert  (see below)
+C.I
+     === Invert (if possible)===
+>>> C=np.mat([[1,2,3],[-1,4,10],[100,0,5]])
+>>> C
+matrix([[  1,   2,   3],
+        [ -1,   4,  10],
+        [100,   0,   5]])
+>>> C.I
+matrix([[ 0.02409639, -0.01204819,  0.00963855],
+        [ 1.21084337, -0.35542169, -0.01566265],
+        [-0.48192771,  0.24096386,  0.00722892]])
+
+ == Stacking them with vstack, hstack, concatenate ==
 >>> np.vstack([a,b])
 array([[0., 0., 0., 0.],
        [0., 0., 0., 0.],
@@ -25,11 +66,27 @@ array([[0., 0., 0., 0.],
 array([[0., 0., 0., 0., 1., 1., 1., 1.],
        [0., 0., 0., 0., 1., 1., 1., 1.]])
 
+# also (shapes must be compatible):
+np.concatenate([a,[[-99],[4]],b], axis=0)
+
+ == compare + boolean indexing ==
+
+# single boolean for any/all
+np.any/all(a>0.5)
+# vector/array of bools:
+a[a>0.5]
+
+ == stats ==
+np.sum(X, axis=[0-rows, 1-cols])
+X.sum(..^..)
+
+X.mean()
+X.std()
+
+# N.B. df.describe() gives quick stats info, but only for pandas data frames
+
 = I/O =
 
 np.save("path", array)
 array = np.load("path")
 
-= Linear Alegebra =
-dotprod   = np.dot( vec1,   vec2)
-outerprod = np.outer( vec1, vec2)
