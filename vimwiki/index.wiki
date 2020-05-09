@@ -3,9 +3,9 @@ Brendans vimwiki:
 
 This is a personal repo where I occasionally make notes to avoid searching
 online repeatedly. The notes are in my own messy shorthand, and while you're
-free to use them, I make no promises as to their legibility and assume no 
+free to use them, I make no promises as to their legibility and assume no
 liability with respect to their accuracy. If you'd like to combine wiki's get
-in touch and we can see if our note-taking styles are compatible. 
+in touch and we can see if our note-taking styles are compatible.
 Use at your own risk.
 
 = Notes:  =
@@ -48,13 +48,13 @@ Use at your own risk.
          * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
 
     = [[python/python|python]] =
-    Ternary op: 
+    Ternary op:
       Y = trueValue if cond else falseValue
       Z = (falseValue,trueValue)[cond]
-      
+
          == System interface: venv, pip, FILE I/O ==
          id(var)  returns the location of a data
-         
+
          - [[python/venv|venv]] --Virtual environment management
          - [[python/pip|pip]] pip package management
          - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, with ... as, os.walk, isdir, isfile, os.list etc.
@@ -64,7 +64,7 @@ Use at your own risk.
          - [[python/numpy|numpy]]
          - [[python/random|random]]
          - [[python/pandas|pandas]]
-         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, 
+         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram,
 
          == structs and functions: Classes, functions  datetime ==
          - [[python/functions|functions]]
@@ -88,19 +88,16 @@ Use at your own risk.
     * - [[css/External|]]
     * - internal
     * - inline
-    
+
 = Data Science, Machine/Statistical Learning, regression, stats, =
 
-    * [[math_stats/Precision_recall|precision_recall]]
-    * [[math_stats/PCA_SVG|PCA_SVG]]
-     
     * [[ML/data_sets|data_sets]]
-   
+
    == Regression, classification ==
     * [[python/OLS_regression|OLS_regression]]
-    
+
    == Classification ==
-   
+
     * [[python/Logistic_regression|Logistic_Regression]]
     * [[python/Random_Forest|Random_Forest]]
     * [[ML/SGD_classifier|SGD_classifier]]--
@@ -109,13 +106,18 @@ Use at your own risk.
 
    == (Neural) Networks ==
     * [[python/Networks|Networks]]
-  
+
     * [[ML/Max_pooling|Max_pooling]]
     * [[ML/Convolution|Convolution]]
     * [[ML/Flattening|Flattening]]
     * [[ML/Dropout|Dropout]]
    == tensorflow ==
-       *
+
+= Math and stats =
+    * [[math_stats/Precision_recall|precision_recall]]
+    * [[math_stats/PCA_SVG|PCA_SVG]]
+    * [[math_stats/Anova|Anova]] --analysis of variance, two-way anova, F-test, F-ratio,Tukey test
+
 
 = OSX =
     * [[OSX/shortcut_keys|shortcut_keys]]

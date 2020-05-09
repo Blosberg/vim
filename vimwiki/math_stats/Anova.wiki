@@ -1,0 +1,11 @@
+
+used to compare the means of more than two subsets, when you have a quantitative dependent (i.e. output) variable, and catorical input variables. 
+To compare the means of just two subsets against each-other, use the T-test.
+
+This provides the F-test. 
+{{file:images/Anova.jpeg|Anova_textnotes}}
+
+
+Need to be revisted for more specifics on two-ways, but the basic principle is that two-way anovas test against not only the null hypothesis that all subsets have the same mean, but also that they have no *interaction*. 
+The Tukey test is a way to check for interactions (notes on this not yet provided).
+
