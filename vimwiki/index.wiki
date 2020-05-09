@@ -1,4 +1,14 @@
-Brendans vimwiki: Everyone else use at your own risk.
+Brendans vimwiki:
+== Disclaimer ==
+
+This is a personal repo where I occasionally make notes to avoid searching
+online repeatedly. The notes are in my own messy shorthand, and while you're
+free to use them, I make no promises as to their legibility and assume no 
+liability with respect to their accuracy. If you'd like to combine wiki's get
+in touch and we can see if our note-taking styles are compatible. 
+Use at your own risk.
+
+= Notes:  =
 
 = shell + packaging =
 
@@ -11,6 +21,8 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
     * [[shell/tmux|tmux]]
 
+= Atom =
+ command palette: cmd+Shift+P
 = vim =
     * [[vim/vimdiff|vimdiff]]
     * [[vim/File_management|File_management]]
@@ -26,7 +38,20 @@ Brendans vimwiki: Everyone else use at your own risk.
 
 = Programming =
     * https://www.codecademy.com/
+    = c++ =
+         * [[c++/vectors|vectors]] -- cheat sheet for vectors in c++
+         * [[c++/classes|classes]] -- define/derive classes, syntax
+         * [[c++/switch|switch]] -- switch statement
+
+    = R =
+         * [[R_language/eval|eval]]    -- evaluate strings as expressions
+         * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
+
     = [[python/python|python]] =
+    Ternary op: 
+      Y = trueValue if cond else falseValue
+      Z = (falseValue,trueValue)[cond]
+      
          == System interface: venv, pip, FILE I/O ==
          id(var)  returns the location of a data
          
@@ -39,7 +64,7 @@ Brendans vimwiki: Everyone else use at your own risk.
          - [[python/numpy|numpy]]
          - [[python/random|random]]
          - [[python/pandas|pandas]]
-         - [[python/matplotlib|matplotlib]]
+         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, 
 
          == structs and functions: Classes, functions  datetime ==
          - [[python/functions|functions]]
@@ -59,14 +84,38 @@ Brendans vimwiki: Everyone else use at your own risk.
 
          - [[python/Exceptions|Exceptions]]
 
-    = R =
-         * [[R_language/eval|eval]]    -- evaluate strings as expressions
-         * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
+    = CSS =
+    * - [[css/External|]]
+    * - internal
+    * - inline
+    
+= Data Science, Machine/Statistical Learning, regression, stats, =
 
-    = c++ =
-         * [[c++/vectors|vectors]] -- cheat sheet for vectors in c++
-         * [[c++/classes|classes]] -- define/derive classes, syntax
-         * [[c++/switch|switch]] -- switch statement
+    * [[math_stats/Precision_recall|precision_recall]]
+    * [[math_stats/PCA_SVG|PCA_SVG]]
+     
+    * [[ML/data_sets|data_sets]]
+   
+   == Regression, classification ==
+    * [[python/OLS_regression|OLS_regression]]
+    
+   == Classification ==
+   
+    * [[python/Logistic_regression|Logistic_Regression]]
+    * [[python/Random_Forest|Random_Forest]]
+    * [[ML/SGD_classifier|SGD_classifier]]--
+    * [[ML/Linear_SVM|Linear_SVM]] -- define a plane separating two types
+
+
+   == (Neural) Networks ==
+    * [[python/Networks|Networks]]
+  
+    * [[ML/Max_pooling|Max_pooling]]
+    * [[ML/Convolution|Convolution]]
+    * [[ML/Flattening|Flattening]]
+    * [[ML/Dropout|Dropout]]
+   == tensorflow ==
+       *
 
 = OSX =
     * [[OSX/shortcut_keys|shortcut_keys]]
@@ -92,23 +141,6 @@ Brendans vimwiki: Everyone else use at your own risk.
     * [[privacy/encfs|encfs]] -- set up the vault
     * [[privacy/othertips|othertips]] -- spooky shit
     * [[privacy/PGP|PGP]]       -- how to use pgp
-
-= Machine learning =
-    * [[ML/data_sets|data_sets]]
-    * [[ML/Max_pooling|Max_pooling]]
-    * [[ML/Convolution|Convolution]]
-    * [[ML/Flattening|Flattening]]
-    * [[ML/Dropout|Dropout]]
-    = Classifiers =
-       * [[ML/Linear_SVM|Linear_SVM]] -- define a plane separating two types
-       * [[ML/SGD_classifier|SGD_classifier]]--
-
-    = tensorflow =
-       *
-
-= Math_stats =
-    * [[math_stats/Precision_recall|precision_recall]]
-    * [[math_stats/PCA_SVG|PCA_SVG]]
 
 = git =
     * [[git/setup|setup]] -- settings, config, etc.
