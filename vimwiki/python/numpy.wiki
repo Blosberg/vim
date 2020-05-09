@@ -69,6 +69,10 @@ array([[0., 0., 0., 0., 1., 1., 1., 1.],
 # also (shapes must be compatible):
 np.concatenate([a,[[-99],[4]],b], axis=0)
 
+# Convert to single array dimension:
+np.ravel()
+--> array([0, 0, 0, ... ])
+
  == compare + boolean indexing ==
 
 # single boolean for any/all

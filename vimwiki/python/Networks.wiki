@@ -1,0 +1,14 @@
+import networkx as nx
+G = nx.karate_club_graph()
+# list nodes and edges
+G.nodes() G.edges()
+G.add_node(label) G.add_edge(tuple)
+G.add_nodes|edges_from([ iterable ])
+
+# visualize a network:
+nx.draw( G,
+         with_labels=True,
+         node_color="lightblue",
+         edge_color="black")
+
+

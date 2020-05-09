@@ -1,0 +1,26 @@
+Logistic regression: Linear model that models
+probabilities on a nonlinear scale
+
+basic logistic formula:
+log(   p(x)/( 1-p(x) )  ) = beta_0 + beta_1 * x_1 + ... + beta_p*x_p
+#  ^ logit function
+
+
+ x1 x2 x3 ...
+
+# construct test data as in
+X_train, X_test, y_train, y_test = train_test_split( X, y,
+                                                     train_size = 0.5,
+                                                     random_state=1)
+clf.fit( X_train, y_train )
+clf.score(X_test, y_test)
+
+# get probabilities for each class for each test point:
+# and predict which class:
+clf.predict[_proba]( X_test )
+
+
+
+
+from sklearn.linear_model import LogisticRegression
+

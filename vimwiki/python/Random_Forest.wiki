@@ -1,0 +1,32 @@
+"""
+Random forests: collections of trees that collectively vote on
+classification in various regions.
+Bagging: Draw a number of bootstrap data sets and fit each to a tree.
+"""
+
+from sklearn.ensemble import RandomForestClassifier
+
+
+model = RandomForestClassifier(n_estimators=100, 
+                               random_state=RSEED, 
+                               max_features = 'sqrt',
+                               n_jobs=-1, verbose = 1)
+                               
+model.fit(train, train_labels)
+n_nodes = []
+max_depths = []
+
+# Stats about the trees in random forest
+for ind_tree in model.estimators_:
+    n_nodes.append(ind_tree.tree_.node_count)
+    max_depths.append(ind_tree.tree_.max_depth)
+    
+print(f'Average number of nodes {int(np.mean(n_nodes))}')
+print(f'Average maximum depth {int(np.mean(max_depths))}')
+
+# Training predictions (to demonstrate overfitting)
+train_rf_predictions = model.predict(train)
+
+# Testing predictions (to determine performance)
+rf_predictions = model.predict(test)
+rf_probs = model.predict_proba(test)[:, 1]

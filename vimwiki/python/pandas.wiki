@@ -107,17 +107,23 @@ df.index    # to get list a-f
 
 # Group by values with the same ColName
 gb = df.groupby("ColName")
-# Get counts in each group:
-# Then gb is a set of tuples with the 1rst entry the ColName group label, and
-# the second being the group itself.
+# Then gb is a set of tuples with the 1rst entry the ColName
+# group label, and  the second being a dataframe (subset of the original).
 
 for x,y in gb:
    # x is the ColName label, y is the group:
    ...
 
+# look at groups
+gb.groups
+gb.get_group("Name") # specific group
+
+# calculations on other cols within groups
+gb["col"].agg(np.mean)
+
 # batch calculations on the groupby sets:
 gb.size()  # num entries in each group
-gb.count() # num entries preserved in cols
+gb.count() # ^ Same as above but num entries preserved in cols
 
 gb.first()/last()     # first/last entry in each group
 gb.mean()/min()/max() #

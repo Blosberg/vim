@@ -1,41 +1,46 @@
 # Check for templates at: https://matplotlib.org/devdocs/gallery/
 
+= setup fig, ax =
 import matplotlib.pyplot as plt
 # pyplot is a collection of
 # functions that make matplotlib work like matlab
-# Good for interactive All commands affect the current figure/plot
+
+plt.subplots() returns a tuple: (figure , axes) object(s).
+fig, ax = plt.subplots()
+is the same as this:
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+fig  lets yous change figure-level attributes or save (e.g. fig.savefig('yourfilename.png')).
+axes objects are for current plot:
 
 %matplotlib inline
+%matplotlib notebook
 # produce plots locally with built-in  magic command
 # for Ipython (jupyter notebooks):
+# (The latter makes for interactive plots)
 
-# setup some simple data:
-x = np.linspace(0,10,20)
-y1=x**2.0
-y2=x**1.5
+plt.subplot( nrows, ncols, activeplotindex)
+#                          ^ The one you want to work with *now*
 
-= matlab vs object-oriented (oo) style =
 
-  == matlab style ==
-# Two syntaxes work in parallel: the matlab style
+= matlab style =
 plt.plot( xvals,
           yvals,
           c= 'k')
 # to go through multiple subplots:
-plt.subplot( nrows, ncols, activeplotindex)
-#                          ^ The one you want to work with *now*
-
 # logplots:
 plt.semilogx()/semilogy()/loglog()
 # or later:
 plt.yscale("log")
 
-  == object-oriented ==
-# and the object-oriented style:
-
-fig, axes = plt.subplots(nrows = 1, ncols = 1)
+= object-oriented =
+fig, axes = plt.subplots( nrows = 2,
+                          ncols = 2)
 # ^ this is tuple-unpacking
-axes[0][1].plot(month_number, interest_paid, c= 'k');
+axes[0][1].plot( month_number,
+                 interest_paid,
+                 c= 'k');
 #    ^  ^ defines grid-point plot to invoke
 axes.plot(month_number, principal_paid, c = 'b');
 axes.[set_title | set_xlabel | set_ylabel ]('textstr')
@@ -55,26 +60,57 @@ axs[1].plot(x, 0.3 * y, 'o')
 axs[2].plot(x, y, '+')
 
 
+= Decorate: legend, axis label, range/domain, markersize color etc =
 plt.plot( x, y,
           "bo-",
           linewidth=4,
           markersize=15,
           label="label1"... )
 
-plt.plot(x,y1,"k3-")
-
-= Decorate =
-
 plt.legend("upper left")
 plt.axis([xmin, xmax, ymin, ymax])
 plt.[x/y]label("$X$")
-plt.savefig("myplot.pdf")
-
-# file format based on extension
 # N.B. plt also knows latex
 
-plt.subplot(nrows, ncols, plotnum )
+plt.savefig("myplot.pdf")
+# file format based on extension
+
 = histograms =
+plt.hist( degree_sequence,
+          histtype="step",
+          bins=bins)
+
+= 3d plots, perspective, heatmaps =
+
+= beeswarm + boxplot =
+
+import seaborn as sns
+sns.set_style("whitegrid")
+tips = sns.load_dataset("tips")
+sns.swarmplot(x="day", y="total_bill", data=tips)
+sns.boxplot(x="day", y="total_bill", data=tips,
+        showcaps=False,boxprops={'facecolor':'None'},
+        showfliers=False,whiskerprops={'linewidth':0})
+
+# also
+ax.boxplot
+
+= heatmap =
+xx1, xx2 = np.meshgrid( np.arange(min,max,step), np.arange(min,max,step) )
+... Z = [prob prediction reshaped to that same matrix shape...]
+fig, ax = plt.fig()
+CS   = ax.contourf(xx1, xx2, Z)
+cbar = plt.colorbar(CS)
+
+= 3d plot  =
+
+from mpl_toolkits.mplot3d import Axes3D
+fig = plt.figure()
+ax  = fig.add_subplot(111,projection="3d")
+ax.scatter(X[:,0], X[:,1], y, c=y)
+ax.set_xlabel("$x_1$")
+ax.set_ylabel("$x_2$")
+ax.set_zlabel("$y$")
 
 = Folium: maps =
 Folium seems like a neat package for plotting actual map data with lattitude, and longitude coordinates, etc.G
