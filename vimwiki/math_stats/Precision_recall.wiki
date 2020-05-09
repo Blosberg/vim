@@ -1,9 +1,11 @@
 
 
-Precision:   [ True positive ] /( [True Positive] + [False positive] )
+= Precision: =
+[ True positive ] /( [True Positive] + [False positive] )
   --> Of what you declared to be True, how precise were you in getting the right ones
      --> How good were you in getting *ONLY* what you wanted
   
-Recall:    [ True positive ] /( [True Positive] + [False Negative] )
+= Recall: =
+[ True positive ] /( [True Positive] + [False Negative] )
   --> What fraction of the Actual positives did you recover (recall) in your declared True Positives
      --> How good were you at getting *ALL* of what you wanted.

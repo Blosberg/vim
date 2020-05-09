@@ -1,5 +1,5 @@
 
-Dropout is a training process that randomly ignords nodes to mitigate overfitting.
+Dropout is a training process that randomly ignores nodes to mitigate overfitting.
 It is a similar process to [[L2_regularization]]
 Dropout is a technique to combat overfitting:
 
