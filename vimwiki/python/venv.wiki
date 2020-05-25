@@ -2,7 +2,7 @@
         
 python3 -m venv [name of venv]
 # good style to create the folder named "venv" within the folder for your project
-source pyML_sandbox_venv/bin/activate
+source venv/bin/activate
 
 = output package list =
 The packages currently being used in your environment:

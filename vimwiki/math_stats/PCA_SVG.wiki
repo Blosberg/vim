@@ -1,16 +1,22 @@
 math_stats wiki on PCA:
 
-{{file:images/PCA.jpg|PCA_notes}}
+Reduce higher dimensional data down to two vectors comprising largest variance. hand-drawn notes here: {{file:images/PCA.jpg|PCA_notes}}
 
 
 {{file:images/PCA-Tutorial-Intuition_jp.pdf|PCA_tutorial}}
+{{file:images/SVD_tutorial.pdf|SVG_tutorial}}
+
+Standford_lectures_CS168:
+{{file:images/Stanford_lecs_CS168/l7.pdf|Lec_7}}
+{{file:images/Stanford_lecs_CS168/l8.pdf|Lec_8}}
+{{file:images/Stanford_lecs_CS168/l9.pdf|Lec_9}}
 
 import numpy as np
 from sklearn.decomposition import PCA
 >>> a=np.array([[ -1,  -1  ],
                 [  0,  -1  ],
                 [  1,   2  ]])
->>> Ua, Sa, Va = np.linalg.svd( a, 
+>>> Ua, Sa, Va = np.linalg.svd( a,
                                 full_matrices=False)
 # These are defined in such a way that we can
 # recover the original input matrix with mat mult.
@@ -19,12 +25,12 @@ from sklearn.decomposition import PCA
 array([[-1., -1.],
        [ 0., -1.],
        [ 1.,  2.]])
-              
+
 Sa are the eigenvalues; Va are the unit-norm eigenvectors, and Ua is the scaling for the individual data along the eigenvector directions (provide proper name for it later)
 
 >>> pca = PCA()
 >>> PCa = pca.fit_transform(a)
-                            
+
 The vectors of this are then equal to +/-  U matmul diag(Sa):
 
 >>> Ua @ np.diag(Sa)
