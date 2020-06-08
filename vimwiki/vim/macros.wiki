@@ -1,2 +1,9 @@
-this is how macros work..
+# To create a macro
+q+[register]
+
+then @[register] to execute.
+To do it over a range
+
+:3,$norm @[register]
+ ^ from lines 3 through to end of buffer, execute this macro (top down) starting from the start of the line in normal mode.
 
