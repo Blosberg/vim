@@ -1,5 +1,9 @@
 # get current release info:
-$cat /etc/lsb_release 
+$cat /etc/lsb_release
+
+* apropos        -- looking for a command, but don't know the name of it
+* file <myfile>  -- get basic info on a file
+* stat <myfile>  -- ownership, modification, etc.
 
 # get kernel info (without "a" option, just get OSX/linux)
 uname -a
@@ -8,7 +12,7 @@ uname -a
 $free -h
 
 # hardware info
-$cat /proc/cpuinfo 
+$cat /proc/cpuinfo
 # (^for CPU), or:
 dmidecode -t [2-baseboard, 4-CPU, ...]
 
@@ -22,9 +26,51 @@ $ lshw
 # network info
 ip a
 
-    * apropos        -- looking for a command, but don't know the name of it
+= Desktop managers: gdm3, lightdm, etc. =
 
-    * file <myfile>  -- get basic info on a file
-    * stat <myfile>  -- ownership, modification, etc.
+gdm3, kdm, and lightdm are all display managers. They provide graphical logins and handle user authentication.
 
+ == GNOME Display Manager (gdm3) ==
+
+gdm3 is the successor of gdm which was the GNOME display manager. The newer gdm3 uses a minimal version of gnome-shell, and provides the same look and feel of as GNOME3 session. Is the Canonical choice since Ubuntu 17.10. You can install it with:
+
+sudo apt-get install gdm3
+
+and remove it with:
+
+sudo apt-get remove gdm3
+
+ == KDE Display Manager (kdm) ==
+
+kdm was KDE's display manager. But it's been deprecated in KDE5 in favor of SDDM, which is more capable as a display manager, and hence comes by default with Kubuntu. You can install it with:
+
+sudo apt-get install sddm
+
+and remove it with:
+
+sudo apt-get remove sddm
+
+ == LightDM ==
+
+LightDM was Canonical's solution for a display manager. It was supposed to be lightweight and comes by default with Ubuntu, Xubuntu, and Lubuntu. It's configurable, with various greeter themes available.
+
+You can install it with:
+
+sudo apt-get install lightdm
+
+And remove it with:
+
+sudo apt-get remove lightdm
+
+Repairing is broad term. However, if you have multiple display managers installed, you can choose between them using:
+
+sudo dpkg-reconfigure gdm3
+
+You can use any display manager's name in place of gdm3 in the above command, and it will allow you to choose between them. You must reboot for the change to take affect.
+
+ == check current ==
+
+To check which display manager is currently being used, run this command:
+
+cat /etc/X11/default-display-manager
 

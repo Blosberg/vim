@@ -9,3 +9,6 @@ and set your default in edit -> preferences.
 
 basically amounts to the shell command:
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
+
+The profiles you like are:
+03 05 15 23  32  35 42 48 50 54 56 58 62 61 69  88 106 137 147 151 153 155 168

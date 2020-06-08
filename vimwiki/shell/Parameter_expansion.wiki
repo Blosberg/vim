@@ -1,6 +1,6 @@
-[[From]]: https://wiki.bash-hackers.org/syntax/pe
+From: https://wiki.bash-hackers.org/syntax/pe
 
-A few examples: 
+A few examples:
 
 $ A="aardvaark"
 $ B="bonobo"
