@@ -26,3 +26,16 @@ multiple lists:
 >>> [ "Here is charnum "+str(i)+" and "+ str(x) +" in a string " for i in range(5,9) for x in range(2,6) if i%2==0 and x%2==1 ]
 ['Here is charnum 6 and 3 in a string ', 'Here is charnum 6 and 5 in a string ', 'Here is charnum 8 and 3 in a string ', 'Here is charnum 8 and 5 in a string ']
 
+>>> testlist
+[['apple', 'banana', 'cherry'], ['date', 'eggplant'], ['fig']]
+>>> [ x for x in testlist] # x is a list of words
+[['apple', 'banana', 'cherry'], ['date', 'eggplant'], ['fig']]
+>>> [ y for x in testlist for y in x] # y is a word each time
+['apple', 'banana', 'cherry', 'date', 'eggplant', 'fig']
+>>> [ y for x in testlist for y in x for IRRELEVANT_VARIABLE in range(3)] # just triples each entry
+['apple', 'apple', 'apple', 'banana', 'banana', 'banana', 'cherry', 'cherry', 'cherry', 'date', 'date', 'date', 'eggplant', 'eggplant', 'eggplant', 'fig', 'fig', 'fig']
+>>> [ z for x in testlist for y in x for z in y] # z is the letters in each word
+['a', 'p', 'p', 'l', 'e', 'b', 'a', 'n', 'a', 'n', 'a', 'c', 'h', 'e', 'r', 'r', 'y', 'd', 'a', 't', 'e', 'e', 'g', 'g', 'p', 'l', 'a', 'n', 't', 'f', 'i', 'g']
+
+
+

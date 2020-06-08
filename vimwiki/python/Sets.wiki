@@ -1,4 +1,7 @@
-Sets are like iterables, but have unique elements
+# Sets are like iterables, but have unique elements
+# set comprehensions have parallel syntax to list comprehensions
+{ a for a in ...}
+
 
 a = set(["Jake", "John", "Eric"])
 b = set(["John", "Jill"])

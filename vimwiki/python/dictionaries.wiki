@@ -1,3 +1,4 @@
+# N.B. dict's have unique entries, casting them as such is equivalent to defining a "set"
 
 Age = {"John" : 16,"Jack" : 24,"Jill" : 30}
 for name, age in Age.items():
