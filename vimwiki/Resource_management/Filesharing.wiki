@@ -1,0 +1,9 @@
+on linux:
+
+right click a folder in nautilus and look for Local Network Share
+The first time you'll have to install Samba
+
+The share definitions are stored in: 
+/var/lib/samba/usershares
+
+When you share/unshare folders, files here get automatically created/deleted.

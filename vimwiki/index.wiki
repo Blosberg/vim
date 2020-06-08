@@ -135,6 +135,7 @@ Use at your own risk.
     * [[Resource_management/valgrind|valgrind]] -- profile your c++ code
     * [[Resource_management/dmesg|dmesg]] -- Get info about a task submitted on a local machine (without SGE queueing), find out why it died, etc.
     * [[Resource_management/du|du]]    -- disk usage
+    * [[Resource_management/Filesharing|Filesharing]]
     = Cluster =
         - [[Resource_management/SGE_submission|SGE_submission]]  -- example script
         - [[Resource_management/check_cluster_status|check_cluster_status]]
