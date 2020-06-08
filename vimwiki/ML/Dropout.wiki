@@ -4,6 +4,3 @@ It is a similar process to [[L2_regularization]]
 Dropout is a technique to combat overfitting:
 
 At each training stage, individual nodes are either "dropped out" of the net with probability 1 − p {\displaystyle 1-p} 1-p or kept with probability p {\displaystyle p} p, leaving a reduced network:
-
-
-

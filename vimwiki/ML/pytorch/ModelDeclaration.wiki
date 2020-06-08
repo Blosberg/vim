@@ -1,0 +1,28 @@
+# from torch import nn
+# Class inheritance: make your model a subclass of nn.Module
+class FMNIST(nn.Module):
+  # equivalently torch.nn.Module..
+  def __init__(self):
+    # build initialization structures:
+    super().__init__()
+    # FMNIST uses greyscale images of 28*28 (=784) pixels (input)
+    self.fc1 = nn.Linear(784, 128)
+    # We define two hidden layers (arbitrary size)
+    self.fc2 = nn.Linear(128,64)
+    # output has 10 classes to predict from:
+    self.fc3 = nn.Linear(64,10)
+    
+  def forward(self, x):
+    # Define rules for forward propagation from input x
+    x = x.view(x.shape[0], -1)
+    
+    # n.b. x gets reassigned at every layer of the network.
+    x = F.relu(self.fc1(x))
+    x = F.relu(self.fc2(x))
+    x = self.fc3(x)
+    # prob is then exp of the output of the final layer.
+    x = F.log_softmax(x, dim=1)
+    
+    return x
+
+model = FMNIST()

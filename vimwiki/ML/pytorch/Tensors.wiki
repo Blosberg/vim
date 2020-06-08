@@ -1,0 +1,14 @@
+import torch
+w = torch.zeros(4,3)
+
+
+= Inspect =
+w.size()
+w.shape #alias to size() but not a func.
+
+= Manipulate =
+w = torch.randn(4,3) # args are dims of output. standard normal assumed.
+w.fill_(1) # in torch, funcs with "_" at the end of the name modify the tensor in place.
+
+# View elements in a differently shaped tensor.
+t=w.view(3,4) # order of elements read like a book

@@ -112,6 +112,12 @@ Use at your own risk.
     * [[ML/Flattening|Flattening]]
     * [[ML/Dropout|Dropout]]
    == tensorflow ==
+     [To be filled in...]
+   == pytorch ==
+    https://pytorch.org/docs/stable/nn.html#torch.nn
+     * [[ML/pytorch/Tensors|Tensors]]
+     * [[ML/pytorch/ModelDeclaration|Model_declaration]]
+     * [[ML/pytorch/Loss|Loss]]
 
 = Math and stats =
     * [[math_stats/Precision_recall|precision_recall]]

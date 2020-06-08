@@ -1,0 +1,20 @@
+
+= torch.nn.Softmax = 
+https://pytorch.org/docs/stable/nn.html#torch.nn.Softmax
+
+Applies the Softmax function to an n-dimensional input Tensor rescaling them so that the elements of the n-dimensional output Tensor lie in the range [0,1] and sum to 1.
+
+defined by exp[xi]/sum(exp[xi])
+
+Doesn't work with NLL, which expects log to be taken already.
+
+= Negative log likelihood loss (NLL)  =
+https://pytorch.org/docs/stable/nn.html#torch.nn.LogSoftmax
+
+LogSoftmax is Mathematically equivalent to log of the above, but slower, and numerically unstable.
+If you want NLL loss, use this. 
+
+= nn.CrossEntropyLoss =
+Does log softmax for you.
+
+
