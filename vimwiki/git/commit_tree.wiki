@@ -1,28 +1,6 @@
 git show [commit] --> changes
 git ls-tree [tree-ish ob] [pattern matching]
 
-= Interactive Staging =
-
-# stage interactively, and can lead to patch more where you select only certain lines:
-git add [--interactive | -i]
-
-s - split a hunk by lines
-e - edit a hunk with +/- lines for staging
-
-# p-option also applied to other procedures...
-git add [ -p | --patch ]
-git stash -p
-git reset [[-p]]
-git checkout -p
-git commit -p
-
-= Commits =
-git commit -am "Commit message"
-# the a option stages and commits all changes to tracked files.
-
-git show [shaID]
-# shows all changes made in a commit
-
 = Branchs =
 git checkout -b [new_branch_name] [starting_point]
 

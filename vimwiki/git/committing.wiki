@@ -1,0 +1,36 @@
+git commit -am "Commit message"
+# the a option stages and commits all changes to tracked files.
+
+git show [shaID]
+# shows all changes made in a commit
+
+= Interactive Staging =
+# See also interactive rebasing in [[commit_tree#interactive|commit_tree]]
+
+# stage interactively, and can lead to patch more where you select only certain lines:
+git add [--interactive | -i]
+
+(u)pdate -- adds files
+(r)evert -- undoes this
+
+(p)atch mode -- brings up selected changed files
+        Select the one you want by number, then hit enter AGAIN 
+        
+        Now you can stage the edits in this file by HUNK
+
+        Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]?
+       
+        ? -- gives you a help list defining these commands, e.g.:
+        s - split a hunk by lines
+        e - edit a hunk with +/- lines for staging
+        ... etc.
+
+# p-option also applied to other procedures...
+git add [ -p | --patch ]
+git stash -p
+git reset [[-p]]
+git checkout -p
+git commit -p
+
+= Commits =
+
