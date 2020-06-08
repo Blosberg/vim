@@ -1,4 +1,5 @@
 Brendans vimwiki:
+
 == Disclaimer ==
 
 This is a personal repo where I occasionally make notes to avoid searching
@@ -102,7 +103,6 @@ Use at your own risk.
     * [[python/Random_Forest|Random_Forest]]
     * [[ML/SGD_classifier|SGD_classifier]]--
     * [[ML/Linear_SVM|Linear_SVM]] -- define a plane separating two types
-
 
    == (Neural) Networks ==
     * [[python/Networks|Networks]]
