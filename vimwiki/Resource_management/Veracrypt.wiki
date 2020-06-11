@@ -1,0 +1,6 @@
+#Relabel the veracrypt link names:
+
+$ sudo exfatlabel /dev/mapper/veracrypt1 VC1
+
+See: https://sourceforge.net/p/veracrypt/discussion/general/thread/e24a7247/
+

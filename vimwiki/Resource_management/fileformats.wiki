@@ -1,0 +1,24 @@
+
+
+File System | Win XP |	Win 7/8/10  | macOS (<=10.6.4) | macOS (>=10.6.5) | Ubuntu Linux | Playstation 4   | Xbox 360/One
+-----------------------------------------------------------------------------------------------------------------------
+NTFS  	    |Y       |Y             |	Read Only      | r-only           | Y            | Y                | No/Yes
+FAT32 	    |Y       |Y             | Y                | Y                | Y            | Y                | Yes/Yes
+exFAT 	    |Y       |Y             | Y                | Y                | Yes (w/ SW)  | Y (MBR, not GUID)| No/Yes
+HFS+ 	    |Y       |(r-only w/ BC)| Y                | Y                | Y            | N                | Y 
+APFS 	    |Y       |Y             | Y                | Yes (OSx>=10.13) | Y            | Y                | No
+EXT 2,3,4   |Y       |Y (3-party SW)| N                | Need "Fuse"      | Y            | Y                | Yes
+
+
+
+-----------------------------------------------------------------------------------------
+| File System 	|	Individual File Size Limit 	|	Single Volume Size Limit |
+|----------------+---------------------------------------+-------------------------------|
+| NTFS     	|	> current drives        	|	16 EB                    |
+| FAT32    	|	< 4 GB                   	|	< 8 TB                   |
+| exFAT    	|	> current drives        	|	64 ZB                    |
+| HFS+    	|	> current drives        	|	8 EB                     |
+| APFS     	|	> current drives        	|	16 EB                    |
+| EXT 2, 3 	|   16 GB (up to 2 TB on some systems) 	|	32 TB                    |
+| EXT 4   	|	16 TiB                  	|	1 EiB                    | 
+-----------------------------------------------------------------------------------------|
