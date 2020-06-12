@@ -1,7 +1,7 @@
 Wildcards in regex tend to follow the capitalization-negation convention:
 
 \w == Any set of alphanumeric characters [124gavry6nASDB]
-\w == Any NON-alphanumeric characters [ @#$	;']
+\W == Any NON-alphanumeric characters [ @#$	;']
 
 \d == any digit
 \D == NOT a digit
