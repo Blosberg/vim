@@ -137,6 +137,8 @@ Use at your own risk.
 
 = Resource_management =
     * [[Resource_management/Mounting|Mounting]] -- Hardware: how to mount/unmount a drive in Unix
+        * [[Resource_management/Veracrypt|Veracrypt]]
+    * [[Resource_management/fileformats|File_formats]] -- Tradeoffs between file formatting standards (OS-compatibility, Size limits, etc.)
     * [[Resource_management/guix|guix]] -- how to manage environments+manifests, etc.
     * [[Resource_management/valgrind|valgrind]] -- profile your c++ code
     * [[Resource_management/dmesg|dmesg]] -- Get info about a task submitted on a local machine (without SGE queueing), find out why it died, etc.
