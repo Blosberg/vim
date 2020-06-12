@@ -1,12 +1,14 @@
 MUCH SIMPLER SOLUTION: use the package "rename"
 $ sudo apt-get install rename
 
-$ rename "s/[old]/[new]/g" *__*
+$ rename "s/[old]/[new]/g" [**__**]
           ^ sed script
                         ^ global (all occurances)
                            ^ list of files over which to perform operation
-                          
-                          
+# or:
+find -name "* *" -type d | rename 's/ /_/g'    # do the directories first
+find -name "* *" -type f | rename 's/ /_/g'
+
 Way easier than writing it out.
 but if you want to do it the painfully manual way ....
 
