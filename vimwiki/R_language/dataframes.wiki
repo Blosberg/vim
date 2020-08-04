@@ -1,0 +1,65 @@
+= dplyr =
+# after > install.packages("dplyr")
+library(dplyr)
+# needed for the following functions to manipulate objects of type data.frame
+
+grades <- data.frame( names = c( "Alice","Bob", "Eve", "Mallory", "Mike"), 
+                      test1 = c( 4, 5,  1,   7,    8), 
+                      test2 = c( 5, -1, 4, 100, 3.14)
+                     )
+> grades
+    names test1  test2
+1   Alice     4   5.00
+2     Bob     5  -1.00
+3     Eve     1   4.00
+4 Mallory     7 100.00
+5    Mike     8   3.14
+
+= Add cols (or change existing ones) with mutate: =
+# Can also eliminate them by setting them =NULL
+
+> mutate(grades, test3=test1+test2)
+    names test1  test2  test3
+1   Alice     4   5.00   9.00
+2     Bob     5  -1.00   4.00
+3     Eve     1   4.00   5.00
+4 Mallory     7 100.00 107.00
+5    Mike     8   3.14  11.14
+
+
+= Subset rows with filter =
+
+> filter(grades, test2 >= 4)
+    names test1 test2
+1   Alice     4     5
+2     Eve     1     4
+3 Mallory     7   100
+
+= Subset cols with select =
+# N.B. Cannot apply arithmetic here.
+
+cum_grades = select(grades, test3)
+> cum_grades
+   test3
+1   9.00
+2   4.00
+3   5.00
+4 107.00
+5  11.14
+
+= String them together with the pipe operator: %>% =
+# no longer need the first argument when pipe makes it clear what 
+# is being operated on.
+
+> grades %>% mutate(cum_grades = test1+test2) %>% select(1,5) %>% filter(cum_grades > 6)
+    names cum_grades
+1   Alice       9.00
+2 Mallory     107.00
+3    Mike      11.14
+
+= plotting =
+
+> row.names(grades) <- grades$names
+> grades$names <-NULL
+
+boxplot(grades)

@@ -1,0 +1,8 @@
+n.b. X = ifelse( bool, 
+                 "trueval", 
+                 "falseval"
+               )
+These next two operate on vectors of bools as you would expect
+any
+
+all
