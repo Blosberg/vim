@@ -28,10 +28,16 @@ endfunction
 
 function! FoldPythonMain() "{{{1
   let thisline = getline(v:lnum)
-  if match(thisline, '^# --- \w\+') >= 0
+  if match(thisline, '^# *--- \w+') >= 0
     return ">1"
   elseif match( thisline, '^# ===') >=0
     return ">1"
+  elseif match( thisline, '^#===') >=0
+    return ">0"
+  elseif match( thisline, '^def .*') >=0
+    return ">1"
+  elseif match( thisline, '^\s+def .*') >=0
+    return ">2"
   else
     return "="
   endif
@@ -41,9 +47,11 @@ function! FoldSnakemake() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '^rule .*:') >= 0
     return ">1"
-  elseif match(thisline, '^# --- \w\+') >= 0
+  elseif match(thisline, '^# *--- \w\+') >= 0
     return ">1"
-  elseif match(thisline, '# ===') >= 0
+  elseif match(thisline, '# *===') >= 0
+    return ">0"
+  elseif match( thisline, '^#===') >=0
     return ">0"
   else
     return "="
