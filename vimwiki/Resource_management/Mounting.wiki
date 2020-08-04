@@ -1,5 +1,8 @@
 
-# First, find out the location of your drive (in this e.g. lets say it's sda2)
+# First, find out the location of your drive
+$ lsblk
+
+# (in this e.g. lets say it's sda2)
 # 
 # mount a drive to a given folder (provided that folder already exists):
 sudo mount -t auto -o rw /dev/sda2 /media/old_HD_internal
@@ -9,4 +12,18 @@ sudo mount -o remount,rw  /dev/sda2 /media/old_HD_internal
 
 # unmount:
 sudo umount /dev/sda2
+
+For HFS file systems, you need to disable journaling from a mac to allow ubuntu to write to it (otherwise it's read-only for ubuntu):
+$ sudo diskutil disableJournal
+
+= FAT32 =
+
+to get your uid and gid values:
+`$` id -u ${USER}
+1000
+`$` id -g ${USER}
+1000
+# using these values:
+`$` sudo   mount -t vfat /dev/sdb1 /media/boon/SSD2_FAT32/ -o rw,uid=1000,gid=1000
+
 
