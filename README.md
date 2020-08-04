@@ -1,1 +1,1 @@
-my vim settings (for Bren to copy)
+My vim settings and wiki. 
