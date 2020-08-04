@@ -1,9 +1,5 @@
-# get current release info:
+= System info = 
 $cat /etc/lsb_release
-
-* apropos        -- looking for a command, but don't know the name of it
-* file <myfile>  -- get basic info on a file
-* stat <myfile>  -- ownership, modification, etc.
 
 # get kernel info (without "a" option, just get OSX/linux)
 uname -a
@@ -25,6 +21,14 @@ $ lshw
 
 # network info
 ip a
+
+= set default text editor =
+sudo update-alternatives --config edit
+
+= file info =
+* apropos        -- looking for a command, but don't know the name of it
+* file <myfile>  -- get basic info on a file
+* stat <myfile>  -- ownership, modification, etc.
 
 = Desktop managers: gdm3, lightdm, etc. =
 
