@@ -45,13 +45,20 @@ Use at your own risk.
          * [[c++/switch|switch]] -- switch statement
 
     = R =
-         * [[R_language/eval|eval]]    -- evaluate strings as expressions
-         * [[R_language/prcomp|prcomp]]  -- the usual principle-components script
+         * [[R_language/logicals|logicals]] ifelse, any, all
+         * [[R_language/eval|eval]]       -- evaluate strings as expressions
+         * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
+         * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist
+         * [[R_language/prcomp|prcomp]]   -- the usual principle-components script
 
-    = [[python/python|python]] =
+    = python]] =
     Ternary op:
       Y = trueValue if cond else falseValue
       Z = (falseValue,trueValue)[cond]
+
+         == tutorials ==
+         - https://docs.python.org/
+         - www.learnpython.org
 
          == System interface: venv, pip, FILE I/O ==
          id(var)  returns the location of a data
@@ -168,3 +175,4 @@ Use at your own risk.
 = Bioinformatics =
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]
+    * [[BioInfo/Experiment_types|Experiment_types]]
