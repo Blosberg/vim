@@ -3,6 +3,10 @@ Wildcards in regex tend to follow the capitalization-negation convention:
 \w == Any set of alphanumeric characters [124gavry6nASDB]
 \W == Any NON-alphanumeric characters [ @#$	;']
 
+# (combined) ranges:
+[A-Z] == all capital letters
+[A-Za-z] == all letters
+
 \d == any digit
 \D == NOT a digit
 
@@ -10,6 +14,8 @@ Wildcards in regex tend to follow the capitalization-negation convention:
 \S == NOT whitespace
 
 .  == Any character _at all_ 
+
+
 
 For multiple characters in series, see [[Regex_Quantifiers]]
 e.g.  X* is for character X repeated arbitrarily many times (including zero) --thus .* is the wildcard for any string.
