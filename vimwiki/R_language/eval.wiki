@@ -1,6 +1,6 @@
 = Create commands as strings, and then execute them literally. =
 
-a="print( 'hello world' )""
+# Execute a string as a command
+a="print( 'hello world' )"
 
-> eval(parse( text=a ))
-hello world
+eval(parse( text=a ))
