@@ -137,6 +137,7 @@ Use at your own risk.
     * [[OSX/shortcut_keys|shortcut_keys]]
 
 = Regex =
+        -- regular expressions --
     * [[Regex/Tutorials|Tutorials]]
     * [[Regex/Wildcards|Wildcards]]
     * [[Regex/Regex_Quantifiers|Regex_Quantifiers]] --

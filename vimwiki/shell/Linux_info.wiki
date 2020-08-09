@@ -1,5 +1,10 @@
-= System info = 
+= System info =
 $cat /etc/lsb_release
+
+* apropos        -- looking for a command, but don't know the name of it
+* file <myfile>  -- get basic info on a file
+* stat <myfile>  -- ownership, modification, etc.
+
 
 # get kernel info (without "a" option, just get OSX/linux)
 uname -a
