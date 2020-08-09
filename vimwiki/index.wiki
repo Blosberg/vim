@@ -13,6 +13,7 @@ Use at your own risk.
 
 = shell + packaging =
 
+    * [[shell/shell_scripting|shell_scripting]]
     * [[shell/Linux_info|Linux_info]]     -- lsb_release, free, distro info,
     * [[shell/command_line|active command_line]] -- move back and forth, delete text while typing, clear current output
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal

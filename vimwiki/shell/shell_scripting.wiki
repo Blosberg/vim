@@ -1,0 +1,20 @@
+
+# check num of comand line args
+if [ $# -ne 1 ]; then
+        echo "Please provide an input file"
+        exit
+fi
+
+fin=$1
+
+# check for existence
+# MIND THE SPACES!
+if [ -e ${fin} ]
+then
+            echo "unzipping file" ${fin}
+    else
+            echo "no such file"   ${fin}  " Exiting."
+            exit
+fi
+
+
