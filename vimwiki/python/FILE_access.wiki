@@ -39,6 +39,13 @@ optional binary
 
 The default mode is 'r' (open for reading text, synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
 = csv read =
+
+# quick and all at once:
+import pandas
+# reading the CSV file
+csvFile = pandas.read_csv('Giants.csv')
+
+# if you want to do it line-by-line:
 import csv
 # "with" ensures that clean-up is always employed, and handles exceptions better (see "[[Exceptions]]")
 # csv_file is automatically closed
