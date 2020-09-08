@@ -3,6 +3,7 @@
 
 For example, the greedy h.+l matches 'hell' in 'hello' but the lazy h.+?l matches 'hel'. More examples:
 
+
 Quant	Legend				Example	Sample Match
 +	The + (one or more) is "greedy"	\d+	12345
 ?	Makes quantifiers "lazy"	\d+?	1 in 12345
@@ -11,3 +12,7 @@ Quant	Legend				Example	Sample Match
 {2,4}	Two to four times, "greedy"	\w{2,4}	abcd
 ?	Makes quantifiers "lazy"	\w{2,4}?	ab in abcd
 
+
+Example: (not sure why this works):
+s/^.*{PATHIN}//        <--- Greedy
+:s/^.\{-}{PATHIN}//    <--- Lazy
