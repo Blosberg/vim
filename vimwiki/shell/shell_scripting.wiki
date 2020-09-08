@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-see also [[shell_variables]] --manipulate strings, check length, etc.
+# see also [[shell_variables]] --manipulate strings, check length, etc.
 
 
 = IF/ELSE =
