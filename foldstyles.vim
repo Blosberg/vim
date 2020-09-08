@@ -28,14 +28,14 @@ endfunction
 
 function! FoldPythonMain() "{{{1
   let thisline = getline(v:lnum)
-  if match(thisline, '^# *--- \w+') >= 0
+  if match(thisline, '^# *--- *\w\+') >= 0
     return ">1"
-  elseif match( thisline, '^# ===') >=0
-    return ">1"
-  elseif match( thisline, '^#===') >=0
+  elseif match(thisline, '^#\s*===') >= 0
     return ">0"
   elseif match( thisline, '^def .*') >=0
     return ">1"
+  elseif match( thisline, '^#===') >=0
+    return ">0"
   elseif match( thisline, '^\s+def .*') >=0
     return ">2"
   else
@@ -49,9 +49,15 @@ function! FoldSnakemake() "{{{1
     return ">1"
   elseif match(thisline, '^# *--- \w\+') >= 0
     return ">1"
+<<<<<<< Updated upstream
   elseif match(thisline, '# *===') >= 0
     return ">0"
   elseif match( thisline, '^#===') >=0
+=======
+  elseif match(thisline, '^#$') >= 0
+    return ">0"
+  elseif match(thisline, '^#===') >= 0
+>>>>>>> Stashed changes
     return ">0"
   else
     return "="
@@ -86,6 +92,23 @@ function! FoldJson() "{{{1
     return foldlevel(thisline-1) + 1
   elseif match(thisline, '^\s*}\s*,\s*$') >= 0
     return foldlevel(thisline-1) - 1
+  else
+    return "="
+  endif
+endfunction
+
+function! FoldShell() "{{{1
+  let thisline = getline(v:lnum)
+  if match(thisline, '^## .*') >= 0
+    return ">1"
+  elseif match(thisline, '^### .*') >= 0
+    return ">2"
+  elseif match(thisline, '^#### .*') >= 0
+    return ">3"
+  elseif match(thisline, '^#===*') >= 0
+    return ">0"
+  elseif match( thisline, '^\s+def .*') >=0
+    return ">2"
   else
     return "="
   endif

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 = System info =
 $cat /etc/lsb_release
 
