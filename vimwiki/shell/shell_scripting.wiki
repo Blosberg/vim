@@ -1,4 +1,30 @@
+#!/bin/bash
 
+
+see also [[shell_variables]] --manipulate strings, check length, etc.
+
+
+= IF/ELSE =
+read -p "Enter your marks: " marks
+
+if [ $marks -ge 80 ]
+then
+    echo "Very Good"
+
+elif [ $marks -ge 50 ]
+then
+    echo "Good"
+
+elif [ $marks -ge 33 ]
+then
+    echo "Just Satisfactory"
+
+else
+    echo "Not OK"
+
+fi
+
+= ARRAYS =
 # check num of comand line args
 if [ $# -ne 1 ]; then
         echo "Please provide an input file"
@@ -7,7 +33,7 @@ fi
 
 fin=$1
 
-# check for existence
+= check for existence of files =
 # MIND THE SPACES!
 if [ -e ${fin} ]
 then

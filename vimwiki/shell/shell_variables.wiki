@@ -1,0 +1,15 @@
+# Take subsets of a string
+$var="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+$echo $var
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+$echo ${var:4}
+EFGHIJKLMNOPQRSTUVWXYZ
+$echo ${var:4:7}
+EFGHIJK
+$echo ${var:4:3}
+EFG
+
+# Get length of string
+$echo ${#var}
+26
+

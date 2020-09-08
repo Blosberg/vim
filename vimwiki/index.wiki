@@ -13,6 +13,7 @@ Use at your own risk.
 
 = shell + packaging =
 
+    * [[shell/shell_variables|shell_variables]] -- string subsets, length,
     * [[shell/shell_scripting|shell_scripting]]
     * [[shell/Linux_info|Linux_info]]     -- lsb_release, free, distro info,
     * [[shell/command_line|active command_line]] -- move back and forth, delete text while typing, clear current output
@@ -52,7 +53,7 @@ Use at your own risk.
          * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script
 
-    = python]] =
+    = python =
     Ternary op:
       Y = trueValue if cond else falseValue
       Z = (falseValue,trueValue)[cond]
