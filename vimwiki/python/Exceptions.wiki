@@ -14,7 +14,14 @@ except DefinedError1:
     do_alt_1
 except DefinedError2:
     do_alt_2
-    
+
+e.g.:
+
+try:
+   os.symlink(src,target)
+except FileExistsError:
+   pass
+
  = Define your own exceptions:  =
 class Custom_error(BaseException):
     pass
