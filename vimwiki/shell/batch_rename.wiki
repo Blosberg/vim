@@ -15,6 +15,9 @@ but if you want to do it the painfully manual way ....
 
 for f in [regex_match] ; do echo mv "$f" "{$f/[old]/[new]};"; done
 
+# if you need to use sed substitutions...
+for f in SRR1045636_block_*; do g=$(echo ${f} | sed 's/\(SRR1045636_block_..\)..\(.\)/\1\2.fastq/');   mv ${f} ${g} ; done
+
 This makes use of the search-and-replace feature of Bash's [[Parameteri_expansion]].
 see: https://wiki.bash-hackers.org/syntax/pe
 
