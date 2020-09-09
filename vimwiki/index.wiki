@@ -136,6 +136,7 @@ Use at your own risk.
 
 = OSX =
     * [[OSX/shortcut_keys|shortcut_keys]]
+    * [[OSX/booting|booting]]
 
 = Regex =
         -- regular expressions --
