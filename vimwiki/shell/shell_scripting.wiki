@@ -24,7 +24,7 @@ else
 
 fi
 
-= ARRAYS =
+= ARRAYS; command line args =
 # check num of comand line args
 if [ $# -ne 1 ]; then
         echo "Please provide an input file"
