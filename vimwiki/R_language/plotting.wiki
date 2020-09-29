@@ -1,0 +1,47 @@
+=basic plot =
+plot( x, y,
+      log="xy",
+      col=rgb(0,0,1,alpha), pch=20,
+      xlim=c(1,maxcov), ylim=c(1,maxcov),
+      xlab="x-axis",  
+      ylab="y-axis",
+#       col.lab="green",
+#       cex.lab=0.75
+# 
+      main="title"
+#     , col.main ="red",
+#       sub = "subtitle, col.sub="blue",
+# 
+# )
+
+
+==Too much data to plot at once: smoothScatter== 
+smoothScatter( bigdatX, bigdatY, 
+               xlim=c(1,maxlogcov), ylim=c(1,maxlogcov),
+               xlab="xax", ylab="yax",
+               main="title")
+               
+
+= Add stuff after plotting. = 
+# Add a red title and a blue subtitle. Make x and y
+# labels 25% smaller than the default and green.
+title(main="My Title", col.main="red",
+  sub="My Sub-title", col.sub="blue",
+  xlab="My X label", ylab="My Y label",
+  col.lab="green", cex.lab=0.75) 
+
+= add lines =
+# line type (lty) can be specified using either text (“blank”, “solid”,
+# “dashed”, “dotted”, “dotdash”, “longdash”, “twodash”) or number (0, 1, 2, 3,
+# 4, 5, 6). Note that lty = “solid” is identical to lty=1. 
+          
+         lines( c(0,1), 
+               c(0,1), 
+               lty = 2,              # 2 = dashed  
+               lwd = 3,              # linewidth
+               col=rgb(0,0,0,0.5))   # r,g,b,alpha=opacity
+               
+              
+  
+  
+               

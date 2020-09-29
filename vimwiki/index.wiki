@@ -52,6 +52,7 @@ Use at your own risk.
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
          * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script
+         * [[R_language/plotting|plotting]] -- smoothScatter, repular plot, options
 
     = python =
     Ternary op:
