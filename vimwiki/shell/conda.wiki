@@ -12,6 +12,12 @@ conda deactivate
 % conda activate /path/to/conda-env
 (conda-env) %
 
+# leave with
+conda deactivate
+
+# remove (delete) an environment with:
+conda env remove -n ENV_NAME
+
 = install packages:=
 
 From inside an active environment.
