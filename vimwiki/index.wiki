@@ -12,6 +12,8 @@ Use at your own risk.
 = Notes:  =
 
 = shell + packaging =
+    
+    * [[shell/conda|conda]] -- Conda: manage environments, recipes.
 
     * [[shell/shell_variables|shell_variables]] -- string subsets, length,
     * [[shell/shell_scripting|shell_scripting]] -- parse command line args for shell scripts;

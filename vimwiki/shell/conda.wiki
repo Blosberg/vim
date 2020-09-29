@@ -1,0 +1,41 @@
+ =  create an environment =
+ # e.g. with conda for Python development, run:
+
+$ conda create --name conda-env python
+
+conda activate conda-env
+conda deactivate
+
+# place environments outside of your Conda’s env/ folder By using the --prefix flag instead of --name when creating an environment.
+
+% conda create --prefix /path/to/conda-env
+% conda activate /path/to/conda-env
+(conda-env) %
+
+= install packages:=
+
+From inside an active environment.
+
+(conda-env) % conda install pandas=0.24.1                   #
+
+From your default shell.
+
+% conda install -n conda-env pandas=0.24.1      # Or -p /path/to/env
+
+
+= Environment files=
+#Create an environment file in two ways.
+
+#From inside an active environment.
+(conda-env) % conda env export --file environment.yml
+
+# From your default shell.
+% conda env export -n conda-env -f /path/to/environment.yml
+
+# Create an environment from file:
+% conda env create -n conda-env -f /path/to/environment.yml
+
+#You can also add the packages listed in an environment.yml file to an existing environment with:
+
+% conda env update -n conda-env -f /path/to/environment.yml
+
