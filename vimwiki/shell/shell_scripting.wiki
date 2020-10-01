@@ -31,7 +31,15 @@ if [ $# -ne 1 ]; then
         exit
 fi
 
+# assign from CL args. e.g.:
 fin=$1
+
+# cycle thorugh all CL args
+for var in "$@"
+do
+    echo "$var"
+done
+
 
 = check for existence of files =
 # MIND THE SPACES!
