@@ -32,4 +32,4 @@ git remote prune origin
 
 == diff patches  ==
 
-see [[diff|diff]]
+see [[preset_changes|preset_changes]]
