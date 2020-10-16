@@ -42,8 +42,15 @@ awk '{print $'$i'}' file
 
 = sed =
 
-check for individual subject pseudonyms in a paired-end database
+# check for individual subject pseudonyms in a paired-end database
 ls *.fq.gz  | sed "s/_.\.fq\.gz//g" | uniq  | wc -l
+
+# extract substring
+echo $test
+merged_fastq/mpimg_L17771-1_AM-DNA-083_mrg_R1_001.fastq.gz
+echo  $test | sed "s/.*\(AM-DNA-...\).*/\1/"
+AM-DNA-083
+
 
 = grep =
 
