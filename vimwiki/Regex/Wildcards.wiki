@@ -13,9 +13,29 @@ Wildcards in regex tend to follow the capitalization-negation convention:
 \s == whitespace
 \S == NOT whitespace
 
-.  == Any character _at all_ 
++-------+---------------------------------------+
+|       |                                       |
+| .     | one of any character                  |
+| ?     | zero or one   of whatever precedes it |
+| *     | zero or more  of whatever precedes it |
+| +     | one  or more  of whatever precedes it |
+| {n}   | exactly n times                       |
+| {n,m} | n to m times                          |
+| {n,}  | n or more times                       |
+| {,m}  | m or fewer times                      |
+|       |                                       |
+|       |                                       |
++---+-------------------------------------------+
 
+Examples:
 
+Quantifier	Legend	Example	Sample Match
++	One or more	Version \w-\w+	Version A-b1_1
+{3}	Exactly three times	\D{3}	ABC
+{2,4}	Two to four times	\d{2,4}	156
+{3,}	Three or more times	\w{3,}	regex_tutorial
+*	Zero or more times	A*B*C*	AAACC
+?	Once or none	plurals?	plural
 
 For multiple characters in series, see [[Regex_Quantifiers]]
 e.g.  X* is for character X repeated arbitrarily many times (including zero) --thus .* is the wildcard for any string.

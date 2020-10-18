@@ -12,7 +12,7 @@ Use at your own risk.
 = Notes:  =
 
 = shell + packaging =
-    
+
     * [[shell/conda|conda]] -- Conda: manage environments, recipes.
 
     * [[shell/shell_variables|shell_variables]] -- string subsets, length,
@@ -145,7 +145,7 @@ Use at your own risk.
 = Regex =
         -- regular expressions --
     * [[Regex/Tutorials|Tutorials]]
-    * [[Regex/Wildcards|Wildcards]]
+    * [[Regex/Wildcards|Wildcards_and_quantifiers]] --wildcards, quantifiers, + * . ?
     * [[Regex/Regex_Quantifiers|Regex_Quantifiers]] --
     * [[Regex/Greedy_vs_lazy|Greedy_vs_lazy]]
     * [[Regex/Lookarounds|Lookarounds]]
