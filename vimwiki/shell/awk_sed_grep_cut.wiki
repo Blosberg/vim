@@ -51,6 +51,12 @@ merged_fastq/mpimg_L17771-1_AM-DNA-083_mrg_R1_001.fastq.gz
 echo  $test | sed "s/.*\(AM-DNA-...\).*/\1/"
 AM-DNA-083
 
+# operate on just a range of the file (but still print the whole thing)
+
+# e.g. swap spaces with underscores from line 2 onwards (but keep spaces in line 1)
+sed  '2,$s/ /_/g' jam_1 
+#     ^range
+
 
 = grep =
 
