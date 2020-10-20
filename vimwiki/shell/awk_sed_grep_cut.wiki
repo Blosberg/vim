@@ -52,6 +52,11 @@ echo  $test | sed "s/.*\(AM-DNA-...\).*/\1/"
 AM-DNA-083
 
 
+# capture in buffer and pass it on with \1, \2 (note the \ to escape {}
+sed 's/\(AM-WGBS-[0-9]\{3\}\).*:All/\1/' readstats.tsv > temp  && mv temp readstats.tsv
+
+
+
 = grep =
 
 = cut =
