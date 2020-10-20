@@ -7,7 +7,7 @@ Wildcards in regex tend to follow the capitalization-negation convention:
 [A-Z] == all capital letters
 [A-Za-z] == all letters
 
-\d == any digit
+\d == any digit  [[:digit:]]
 \D == NOT a digit
 
 \s == whitespace
