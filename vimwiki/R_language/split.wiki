@@ -1,0 +1,27 @@
+Split
+# create a list of objects from an array
+
+> A
+[1] 1  2  3  4  5  6  7  8
+
+> B
+[1] 0  0  1  2  1  1  0 -1
+
+> C=split(A, B)
+#         ^ split up the first array
+#            ^ according to the factors of the second.
+
+
+> C
+$`-1`
+[1] 8
+
+$`0`
+[1] 1 2 7
+
+$`1`
+[1] 3 5 6
+
+$`2`
+[1] 4
+
