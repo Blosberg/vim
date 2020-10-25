@@ -49,6 +49,9 @@ Use at your own risk.
          * [[c++/switch|switch]] -- switch statement
 
     = R =
+
+         * [[R_language/Env_files|Env_files]] save and load image files of RData for the working space.
+
          * [[R_language/logicals|logicals]] ifelse, any, all
          * [[R_language/eval|eval]]       -- evaluate strings as expressions
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.

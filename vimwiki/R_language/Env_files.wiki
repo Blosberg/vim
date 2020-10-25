@@ -1,0 +1,5 @@
+# Save an image file to a specific file:
+> save.image(file='myEnvironment.RData')
+
+# And load it again later:
+> load('myEnvironment.RData')
