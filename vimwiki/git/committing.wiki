@@ -4,6 +4,17 @@ git commit -am "Commit message"
 git show [shaID]
 # shows all changes made in a commit
 
+= unstaging =
+
+The easiest way to unstage files on Git is to use the “git reset” command and specify the file you want to unstage.
+
+git reset <commit> -- <path>
+
+By default, the commit parameter is optional : if you don’t specify it, it will be referring to HEAD.
+
+This command will reset the index entries (the ones you added to your staging area) to their state at the specified commit (or HEAD if you didn’t specify any commits).
+
+
 = Interactive Staging =
 # See also interactive rebasing in [[commit_tree#interactive|commit_tree]]
 
