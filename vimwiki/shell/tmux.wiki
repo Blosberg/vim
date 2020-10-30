@@ -8,7 +8,8 @@ Hold Shift to circumvent tmux's mouse handling --then highlight, and ctrl+shift+
 tmux new -s myname
 (from within): new<CR>  new session
 s  list sessions
-$  name session
+$  (re)name session
+,  (re)name pane
 
 = Windows (tabs) =
 c  create window
