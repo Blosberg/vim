@@ -76,6 +76,7 @@ Use at your own risk.
          - [[python/venv|venv]] --Virtual environment management
          - [[python/pip|pip]] pip package management
          - [[python/FILE_access|FILE_I/O]] -- reading/writing, csv files, with ... as, os.walk, isdir, isfile, os.list etc.
+         - [[python/jupyter|jupyter_notebooks]] -- starting/stopping sessions
 
          == Packages: numpy, pandas, matplotlib, pdb ==
          - [[python/import_exec|import_exec]]: sourcing, importing, etc.

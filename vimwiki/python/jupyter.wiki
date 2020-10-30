@@ -1,0 +1,11 @@
+# check for running sessions:
+$ jupyter notebook list
+
+# kill a running server:
+$ jupyter notebook stop 8889
+
+
+# start a new one in background:
+$ jupyter notebook &
+
+
