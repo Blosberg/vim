@@ -3,6 +3,55 @@
 
 # see also [[shell_variables]] --manipulate strings, check length, etc.
 
+= for loops =
+
+for VAR in file1 file2 file3
+do
+	command1 on $VARIABLE
+	command2
+	commandN
+done
+
+== seq examples ==
+for i in {1..5}
+do
+   echo "Welcome $i times"
+done
+
+# skip every other val.
+for i in {START..END..STEP}
+  do 
+     echo "Welcome $i times"
+ done
+
+== zero padding numbers ==
+
+printf "%03d\n" 5
+005
+
+
+== c-like ==
+
+for (( c=1; c<=5; c++ ))
+do  
+   echo "Welcome $c times"
+done
+
+
+== al together == 
+FILES="$@"
+for f in $FILES
+do
+  # if .bak backup file exists, read next file
+  if [ -f ${f}.bak ]
+  then
+    echo "Skiping $f file..."
+    continue  # read next file and skip the cp command
+    fi
+      # we are here means no backup file exists, just use cp command to copy file
+	/bin/cp $f $f.bak
+done
+
 
 = IF/ELSE =
 read -p "Enter your marks: " marks
