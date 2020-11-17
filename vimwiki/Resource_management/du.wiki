@@ -1,3 +1,5 @@
 get the amount of disk space taken up by the contents of the current directory.
 
-$ du -h
+$ du -h  --max-depth=1
+#     ^ human readable
+#        ^ go down 1 dir
