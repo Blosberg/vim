@@ -186,6 +186,8 @@ Use at your own risk.
 
     * [[git/Tutorials|Tutorials]]
 = Bioinformatics =
+
+    * [[BioInfo/bedtools|bedtools]] -- map and manipulate bedfiles onto each other
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]
     * [[BioInfo/Experiment_types|Experiment_types]]
