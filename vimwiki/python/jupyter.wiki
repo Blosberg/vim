@@ -8,4 +8,12 @@ $ jupyter notebook stop 8889
 # start a new one in background:
 $ jupyter notebook &
 
+# Start of notebooks with the following snippet:
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+%matplotlib notebook
+
+import numpy as  np
+import pandas as pd
 
