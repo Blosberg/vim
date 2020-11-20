@@ -49,15 +49,9 @@ function! FoldSnakemake() "{{{1
     return ">1"
   elseif match(thisline, '^# *--- \w\+') >= 0
     return ">1"
-<<<<<<< Updated upstream
-  elseif match(thisline, '# *===') >= 0
-    return ">0"
-  elseif match( thisline, '^#===') >=0
-=======
   elseif match(thisline, '^#$') >= 0
     return ">0"
   elseif match(thisline, '^#===') >= 0
->>>>>>> Stashed changes
     return ">0"
   else
     return "="
