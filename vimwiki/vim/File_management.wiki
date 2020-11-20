@@ -1,4 +1,18 @@
 
+= Commands related to file names =
+
+:echo @% 	def/my.txt 	directory/name of file (relative to the current working directory of /abc)
+:echo expand('%:t') 	my.txt 	name of file ('tail')
+:echo expand('%:p') 	/abc/def/my.txt 	full path
+:echo expand('%:p:h') 	/abc/def 	directory containing file ('head')
+:echo expand('%:p:h:t') 	def 	First get the full path with :p (/abc/def/my.txt), then get the head of that with :h (/abc/def), then get the tail of that with :t (def)
+:echo expand('%:r') 	def/my 	name of file less one extension ('root')
+:echo expand('%:e') 	txt 	name of file's extension ('extension') 
+
+
+ = open files  = 
+
+
 Open/close:
 
 e.g. File: ~/.vimrc
@@ -14,7 +28,7 @@ gf       To open the file in a new buffer
 While in insert mode, when typing the name of a file, type <C-X><C-F> to open a list of ins-completions: 
 <C-Y> selects the highlighted option
 
-~/Desktop/Science/postdoc_MDC/administration_logistics/
+~/Desktop/Science/2020_postdoc_MPIMG/projects/data_workflows/README.md
 
 
 

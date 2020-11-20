@@ -30,9 +30,10 @@ Use at your own risk.
  command palette: cmd+Shift+P
 = vim =
     * [[vim/vimdiff|vimdiff]]
-    * [[vim/File_management|File_management]]
+    * [[vim/File_management|File_management]] -- open files from tabs, gf <C-W>f, get file extensions, paths, etc.
     * [[vim/macros|macros]]
     * [[vim/g_command|g_command]]
+    * [[vim/syntax|syntax]]
     * [[vim/tabs|tabs]]    -- open and navigate tabs in vim
     * [[vim/Mappings|Mappings]]
     * -- Text manipulation --

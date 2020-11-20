@@ -1,0 +1,6 @@
+Usually vim detects the filetype you're working with based on the extension.
+To add a new filetype it hasn't seen before, try
+:help new-filetype
+# and create a file with something like
+au BufRead,BufNewFile *.mine            set filetype=mine
+# in the corresponding file type
