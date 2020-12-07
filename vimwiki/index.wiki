@@ -58,7 +58,7 @@ Use at your own risk.
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
          * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist
          * [[R_language/apply|apply]] -- sweep-like operations on extended datasets lapply, sapply, mapply, etc.
-         * [[R_language/prcomp|prcomp]]   -- the usual principle-components script
+         * [[R_language/prcomp|prcomp]]   -- the usual principle-components script (pca)
          * [[R_language/plotting|plotting]] -- smoothScatter, repular plot, options
          * [[R_language/split|split]] -- split arrays into lists of arrays
 
@@ -104,6 +104,8 @@ Use at your own risk.
 
          - [[python/Exceptions|Exceptions]]
 
+    = Snakemake =
+         * [[python/Snakemake_inputLists|SM_inputLists]] -- trace over inputs with wildcards that reference some dict.
     = CSS =
     * - [[css/External|]]
     * - internal
@@ -186,6 +188,7 @@ Use at your own risk.
     * [[git/tags|tags]]
 
     * [[git/Tutorials|Tutorials]]
+    * [[git/fugitive|fugitive]]
 = Bioinformatics =
 
     * [[BioInfo/bedtools|bedtools]] -- map and manipulate bedfiles onto each other
