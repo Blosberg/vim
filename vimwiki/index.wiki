@@ -61,6 +61,7 @@ Use at your own risk.
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script (pca)
          * [[R_language/plotting|plotting]] -- smoothScatter, repular plot, options
          * [[R_language/split|split]] -- split arrays into lists of arrays
+	 * [[R_language/GRanges|GRanges]] -- setdiff, GRL_ overlaps, etc.
 
     = python =
     Ternary op:

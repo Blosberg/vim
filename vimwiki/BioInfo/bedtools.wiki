@@ -3,15 +3,30 @@ Bedtools Read The docs:
 [[https://bedtools.readthedocs.io/en/latest/content/bedtools-suite.html|BedTools:ReadTheDocs]]
 
 
-# $cat ta.bed 
+# $cat  a.bed
 chr1    100     200     2
 chr1    150     250     3
 chr1    160     260     4
 
-# cat tb.bed
+# $cat  b.bed
 chr1    101     102     0.1
 chr1    150     151     0.2
 chr1    165     166     0.3
+
+= intersect =
+
+-wa	Write the original entry in A for each overlap.
+-wb     ""  "" for B
+^ same entry can be repeated if it overlaps more than once.
+
+-u	Write the original A entry _once_ if _any_ overlaps found in B.
+		- In other words, just report the fact >=1 hit was found.
+		- Overlaps restricted by -f and -r.
+
+$ bedtools intersect -u  -a a.bed -b b.bed
+chr1	100	200	2
+chr1	150	250	3
+chr1	160	260	4
 
 = Map =
 # -a =file to be mapped onto

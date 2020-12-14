@@ -1,0 +1,11 @@
+= setdiff =
+addenda = setdiff( gr_add, prev_rgs )
+#
+# prev_rgs             |==========|          |========|  |====|
+# gr_add                   |==========================================|
+#
+# addenda                         |==========|        |==|    |=======|
+
+
+getOverlaps(a,b)     --> indices
+getOverlapPairs(a,b) --> GRobjects themselves.
