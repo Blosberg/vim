@@ -1,0 +1,61 @@
+
+# Here is a snakemake template script that does this.
+
+# This is config.json:
+{
+	"Xletters": ["X","Y","Z"],
+	"Aletters": ["A","B","C"]
+}
+# -----------------------------------------------
+# And here is the template Snakemake file:
+
+import os
+import json
+
+# fin_json = open('config.json')
+# config   = json.load( fin_json )
+# Set this at runtime with:  --configfile FILE 
+
+### DELETE THIS; DEBUGGING:
+OUTPUT_FILES=[ "All_the_files_from_Aletters.txt", "All_the_files_from_Xletters.txt"]
+print( "here is config" )
+print( config["Aletters"])
+print( "here is OUTPUT_FILES:" )
+print( OUTPUT_FILES )
+### DELETE DOWN TO HERE.
+
+rule all:
+   input:
+      OUTPUT_FILES
+
+# ----------------------------
+rule in2out:
+   input:
+      inFile  = "{sample}_in.txt"
+   output:
+      outFile = "{sample}_out.txt"
+   log:
+      logFile = "{sample}.log"
+   message:
+      "Converting {input} to {output}"
+   shell:
+      "cat {input.inFile} > {output.outFile} 2> {log.logFile}"
+     #        nice( tool(bw2bg), [ "{input}", "{output}"], " 2> {log}")
+
+# ----------------------------
+rule CatMany:
+   #------ convert bw to bg
+   # (perform twice for each sample: bwType==> coverage , methFrac)
+   input:
+      inFile     = lambda wc: expand("{chara}_out.txt", chara=config[wc.letterType] )
+   output:
+      aggregated = "All_the_files_from_{letterType}.txt"
+   log:
+      logFile = "All_the_files_from_{letterType}.log"
+   message:
+      "Converting {input} to {output}"
+   shell:
+      "cat {input} > {output} 2> {log}"
+     #        nice( tool(bw2bg), [ "{input}", "{output}"], " 2> {log}")
+
+
