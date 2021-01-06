@@ -1,0 +1,16 @@
+
+ The motion ]m jumps forward to the next method or function. Jumping back can be carried out with [m.
+ [/]M to go to end of method.
+ 
+ 
+= Operate until pattern=
+
+    dtX – deletes everything up until the first X. The X can be any character at all.
+    ctX – changes everything up until the first X. That is, deletes and leaves you in insert mode.
+    ytX – yanks (copies) everything up until the first X.
+
+With a pattern rather than a single character. Simply use /some_pattern and then <Enter> after either d, c, or y:
+
+    d/foo<Enter> – delete up until foo is found
+    c/bar<Enter> – change everything up until bar
+    y/pattern<Enter> – yank everything up until pattern
