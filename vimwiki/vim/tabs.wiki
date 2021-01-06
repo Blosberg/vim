@@ -1,14 +1,20 @@
 " Tabs
 
-:tabedit file2 
+:tabedit file2
 
 will open a new tab and take you to edit file2
-To navigate between these tabs, you can be in normal mode and type 
+To navigate between these tabs, you can be in normal mode and type
 
-:gt 
+# forward
+:gt
 
-or 
+or
 
+# backwards:
 :gT
-(to go backwards)
 
+# Rearrange tabs:
+
+You can use :tabmove followed by the tab number to move past. For example,
+:tabmove 3 will make the current tab move past the 3rd. :tabmove 0 moves to the
+beginning and :tabmove (without a number) moves to the end.

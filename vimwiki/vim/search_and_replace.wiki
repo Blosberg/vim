@@ -1,29 +1,40 @@
+= simple search/replace example: =
 given this file:
 
 fooVal1Bar;
-
-fooVal^2Bar;
-
+fooVal2Bar;
 fooVal3Bar;
 
 
-running this command in vim 
-:%s/foo\(\w\+\)Bar/& = \1 + \1\Old/  
+running this command in vim
+:%s/foo\(\w\+\)Bar/& = \1 + \1\Old/
 
 produces this:
-
 fooVal1Bar = Val1 + Val1Old;
-
 fooVal2Bar = Val2 + Val2Old;
-
 fooVal3Bar = Val3 + Val3Old;
 
 
  ^ % == range of operation (whole file = equivalent to 1,$
   ^s/x/y/  == search for x, replace it with y:
-  
-the \w there is a regex wildcard (see  [[Wildcards]] wiki link)   
-   
+
+the \w there is a regex wildcard (see  [[Wildcards]] wiki link)
+
+= Preserve Case =
+use capital S to preserve capitalization
+
+:%S/company/organization/g
+
+with this, references to company will be replaced with organization, and Company with Organization. It will even handle camel case and other capitalization syntaxes.
 
 
+= pattern matching insertion with & =
+
+An ampersand, & , in your replacement pattern will insert the matched pattern into the replacement text.
+e.g
+%s/https\?.*/[&](&)/g
+
+https://some_website -->
+
+[https://some_website ](https://some_website )
 

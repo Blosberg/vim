@@ -103,6 +103,14 @@ df["First"] or df.First
 `df[["First","Second"]]`
 df.index    # to get list a-f
 
+   = clean out NaNs =
+
+   # boolean col denoting whether the number of nans discovered in each row is 0
+   Row_has_no_col_null = Prom_bc_paired.loc[:,["promoter","barcode"]].isnull().astype(int).sum(axis=1) == 0
+   # filtered df
+    Prom_bc_nunulls = Prom_bc_paired.loc[ Row_has_no_col_null, :]
+
+
    = Groupby =
 
 # Group by values with the same ColName
