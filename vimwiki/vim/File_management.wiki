@@ -31,4 +31,11 @@ While in insert mode, when typing the name of a file, type <C-X><C-F> to open a 
 ~/Desktop/Science/2020_postdoc_MPIMG/projects/data_workflows/README.md
 
 
+= Read in from a file =
+in normal mode
+:r infile
+will paste the contents of infile to the current buffer after the line in which the cursor currently is.
+:.-1read header.txt
+will do so at the line above
+
 
