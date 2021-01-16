@@ -17,6 +17,11 @@ Short way: prefix, then dollar sign:
 
 Ctrl + B, $
 
+= Change directory  =
+# Detach from a session and then reattach to it with the "c" option specifying new starting directory:
+
+tmux attach-session -t tmuxwtfbbq -c /home/chuck/new_default_directory
+
 = Windows (tabs) =
 c  create window
 w  list windows
