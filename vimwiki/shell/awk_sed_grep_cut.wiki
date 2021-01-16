@@ -4,26 +4,26 @@
 #---to print columns 1,2,3 from filename
  awk '{ print $1, $2, $3 }' filename.txt
 
-== Check number of columns ==
+   == Check number of columns ==
 
 awk -F"\t" '{print NF;exit}'  DZ11.AT.methyCalling.bed
              #         ^ n.b. the exit makes you just look at the first line
 
- == sum over a column ==
+   == sum over a column ==
 awk '{s+=$3}END{print s}' file
 
-== average over a column ==
+   == average over a column ==
 awk '{s+=$3}END{print s/NR}' file
 
-== merge columns of separate files: ==
+   == merge columns of separate files: ==
 pr -m -t -s\  test1 test2
 
-== average across columns (take the average of a row) ==
+   == average across columns (take the average of a row) ==
 awk '{sum=0; for(i=1; i<=NF; i++){sum+=$i}; sum/=NF; print sum}' FILE
 
 #--- you can then select whichever columns you want, eg:
 
-== Worked examples: ==
+   == Worked examples: ==
 
 > cat file1
 one two three
@@ -43,7 +43,7 @@ four five six one
 four five six one
 four five six one
 
-== PRINT 'i'TH COLUMN---------: ==
+   == PRINT 'i'TH COLUMN---------: ==
 
 awk '{print $'$i'}' file
 
@@ -52,20 +52,20 @@ awk '{print $'$i'}' file
 # check for individual subject pseudonyms in a paired-end database
 ls *.fq.gz  | sed "s/_.\.fq\.gz//g" | uniq  | wc -l
 
-# extract substring
+   == extract substring ==
 echo $test
 merged_fastq/mpimg_L17771-1_AM-DNA-083_mrg_R1_001.fastq.gz
 echo  $test | sed "s/.*\(AM-DNA-...\).*/\1/"
 AM-DNA-083
 
-# operate on just a range of the file (but still print the whole thing)
+   == operate on just a range of the file (but still print the whole thing) ==
 
 # e.g. swap spaces with underscores from line 2 onwards (but keep spaces in line 1)
 sed  '2,$s/ /_/g' jam_1
 #     ^range
 
 
-# capture in buffer and pass it on with \1, \2 (note the \ to escape {}
+   == capture in buffer and pass it on with \1, \2 (note the \ to escape {} ==
 sed 's/\(AM-WGBS-[0-9]\{3\}\).*:All/\1/' readstats.tsv > temp  && mv temp readstats.tsv
 
 
