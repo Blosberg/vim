@@ -1,4 +1,4 @@
-MUCH SIMPLER SOLUTION: use the package "rename"
+ = use the package "rename" =
 $ sudo apt-get install rename
 
 $ rename "s/[old]/[new]/g" [**__**]
@@ -12,6 +12,7 @@ find -name "* *" -type f | rename 's/ /_/g'
 Way easier than writing it out.
 but if you want to do it the painfully manual way ....
 
+= Manually =
 
 for f in [regex_match] ; do echo mv "$f" "{$f/[old]/[new]};"; done
 

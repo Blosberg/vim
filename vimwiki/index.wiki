@@ -33,7 +33,7 @@ Use at your own risk.
 Sun 27 Dec 2020 16:54:08 CET (date stamp inserted with :r !date )
     * [[vim/movements|movements]]
     * [[vim/vimdiff|vimdiff]]
-    * [[vim/File_management|File_management]] -- open files from tabs, gf <C-W>f, get file extensions, paths, etc. write selection to file
+    * [[vim/File_management | File_management]] -- open files from tabs, gf <C-W>f, get file extensions, paths, etc. write selection to file
     * [[vim/macros|macros]]
     * [[vim/g_command|g_command]]
     * [[vim/syntax|syntax]]
