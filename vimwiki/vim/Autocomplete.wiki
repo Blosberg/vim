@@ -1,0 +1,2 @@
+ctrl+f for filenames
+ctrl+n for keywords, variables, etc.

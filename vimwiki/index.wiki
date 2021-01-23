@@ -30,21 +30,27 @@ Use at your own risk.
  command palette: cmd+Shift+P
 = vim =
 
-Sun 27 Dec 2020 16:54:08 CET (date stamp inserted with :r !date )
+Sat 23 Jan 2021 12:18:59 CET (date stamp inserted with :r !date )
     * [[vim/movements|movements]]
     * [[vim/vimdiff|vimdiff]]
-    * [[vim/File_management | File_management]] -- open files from tabs, gf <C-W>f, get file extensions, paths, etc. write selection to file
-    * [[vim/macros|macros]]
-    * [[vim/g_command|g_command]]
-    * [[vim/syntax|syntax]]
     * [[vim/tabs|tabs]]    -- open and navigate tabs in vim
+    * [[vim/File_management |File_management]] -- open files from tabs, gf <C-W>f, get file extensions, paths, etc. write selection to file
+
+    == Batch operations ==
+    * [[vim/macros|macros]]
+    * [[vim/g_command|g_command]] -- global commands like g/pattern/command
     * [[vim/Mappings|Mappings]]
-    * -- Text manipulation --
     * [[vim/search_and_replace|search_and_replace]]
-    * [[vim/spellcheck|spellcheck]]
     * [[vim/Incrementing|Incrementing]] -- numbers +/-
+
+    == Patterns ==
+    * [[vim/syntax|syntax]]  -- file-type dependent syntax recognition
+    * [[vim/spellcheck|spellcheck]]
     * [[vim/Expression_Register|Expression_Register]]
-    *
+    * [[vim/Autocomplete|Autocomplete]]
+
+    == plugins ==
+    * [[vim/fugitive|fugitive]]
 
 = Programming =
     * https://www.codecademy.com/

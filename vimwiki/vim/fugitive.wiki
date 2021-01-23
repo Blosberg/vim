@@ -1,0 +1,21 @@
+
+http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
+
+= Most basic command: =
+
+:Git <Whatever you would write in the command line>
+e.g. 
+:Gite checkout %            --> Gread  (empties the buffer and loads from most recent commit.)
+:Git add %                  --> Gwrite
+:Git mv  % target path      --> Gmove target_path
+#        ^ current buffer
+
+:Git commit -m "message"
+
+:Gremove --> wipes out the buffer and stages removal of file.
+
+:Gstatus brings up a menu of what's been changed
+"-" adds things to staging
+ctrl n/p navigates
+<Enter> opens it
+
