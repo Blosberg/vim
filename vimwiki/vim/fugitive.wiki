@@ -19,3 +19,21 @@ e.g.
 ctrl n/p navigates
 <Enter> opens it
 
+= Gdiff =
+
+:h diffget
+Explanatory video:
+http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/
+
+highlight version to commit in visual mode and then
+:diffget 
+# in index, or 
+:diffput 
+# in the working version
+
+Gwrite
+and
+Gread
+
+stage and reset (respectively) the whole file
+
