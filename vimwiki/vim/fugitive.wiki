@@ -21,6 +21,7 @@ ctrl n/p navigates
 
 = Gdiff =
 
+Look at help menu here:
 :h diffget
 Explanatory video:
 http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/
@@ -31,6 +32,7 @@ highlight version to commit in visual mode and then
 :diffput 
 # in the working version
 
+The following
 Gwrite
 and
 Gread

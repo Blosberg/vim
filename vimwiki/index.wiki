@@ -30,7 +30,7 @@ Use at your own risk.
  command palette: cmd+Shift+P
 = vim =
 
-Sat 23 Jan 2021 12:18:59 CET (date stamp inserted with :r !date )
+Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[vim/movements|movements]]
     * [[vim/vimdiff|vimdiff]]
     * [[vim/tabs|tabs]]    -- open and navigate tabs in vim
