@@ -1,0 +1,25 @@
+doc here: 
+https://github.com/k-takata/minpac
+
+Commands
+
+Minpac doesn't provide any commands. Use the :call command to call minpac functions. E.g.:
+
+" To install or update plugins:
+call minpac#update()
+
+" To uninstall unused plugins:
+call minpac#clean()
+
+" To see plugins status:
+call minpac#status()
+
+== Start vs opt ==
+All plugins will be installed under the following directories:
+
+"start" plugins: <dir>/pack/<package_name>/start/<plugin_name>
+"opt" plugins:   <dir>/pack/<package_name>/opt/<plugin_name>
+
+"start" plugins will be automatically loaded after processing your .vimrc, or you can load them explicitly using :packloadall command. "opt" plugins can be loaded with :packadd command. See :help packages for detail.
+
+:packadd {name}

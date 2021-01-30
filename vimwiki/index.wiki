@@ -50,7 +50,10 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[vim/Autocomplete|Autocomplete]]
 
     == plugins ==
+    *[[vim/minpac|minpac]] -- plugin to manage plugins: packadd update
+
     * [[vim/fugitive|fugitive]]
+    * [[vim/gitgutter|gitgutter]]
 
 = Programming =
     * https://www.codecademy.com/

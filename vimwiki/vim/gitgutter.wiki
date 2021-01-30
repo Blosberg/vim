@@ -1,0 +1,10 @@
+full doc here:
+
+https://github.com/airblade/vim-gitgutter
+
+currently installed under "opt" --must be added
+
+:packadd vim-gitgutter
+:GitGutterEnable
+
+
