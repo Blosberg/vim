@@ -9,19 +9,28 @@
 awk -F"\t" '{print NF;exit}'  DZ11.AT.methyCalling.bed
              #         ^ n.b. the exit makes you just look at the first line
 
-   == sum over a column ==
+   == Conditionally print lines ==
+
+awk -v mincov="${MinCov}" -v maxcov="${MaxCov}" '($5+$6)>=mincov && ($5+$6)<=maxcov'  ${fbed_in} > out
+
+   == format output ==
+awk -v minD="${MinD}" -v maxP="${MaxPval}" \
+           '{ if ( $5<maxP &&  $6>minD ) printf "%s\t%d\t%d\t%.4g\t%.4g\n", $1, $2, $2+2, $5, $6} '       ${ufile_in} >  ${Sigdiff_pos_out}
+  
+
+   == sum/average a column ==
 awk '{s+=$3}END{print s}' file
 
-   == average over a column ==
 awk '{s+=$3}END{print s/NR}' file
+
+   == sum/average rows ==
+awk '{sum=0; for(i=1; i<=NF; i++){sum+=$i}; sum/=NF; print sum}' file
+
+# --- ( or then select whichever columns you want)
+
 
    == merge columns of separate files: ==
 pr -m -t -s\  test1 test2
-
-   == average across columns (take the average of a row) ==
-awk '{sum=0; for(i=1; i<=NF; i++){sum+=$i}; sum/=NF; print sum}' FILE
-
-#--- you can then select whichever columns you want, eg:
 
    == Worked examples: ==
 
