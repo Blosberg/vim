@@ -73,10 +73,18 @@ function! FoldRmarkdown() "{{{1
   endif
 endfunction
 
-function! FoldRfuncs() "{{{1
+function! FoldR() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '\w\+ *<- *function(') >= 0
     return ">1"
+  elseif match(thisline, '^# *--- *\w\+') >= 0
+    return ">1"
+  elseif match(thisline, '^### .*') >= 0
+    return ">2"
+  elseif match(thisline, '^#### .*') >= 0
+    return ">3"
+  elseif match(thisline, '^##### .*') >= 0
+    return ">4"
   else
     return "="
   endif
