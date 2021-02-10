@@ -1,5 +1,11 @@
 
-http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
+http://vimcasts.org/e/31
+http://vimcasts.org/e/32
+http://vimcasts.org/e/33
+http://vimcasts.org/e/34
+http://vimcasts.org/e/35
+
+
 
 = Most basic command: =
 

@@ -31,6 +31,25 @@ f  find window
 ,  name window
 &  kill window
 
+== Move windows  ==
+
+swap-window
+
+"Prefix :" (that is Ctrl+B, : by default) brings you to the tmux-command prompt. There you enter:
+
+swap-window -s 3 -t 1
+
+to let window number 3 and window number 1 swap their positions.
+
+To swap the current window with the top window, do:
+
+swap-window -t 0
+
+In the unlikely case of having no window at index 0, do:
+
+move-window -t 0
+
+
 = Panes (splits) =
 %  vertical split
 "  horizontal split
