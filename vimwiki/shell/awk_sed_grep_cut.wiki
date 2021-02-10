@@ -67,6 +67,14 @@ merged_fastq/mpimg_L17771-1_AM-DNA-083_mrg_R1_001.fastq.gz
 echo  $test | sed "s/.*\(AM-DNA-...\).*/\1/"
 AM-DNA-083
 
+   == print (sub)set of lines ==
+
+sed -n '4,6p' FILE_1234.txt
+
+# e.g.
+sed -n '3,18p;6q' FILE_1234.txt
+# WOULD print lines 3-18 (because "3,18p", but stops before line 6 because of "6q")
+
    == operate on just a range of the file (but still print the whole thing) ==
 
 # e.g. swap spaces with underscores from line 2 onwards (but keep spaces in line 1)
