@@ -159,6 +159,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[math_stats/Precision_recall|precision_recall]]
     * [[math_stats/PCA_SVG|PCA_SVG]]
     * [[math_stats/Anova|Anova]] --analysis of variance, two-way anova, F-test, F-ratio,Tukey test
+    * [[math_stats/FDR|FDR]]
 
 
 = OSX =

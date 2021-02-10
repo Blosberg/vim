@@ -1,0 +1,24 @@
+
+
+The Benjamini-Hochberg Procedure (FDR)
+
+
+Step 1: Conduct all of your statistical tests and find the p-value for each test.
+
+Step 2: Arrange the p-values in order from smallest to largest, assigning a rank to each one – the smallest p-value has a rank of 1, the next smallest has a rank of 2, etc.
+
+Step 3: Calculate the Benjamini-Hochberg critical value for each p-value, using the formula (i/m)*Q
+where:
+i = rank of p-value
+m = total number of tests
+Q = your chosen false discovery rate
+
+Step 4: Find the largest p-value that is less than the critical value. Designate every p-value that is smaller than this p-value to be significant.
+
+(e.g. suppose p-values are in the 5th col)
+( cat -n adds the line numbers, sed -n '2,p'
+
+sed -n '2,$p' $file_in \
+   | sort -n -k 5 \
+   | cat -n  \
+   | awk -v Qthresh=$Qthresh -v M=$M '{print $2, $3, $6, $7, $1*Qthresh/M, $6<$1*Qthresh/M }' > output
