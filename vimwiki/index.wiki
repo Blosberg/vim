@@ -50,7 +50,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[vim/Autocomplete|Autocomplete]]
 
     == plugins ==
-    *[[vim/minpac|minpac]] -- plugin to manage plugins: packadd update
+    * [[vim/minpac|minpac]] -- plugin to manage plugins: packadd update
 
     * [[vim/fugitive|fugitive]]
     * [[vim/gitgutter|gitgutter]]
@@ -99,7 +99,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          - [[python/numpy|numpy]]
          - [[python/random|random]]
          - [[python/pandas|pandas]]
-         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram,
+         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering)
 
          == structs and functions: Classes, functions  datetime ==
          - [[python/functions|functions]]
