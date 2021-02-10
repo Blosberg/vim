@@ -1,0 +1,20 @@
+ import pyranges as pr
+ gr2 = pr.from_dict({"Chromosome": ["chr1"] * 3, "Start": [1, 11, 21], "End": [10, 20, 30]})
+ gr2
+ gr1 = pr.from_dict({"Chromosome": ["chr1"] * 2, "Start": [17, 27], "End": [22, 40]})
+ gr1
+ gr2.subtract(gr1)
+ gr1 = pr.from_dict({"Chromosome": ["chr1"] * 2, "Start": [17, 29], "End": [22, 40]})
+ gr2.subtract(gr1)
+ gr2 = pr.from_dict({"Chromosome": ["chr1"] * 5, "Start": [1, 11, 21,1,201], "End": [10, 20, 30,50,250]})
+ gr2
+ gr1
+
+ gr2 = pr.from_dict({"Chromosome": ["chr1"] * 5, "Start": [1, 10, 20,1,201], "End": [10, 20, 30,50,250]})
+ gr2
+ gr2.subtract(gr1)
+ hist()
+ import readline
+ readline.get_current_history_length(50)
+ readline.get_current_history_length()
+
