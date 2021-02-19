@@ -1,10 +1,15 @@
   # if you do pca <- prcomp ( A )
+
+A should be a table where
+  * - Every ROW represents a distinct observation
+  * - Every COLUMN is a dimension characterizing the position of that point.
+
   # Then pca$rotation will be an orthonormal rotation matrix.
   # and  pca$x        will be the rotated data, with the same dimensionality as A
-   
+
   # You can then do the following:
-         
-  # A_copy <- pca$rotation %*% t(pca$x) 
+
+  # A_copy <- pca`$`rotation %*% t(pca$x)
   # ^ gives you back the original value "A"
 
   # to get the matrix that performs the forward operation (i.e. rotates from original space _into_ PCA space):
