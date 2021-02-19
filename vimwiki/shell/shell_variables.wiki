@@ -36,3 +36,8 @@ $ echo "$(dirname "${VAR}")" ; echo "$(basename "${VAR}")"
 /home/pax
 file.c
 
+= options =
+
+-f ...
+-z string True if the string is null (an empty string)
+

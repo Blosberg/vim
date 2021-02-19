@@ -18,6 +18,9 @@ Step 4: Find the largest p-value that is less than the critical value. Designate
 (e.g. suppose p-values are in the 5th col)
 ( cat -n adds the line numbers, sed -n '2,p'
 
+# instead of cat -n, this would probably be cleaner with awk '{ print NR, $1, $2}'
+# in awk, NR is the row number
+
 sed -n '2,$p' $file_in \
    | sort -n -k 5 \
    | cat -n  \
