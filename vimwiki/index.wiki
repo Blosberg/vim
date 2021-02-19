@@ -99,7 +99,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          - [[python/numpy|numpy]]
          - [[python/random|random]]
          - [[python/pandas|pandas]]
-         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering)
+         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering), heatmap
 
          == structs and functions: Classes, functions  datetime ==
          - [[python/functions|functions]]
@@ -211,3 +211,4 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]
     * [[BioInfo/Experiment_types|Experiment_types]]
+    * [[BioInfo/pyranges|pyranges]]

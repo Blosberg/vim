@@ -1,0 +1,7 @@
+
+Readers:
+https://pyranges.readthedocs.io/en/latest/autoapi/pyranges/readers/
+
+If you just want to create a PyRanges from a tab-delimited bed-like file, use pr.PyRanges(pandas.read_table(f)) 
+
+
