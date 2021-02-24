@@ -30,6 +30,10 @@ function! FoldPythonMain() "{{{1
   let thisline = getline(v:lnum)
   if match(thisline, '^# *--- *\w\+') >= 0
     return ">1"
+  elseif match(thisline, '^## *--- *\w\+') >= 0
+    return ">2"
+  elseif match(thisline, '^### *--- *\w\+') >= 0
+    return ">3"
   elseif match(thisline, '^#\s*===') >= 0
     return ">0"
   elseif match( thisline, '^def .*') >=0
