@@ -69,7 +69,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          * [[R_language/logicals|logicals]] ifelse, any, all
          * [[R_language/eval|eval]]       -- evaluate strings as expressions
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
-         * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist
+         * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist, table unique values (how many of each)
          * [[R_language/apply|apply]] -- sweep-like operations on extended datasets lapply, sapply, mapply, etc.
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script (pca/PCA)
          * [[R_language/plotting|plotting]] -- smoothScatter, repular plot, options

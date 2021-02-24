@@ -3,8 +3,8 @@
 library(dplyr)
 # needed for the following functions to manipulate objects of type data.frame
 
-grades <- data.frame( names = c( "Alice","Bob", "Eve", "Mallory", "Mike"), 
-                      test1 = c( 4, 5,  1,   7,    8), 
+grades <- data.frame( names = c( "Alice","Bob", "Eve", "Mallory", "Mike"),
+                      test1 = c( 4, 5,  1,   7,    8),
                       test2 = c( 5, -1, 4, 100, 3.14)
                      )
 > grades
@@ -35,6 +35,19 @@ grades <- data.frame( names = c( "Alice","Bob", "Eve", "Mallory", "Mike"),
 2     Eve     1     4
 3 Mallory     7   100
 
+= Counting entries and values =
+
+# get the unique values with unique:
+> unique( init_clust )
+[1] 1 2 3 4
+
+# Get the counts for each unique value with table:
+> table( init_clust )
+init_clust
+  1   2   3   4
+770 162 351 256
+
+
 = Subset cols with select =
 # N.B. Cannot apply arithmetic here.
 
@@ -48,7 +61,7 @@ cum_grades = select(grades, test3)
 5  11.14
 
 = String them together with the pipe operator: %>% =
-# no longer need the first argument when pipe makes it clear what 
+# no longer need the first argument when pipe makes it clear what
 # is being operated on.
 
 > grades %>% mutate(cum_grades = test1+test2) %>% select(1,5) %>% filter(cum_grades > 6)
