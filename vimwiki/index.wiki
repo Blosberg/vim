@@ -64,6 +64,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
 
     = R =
 
+         * .libPaths() # tells you where packages are saved to and accessed.
          * [[R_language/Env_files|Env_files]] save and load image files of RData for the working space.
 
          * [[R_language/logicals|logicals]] ifelse, any, all
