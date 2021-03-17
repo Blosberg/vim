@@ -89,6 +89,10 @@ sed 's/\(AM-WGBS-[0-9]\{3\}\).*:All/\1/' readstats.tsv > temp  && mv temp readst
 
 = grep =
 
+# take only lines with chr[1-9] (1 or 2 digits), M, X, Y
+
+grep -E '^(^chr[0-9]{1,2}\s|chrM\s|^chrX\s|^chrY\s)' chrTestSet.bed
+
 = cut =
 
 cut -f[n] -d"[x]"
