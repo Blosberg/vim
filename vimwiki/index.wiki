@@ -17,6 +17,7 @@ Use at your own risk.
 
     * [[shell/shell_variables|shell_variables]] -- string subsets, length, basename, dirname of filepaths
     * [[shell/shell_scripting|shell_scripting]] -- parse command line args for shell scripts;
+    * [[shell/random|andom]] -- RND number generator, shuffle files shuffle arrays
     * [[shell/Linux_info|Linux_info]]     -- lsb_release, free, distro info,
     * [[shell/command_line|active command_line]] -- move back and forth, delete text while typing, clear current output
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
@@ -65,6 +66,9 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     = R =
 
          * .libPaths() # tells you where packages are saved to and accessed.
+         * install specific versions with:
+               install.packages("devtools")
+               devtools::install_github("PhanstielLab/bedtoolsr@v2.29.0-3")
          * [[R_language/Env_files|Env_files]] save and load image files of RData for the working space.
 
          * [[R_language/logicals|logicals]] ifelse, any, all

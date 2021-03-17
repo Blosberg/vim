@@ -1,0 +1,20 @@
+
+# e.g. fill up 100 blocks with 5 random catagetories
+
+        Remainder=$(( ${NumBlocks_per_mix} - ${NumBlocks_CTscan} ))
+        F=(0 0 0 0 0)
+        order=$( seq 0 4 | shuf )
+        for i in ${order}
+        do
+           # Generate a random number of blocks for each cell, where the first has full range, etc.
+           if [[ ${Remainder} > 0 ]]
+           then
+               F[${i}]=$( echo $(( $RANDOM % (${Remainder} + 1)  )) )
+               Remainder=$(( ${Remainder} - ${F[${i}]} ))
+           else
+               F[${i}]=0
+           fi
+
+        done
+        F[$i]=$( echo $(( ${Remainder} + ${F[$i]} )) )
+        
