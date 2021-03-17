@@ -33,7 +33,7 @@ chr1	160	260	4
 # -b =data to take
 # -c =column from file b to work with
 # -o operation to be performed on that col
-bedtools map -a ta.bed -b tb.bed -c 4 -o mean
+bedtools map -a ta.bed -b tb.bed -c 4 -o mean -null NA
 chr1    100     200     2       0.2
 chr1    150     250     3       0.25
 chr1    160     260     4       0.3
@@ -52,4 +52,8 @@ chr1  150  250 |  chr1  150 151  0.2   > chr1 150 250 0.25
                |                      \
 chr1  160  260 |  chr1  165 166  0.3   > chr1 160 260 0.3
                |                      /
+---------------+---------------------<
+chrX 100   200 |                      > NA
 ---------------+---------------------/
+
+
