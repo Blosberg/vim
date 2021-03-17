@@ -1,3 +1,20 @@
+= read/write from bed =
+
+BiocManager::install("plyranges")
+library(plyranges)
+
+tmp =readr::read_tsv( AllsampU_CT ) %>% plyranges::as_granges()
+
+CT_profile = Average_mcols ( tmp )
+
+df_out = as.data.frame( CT_profile )
+df_out$width=NULL
+df_out$strand=NULL
+
+# rtracklayer::export.bed( CT_profile, con=CT_ProFile_out )
+readr::write_tsv( df_out, na="NA", path=CT_ProFile_out )
+
+
 = setdiff =
 addenda = setdiff( gr_add, prev_rgs )
 #
