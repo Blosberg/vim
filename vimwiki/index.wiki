@@ -79,7 +79,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script (pca/PCA)
          * [[R_language/plotting|plotting]] -- smoothScatter, repular plot, options
          * [[R_language/split|split]] -- split arrays into lists of arrays
-	 * [[R_language/GRanges|GRanges]] -- setdiff, GRL_ overlaps, etc.
+	 * [[R_language/GRanges|GRanges]] -- setdiff, GRL_ overlaps, etc., sort order
 	 * [[R_language/biostrings|biostrings]] --biostrings, read in and inspect reference genomes.
 
     = python =
@@ -212,7 +212,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[git/fugitive|fugitive]]
 = Bioinformatics =
 
-    * [[BioInfo/bedtools|bedtools]] -- map and manipulate bedfiles onto each other
+    * [[BioInfo/bedtools|bedtools]] -- map and manipulate bedfiles onto each other; make windows,
     * http://rosalind.info/problems/locations/
     * [[BioInfo/Datasets|Datasets]]
     * [[BioInfo/Experiment_types|Experiment_types]]

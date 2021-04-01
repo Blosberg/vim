@@ -14,6 +14,18 @@ df_out$strand=NULL
 # rtracklayer::export.bed( CT_profile, con=CT_ProFile_out )
 readr::write_tsv( df_out, na="NA", path=CT_ProFile_out )
 
+= Order =
+
+# Order is defined by whatever seqlevel comes first, so initialize with proper seqlevels:
+gr=GRanges()
+seqlevels( gr ) <- unlist( lapply( c(1:22, "X", "Y", "M"), function(x) paste0( "chr", as.character(x)) ) )
+
+# and then add more with:
+
+gr = sort( c( gr, new_additional_gr) )
+and make sure that the original always comes first
+
+
 
 = setdiff =
 addenda = setdiff( gr_add, prev_rgs )
@@ -26,3 +38,30 @@ addenda = setdiff( gr_add, prev_rgs )
 
 getOverlaps(a,b)     --> indices
 getOverlapPairs(a,b) --> GRobjects themselves.
+
+= Subtract =
+# subtract ranges but don't reduce them
+GRanges_subtract <- function( gr1, gr2 )
+{
+  # Subtract GRange object gr2 from gr1, but unlike setdiff, preserve individual
+  # ranges in gr1
+  df_1 = data.frame( seqnames=seqnames(gr1), start=start(gr1)-1, end=end(gr1), strand=strand(gr1), mcols( gr1 ) )
+  df_2 = data.frame( seqnames=seqnames(gr2), start=start(gr2)-1, end=end(gr2), strand=strand(gr2), mcols( gr2 ) )
+  #                                                          ^ -1 --> convert to base-0 start for bedtools
+
+  result = bedtoolsr::bt.subtract(df_1, df_2)
+
+  if ( length(result)==0 ){
+    # subtraction has left nothing remaining. Return empty GRanges obj.
+    return( GRanges() )
+  } else {
+
+    colnames( result ) = colnames( df_1 )
+    result$start=result$start+1
+    #                        ^ reset to base-1 notation consistent with GRanges
+
+    return ( GRanges( result ) )
+  }
+
+}
+

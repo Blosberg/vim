@@ -57,3 +57,8 @@ chrX 100   200 |                      > NA
 ---------------+---------------------/
 
 
+= Make windows =
+# bins
+bedtools makewindows -g NOR.chrom.sizes -w 200 -s 50 -i srcwinnum >NOR_w200_s50.bed
+bedtools makewindows -g NFZ.chrom.sizes -w 200 -s 50 -i srcwinnum >NFZ_w200_s50.bed
+
