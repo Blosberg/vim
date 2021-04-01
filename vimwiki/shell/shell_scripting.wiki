@@ -20,7 +20,7 @@ done
 
 # skip every other val.
 for i in {START..END..STEP}
-  do 
+  do
      echo "Welcome $i times"
  done
 
@@ -33,12 +33,12 @@ printf "%03d\n" 5
 == c-like ==
 
 for (( c=1; c<=5; c++ ))
-do  
+do
    echo "Welcome $c times"
 done
 
 
-== al together == 
+== al together ==
 FILES="$@"
 for f in $FILES
 do
@@ -71,6 +71,14 @@ then
 else
     echo "Not OK"
 
+fi
+
+# Check if two files differ:
+if [ $(diff map_to_windows.sh tmp  | wc -l) != 0 ]
+then
+  echo "hello diff"
+else
+  echo "No diff"
 fi
 
 = ARRAYS; command line args =
