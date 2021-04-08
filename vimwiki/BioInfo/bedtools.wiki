@@ -2,7 +2,7 @@
 Bedtools Read The docs:
 [[https://bedtools.readthedocs.io/en/latest/content/bedtools-suite.html|BedTools:ReadTheDocs]]
 
-
+= Input examples =
 # $cat  a.bed
 chr1    100     200     2
 chr1    150     250     3
@@ -39,7 +39,7 @@ chr1    150     250     3       0.25
 chr1    160     260     4       0.3
 
 
-bedfile_a      |      bedfile_b        |    output
+bedfime_a      |      bedfile_b        |    output
 ---------------+------------------------------------------
                |  chr1  101 102  0.1  \
 chr1  100  200 |  chr1  150 151  0.2   > chr1 100 200 0.2
@@ -62,3 +62,35 @@ chrX 100   200 |                      > NA
 bedtools makewindows -g NOR.chrom.sizes -w 200 -s 50 -i srcwinnum >NOR_w200_s50.bed
 bedtools makewindows -g NFZ.chrom.sizes -w 200 -s 50 -i srcwinnum >NFZ_w200_s50.bed
 
+
+= get fasta (extract features/sequences/etc. from fasta file in bed regions) =
+
+$bedtools getfasta
+
+Tool:    bedtools getfasta (aka fastaFromBed)
+Version: v2.29.2
+Summary: Extract DNA sequences from a fasta file based on feature coordinates.
+
+Usage:   bedtools getfasta [OPTIONS] -fi <fasta> -bed <bed/gff/vcf>
+
+Options:
+        -fi             Input FASTA file
+        -fo             Output file (opt., default is STDOUT
+        -bed            BED/GFF/VCF file of ranges to extract from -fi
+        -name           Use the name field and coordinates for the FASTA header
+        -name+          (deprecated) Use the name field and coordinates for the FASTA header
+        -nameOnly       Use the name field for the FASTA header
+        -split          Given BED12 fmt., extract and concatenate the sequences
+                        from the BED "blocks" (e.g., exons)
+        -tab            Write output in TAB delimited format.
+                        - Default is FASTA format.
+        -s              Force strandedness. If the feature occupies the antisense,
+                        strand, the sequence will be reverse complemented.
+                        - By default, strand information is ignored
+
+
+= intersect  =
+
+bedtools intersect -wa -u -a a.bed -b b.bed
+#                       ^ once
+#                   ^ exact a

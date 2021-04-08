@@ -105,6 +105,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          - [[python/random|random]]
          - [[python/pandas|pandas]]
          - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering), heatmap
+         - [[python/PCA|PCA]] : principle components in python
 
          == structs and functions: Classes, functions  datetime ==
          - [[python/functions|functions]]
