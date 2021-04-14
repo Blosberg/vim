@@ -32,6 +32,7 @@ Use at your own risk.
 = vim =
 
 Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
+    * [[vim/starting|starting]] -- start at line#/Regex; pipe from stdin
     * [[vim/movements|movements]]
     * [[vim/vimdiff|vimdiff]]
     * [[vim/tabs|tabs]]    -- open and navigate tabs in vim

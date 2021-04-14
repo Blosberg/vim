@@ -1,0 +1,19 @@
+# start at line 4
+vim +4 file
+
+# Start at match with patter
+vim +/patter
+
+# Start editting from stdin
+echo "hello world" | vim -
+
+# vimdiff == vim -d
+diffthis in every window if you already have a split
+
+# execute in every window
+:windo diffthis
+
+# Start with a command
+vim -c command
+# e.g.
+vim -c ":%s/cat/albatross/g" FILE_1234.txt
