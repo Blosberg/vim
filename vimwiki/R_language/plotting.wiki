@@ -3,45 +3,88 @@ plot( x, y,
       log="xy",
       col=rgb(0,0,1,alpha), pch=20,
       xlim=c(1,maxcov), ylim=c(1,maxcov),
-      xlab="x-axis",  
+      xlab="x-axis",
       ylab="y-axis",
 #       col.lab="green",
 #       cex.lab=0.75
-# 
+#
       main="title"
 #     , col.main ="red",
 #       sub = "subtitle, col.sub="blue",
-# 
+#
 # )
 
+= hist : transparent histograms =
 
-==Too much data to plot at once: smoothScatter== 
-smoothScatter( bigdatX, bigdatY, 
+  breaks_in=100
+  hist_a=hist( dat_a, plot = FALSE,
+               breaks = breaks_in )
+  hist_b=hist( dat_b, plot = FALSE,
+               breaks = breaks_in )
+
+    plot(  c(min(hist_b$mids), hist_b$mids, max(hist_b$mids) ),
+           c(0, hist_b$density, 0),
+           type="l",
+           lwd=1,
+           lty  = "blank",
+           col  = adjustcolor(color_in, alpha.f = 0.3),
+           xlab  = "width [nt]",
+           ylab  = "dens",
+           main  = paste("HyperCGI widths [log]"),
+           ylim=c(0,1)
+           )
+
+    polygon( c( min(hist_a$mids),
+                hist_a$mids,
+                max(hist_a$mids)),
+            c(0, hist_a$density, 0),
+            lty  ="blank",
+            col  = adjustcolor(color_in, alpha.f = 0.6) )
+    polygon( c( min(hist_b$mids),
+                hist_b$mids,
+                max(hist_b$mids)),
+             c(0, hist_b$density, 0),
+             lty  ="blank",
+             col  = adjustcolor("blue", alpha.f = 0.6) )
+
+
+    legend( 7, 0.8,
+            inset  = 0.2,
+            legend = c("Red Data", "Blue Data"),
+            cex=0.8,
+            lty=c(1,1),
+            col=c( "red", "blue" ),
+            box.lwd=1
+           )
+
+
+==Too much data to plot at once: smoothScatter==
+smoothScatter( bigdatX, bigdatY,
                xlim=c(1,maxlogcov), ylim=c(1,maxlogcov),
                xlab="xax", ylab="yax",
                main="title")
-               
 
-= Add stuff after plotting. = 
+
+= Add stuff after plotting. =
 # Add a red title and a blue subtitle. Make x and y
 # labels 25% smaller than the default and green.
 title(main="My Title", col.main="red",
   sub="My Sub-title", col.sub="blue",
   xlab="My X label", ylab="My Y label",
-  col.lab="green", cex.lab=0.75) 
+  col.lab="green", cex.lab=0.75)
 
 = add lines =
 # line type (lty) can be specified using either text (“blank”, “solid”,
 # “dashed”, “dotted”, “dotdash”, “longdash”, “twodash”) or number (0, 1, 2, 3,
-# 4, 5, 6). Note that lty = “solid” is identical to lty=1. 
-          
-         lines( c(0,1), 
-               c(0,1), 
-               lty = 2,              # 2 = dashed  
+# 4, 5, 6). Note that lty = “solid” is identical to lty=1.
+
+         lines( c(0,1),
+               c(0,1),
+               lty = 2,              # 2 = dashed
                lwd = 3,              # linewidth
                col=rgb(0,0,0,0.5))   # r,g,b,alpha=opacity
-               
-              
-  
-  
-               
+
+
+
+
+

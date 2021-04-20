@@ -175,6 +175,28 @@ ax.set_xlabel("$x_1$")
 ax.set_ylabel("$x_2$")
 ax.set_zlabel("$y$")
 
+= Venn Diagrams =
+
+from matplotlib_venn import venn2, venn2_circles
+from matplotlib import pyplot as plt
+
+Subsets_in=( 319 , 743, 787)
+# ( A_excl, B_excl, shared)
+
+plt.figure(figsize=(4,4))
+out = venn2( subsets = Subsets_in,
+       set_labels = ('Exe', 'VE') ,
+       set_colors=('red', 'blue'),
+       alpha = 0.9)
+venn2_circles( subsets = Subsets_in )
+plt.title("Hyper CGIs --EpiHypo", fontsize=22)
+
+for text in out.set_labels:
+    text.set_fontsize(18)
+
+plt.savefig('OutPath.png')
+
+
 = Folium: maps =
 Folium seems like a neat package for plotting actual map data with lattitude, and longitude coordinates, etc.G
 
