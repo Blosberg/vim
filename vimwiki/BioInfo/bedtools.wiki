@@ -110,6 +110,19 @@ Options:
                         strand, the sequence will be reverse complemented.
                         - By default, strand information is ignored
 
+= Collect CG density =
+# Collect the sequences for each of these regions
+bedtools getfasta -fi mm10.fa -bed ChIP_KLF1_mm10_WTLiver_peaks.bed -tab -fo seqs.bed
+
+# collect the number of CGs:
+less ChIP_bed_seq.bed   | grep -i CG | perl -ane '$F[1]=~s/g/G/g; $F[1]=~s/c/C/g; my $c = () = $F[1] =~ /CG/g;  $F[0]=~s/[:-]/\t/g; print "$F[0]\t$c\n"' > NumCGs.bed
+# ^ read in by line
+
+# if you want density, divide by window size ( assuming it's 100 here)
+# Add a c/=100  command to the above like this:
+less tmp | grep -i CG | perl -ane '$F[1]=~s/g/G/g; $F[1]=~s/c/C/g; my $c = () = $F[1] =~ /CG/g; $c/=100; $F[0]=~s/[:-]/\t/g; print "$F[0]\t$c\n"' >w100_s20_CpG_density.bed
+
+
 
 = intersect  =
 

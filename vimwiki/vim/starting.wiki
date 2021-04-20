@@ -2,7 +2,7 @@
 vim +4 file
 
 # Start at match with patter
-vim +/patter
+vim +/pattern
 
 # Start editting from stdin
 echo "hello world" | vim -

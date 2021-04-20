@@ -17,12 +17,13 @@ Use at your own risk.
 
     * [[shell/shell_variables|shell_variables]] -- string subsets, length, basename, dirname of filepaths
     * [[shell/shell_scripting|shell_scripting]] -- parse command line args for shell scripts; if/else, control flow; compare files
-    * [[shell/random|andom]] -- RND number generator, shuffle files shuffle arrays
+    * [[shell/random|random]] -- RND number generator, shuffle files shuffle arrays
     * [[shell/Linux_info|Linux_info]]     -- lsb_release, free, distro info,
     * [[shell/command_line|active command_line]] -- move back and forth, delete text while typing, clear current output
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
         - [[shell/prompt_values|prompt_values]] --PS1, PS2, etc. the characters that appear before the "$" prompt on terminal
-    * [[shell/awk_sed_grep_cut|awk_sed_grep_cut]] -- one-liners
+    * [[shell/awk_sed_grep_cut|awk_sed_grep_cut]] -- one-liners sum column
+    * [[shell/wc|wc]] -- count line numbers/ char numbers
     * [[shell/batch_rename|batch_rename]] -- change the names of multiple files/folders
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
     * [[shell/tmux|tmux]]
@@ -37,6 +38,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[vim/vimdiff|vimdiff]]
     * [[vim/tabs|tabs]]    -- open and navigate tabs in vim
     * [[vim/File_management |File_management]] -- open files from tabs, gf <C-W>f, get file extensions, paths, etc. write selection to file
+    * [[vim/conceal|conceal]] -- show or hide special characters in, e.g. markdown
 
     == Batch operations ==
     * [[vim/macros|macros]]
@@ -75,10 +77,11 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          * [[R_language/logicals|logicals]] ifelse, any, all
          * [[R_language/eval|eval]]       -- evaluate strings as expressions
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
-         * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot, hist, table unique values (how many of each)
+         * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot,  table unique values (how many of each)
+         * [[R_language/plotting|plotting]] -- hist
          * [[R_language/apply|apply]] -- sweep-like operations on extended datasets lapply, sapply, mapply, etc.
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script (pca/PCA)
-         * [[R_language/plotting|plotting]] -- smoothScatter, repular plot, options
+         * [[R_language/plotting|plotting]] -- smoothScatter, regular plot, histograms, transparent,  options
          * [[R_language/split|split]] -- split arrays into lists of arrays
 	 * [[R_language/GRanges|GRanges]] -- setdiff, GRL_ overlaps, etc., sort order
 	 * [[R_language/biostrings|biostrings]] --biostrings, read in and inspect reference genomes.
@@ -105,7 +108,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          - [[python/numpy|numpy]]
          - [[python/random|random]]
          - [[python/pandas|pandas]]
-         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering), heatmap
+         - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering), heatmap, Venn
          - [[python/PCA|PCA]] : principle components in python
 
          == structs and functions: Classes, functions  datetime ==
