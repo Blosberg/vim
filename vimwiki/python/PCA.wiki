@@ -1,0 +1,18 @@
+# doc: https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+
+import numpy as np
+from sklearn.decomposition import PCA
+pca_25 = PCA( n_components=25 )
+pca_25.fit_transform( Kfish_methTiles )
+pca_result_25 = pca_25.fit_transform( Kfish_methTiles )
+
+# then feed this into Tsne if you want
+tsne = TSNE(n_components=2, verbose=0, perplexity=40, n_iter=300)
+tsne_pca_results = tsne.fit_transform(pca_result_25)
+
+print(pca.explained_variance_ratio_)
+[0.9924... 0.0075...]
+print(pca.singular_values_)
+[6.30061... 0.54980...]
+
+

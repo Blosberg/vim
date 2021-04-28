@@ -4,6 +4,14 @@ type(var)
 
 # In pandas create 1-D arrays (series) like lists
 
+= read/ write =
+
+# read
+df = pd.read_csv( "WindowMapOutput_w200_s50_table_noNA.tsv" , sep="\t")
+
+# write
+df.to_csv(file_name, sep='\t')
+
 = Series =
 
 S = pd.Series( [1,2,3],
