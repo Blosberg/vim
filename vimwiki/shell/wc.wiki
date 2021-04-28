@@ -1,0 +1,4 @@
+
+# print just the number of lines without file name?
+# 
+Nolap=$( wc -l < ${fin}) 
