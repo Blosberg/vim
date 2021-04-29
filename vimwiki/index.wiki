@@ -73,7 +73,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
                install.packages("devtools")
                devtools::install_github("PhanstielLab/bedtoolsr@v2.29.0-3")
          * [[R_language/Env_files|Env_files]] save and load image files of RData for the working space.
-
+	 * [[R_language/IOreadWrite|IO_Read/write]] -- read/write files, csvs etc.
          * [[R_language/logicals|logicals]] ifelse, any, all
          * [[R_language/eval|eval]]       -- evaluate strings as expressions
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
