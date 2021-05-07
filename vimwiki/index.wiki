@@ -208,7 +208,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
     * [[git/inspect|inspect]] -- review and tidy up repo. blame, diff, log, bisect, clean etc.
 
     * [[git/preset_changes|preset_changes]] -- create and apply diff files, patches, cherry pick commits
-    * [[git/committing|committing]]
+    * [[git/committing|committing]] -- unstage, interactive staging...
         * [[git/commit_tree|commit_tree]] --navigate tree of commits: check history, branching, merging, rebase, reset
     * [[git/sharing|sharing]] --pushing and pulling with remotes; sending patches, diffs, etc.
     * [[git/stash|stash]]
