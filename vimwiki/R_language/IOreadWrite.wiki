@@ -1,0 +1,7 @@
+
+= tsv = 
+from tsv file:
+df <- read.csv( file, sep = "\t", )  # first line is header by default, otherwise set header=FALSE
+rownames(df) <- df$TFstatus          # name of some column you just read in
+df$TFstatus <- NULL                  # delete the column itself to keep tidy
+
