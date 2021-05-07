@@ -1,0 +1,29 @@
+from, user guide:
+http://www.bioinf.uni-leipzig.de/Software/metilene/Manual/
+
+
+= Input =
+
+The input consists of a single SORTED (for genomic positions) tab-separated file. It must contain a header line of the format:
+
+| chr | pos | g1_xxx | g1_xxx | [...] | g2_xxx | g2_xxx | [...] |
+
+or
+
+| chr | pos | g2_xxx | g3_xxx | [...] | g1_xxx | g2_xxx | [...]
+
+The affiliations of samples is assigned through a unique prefix, e.g., "g1", "g2" , which are passed as arguments when calling metilene . No underscore is required, and names can be labeled completely freely. The input file can contain data of more than two groups, however, only the two selected groups are considered. See section 12 for more details for the group selection when calling metilene
+
+= Output =
+
+The output for the de-novo DMR annotation mode consists of a bed-like format:
+
+
+| chr | start | stop | q-value | mean methylation difference | #CpGs | p (MWU) | p (2D KS) | mean g1 | mean g2 |
+| 1   | 2     | 3    | 4       | 5                           | 6     | 7       | 8         | 9       | 10      |
+
+While "mean g1" and "mean g2" refer to the absolute mean methylation level for the corresponding segment in both groups, the difference is given in the 5th column. Single CpGs are not tested using the 2D KS-test. Here, q-values are based on MWU-test p-values. All outputs are unsorted when using multiple threads. We recommend to use sort:
+
+$ metilene *options* | sort -V -k1,1 -k2,2n
+
+for a sorted output.
