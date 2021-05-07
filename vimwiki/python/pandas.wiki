@@ -118,6 +118,28 @@ df.index    # to get list a-f
    # filtered df
     Prom_bc_nunulls = Prom_bc_paired.loc[ Row_has_no_col_null, :]
 
+   = Tidy, rearrange, melt =
+# puts a table into single-observable column-wise format
+# e.g. Starting off with a metilene output file (converted to tsv)
+>>> df
+	                q-value  ... p_2DKS 	mean_g1 	mean_g2
+location 			 ...
+chr1:7621909-7622017 	0.004158 ... 6.421400e-07 	0.698760 	0.50662
+chr1:9680142-9680354 	0.023021 ... 8.969600e-06 	0.194800 	0.31956
+chr1:14242645-14242713 	0.007769 ... 1.750300e-06 	0.054915 	0.18143
+... 	... 	... 	... 	... 	... 	... 	...
+
+# "Melt" into single-observable rows with:
+>>>df.loc[:, [ "mean_g1", "mean_g2"] ].melt(var_name='AgeGroup', value_name='MethFrac')
+
+  	AgeGroup 	MethFrac
+0 	mean_g1 	0.698760
+1 	mean_g1 	0.194800
+2 	mean_g1 	0.054915
+3 	mean_g1 	0.111400
+4 	mean_g1 	0.280900
+... 	... 	...
+
 
    = Groupby =
 

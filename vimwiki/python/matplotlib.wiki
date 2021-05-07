@@ -11,6 +11,11 @@ is the same as this:
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
+# Set the current plot axis:
+plt.axes(axs[0])
+
+# then plt.whatever() sends the result to axs[0]
+
 fig  lets yous change figure-level attributes or save (e.g. fig.savefig('yourfilename.png')).
 axes objects are for current plot:
 

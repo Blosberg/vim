@@ -107,9 +107,10 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          - [[python/import_exec|import_exec]]: sourcing, importing, etc.
          - [[python/numpy|numpy]]
          - [[python/random|random]]
-         - [[python/pandas|pandas]]
+         - [[python/pandas|pandas]] -- tidy rearrange melt
+	 == visualizaiont, plotting: pca, matplotlib ==
+         - [[python/PCA|PCA]] : principle components in python pca 
          - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering), heatmap, Venn
-         - [[python/PCA|PCA]] : principle components in python
 
          == structs and functions: Classes, functions  datetime ==
          - [[python/functions|functions]]
