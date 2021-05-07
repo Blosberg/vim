@@ -16,7 +16,7 @@ awk -v mincov="${MinCov}" -v maxcov="${MaxCov}" '($5+$6)>=mincov && ($5+$6)<=max
    == format output ==
 awk -v minD="${MinD}" -v maxP="${MaxPval}" \
            '{ if ( $5<maxP &&  $6>minD ) printf "%s\t%d\t%d\t%.4g\t%.4g\n", $1, $2, $2+2, $5, $6} '       ${ufile_in} >  ${Sigdiff_pos_out}
-  
+
 
    == sum/average a column ==
 awk '{s+=$3}END{print s}' file
@@ -55,6 +55,10 @@ four five six one
    == PRINT 'i'TH COLUMN---------: ==
 
 awk '{print $'$i'}' file
+
+   == delete 'i'th column ==
+
+awk '!($3="")' file
 
 = sed =
 
