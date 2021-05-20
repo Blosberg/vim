@@ -1,9 +1,18 @@
 LISTS
 
-= list indexing list[start:stop:stride] =
+= Slicing =
+list indexing list[start:stop:stride]
 # a in reverse order
-a[::-1] 
+a[::-1]
 
+
+= Count occurances within a list =
+>>> my_list = [1, 2, 3, 0, 2, 3]
+>>> count = my_list.count(3)
+>>> print(count)
+2
+
+= memory =
 L0=[1,2,3]
 L1=L0
 # ^ Just creates another pointer to the same position in memory. If you want another list (i.e. copy by value), then:
