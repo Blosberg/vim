@@ -3,6 +3,11 @@
 
 # see also [[shell_variables]] --manipulate strings, check length, etc.
 
+= redirects, pipes =
+
+use <( ) braces to redirect the output of whats inside the brackets to become inputs of what's outside of them.
+bedtools intersect -c -a <( grep ^chr ../NFZ_w200_s50.bed  )  -b <( grep ^chr NFZ_CpGlocs.bed ) | cut -f1,2,3,5 > NFZIuN_w200_s50_CpG_count.bed
+
 = for loops =
 
 for VAR in file1 file2 file3
