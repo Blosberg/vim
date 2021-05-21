@@ -1,0 +1,25 @@
+
+-n Option : To sort a file numerically used –n option
+
+-r Option: Sorting In Reverse Order (i.e. descending)
+
+-nr (both above)
+
+-k Option : Unix provides the feature of sorting a table on the basis of any column number by using -k option.
+Use the -k option to sort on a certain column. For example, use “-k 2” to sort on the second column
+
+	A key specification like -k2 means to take all the fields from 2 to the end of the line into account. So Villamor 44 ends up before Villamor 50. 
+        To sort by a single column, use -k2,2 as the key specification. This means to use the fields from #2 to #2, i.e. only the second field.
+sort -kx,y -k5n,5  
+      # ^ sort from col x to col y; numeric flags as needed
+
+-c option : This option is used to check if the file given is already sorted or not & checks if a file is already sorted pass the -c option to sort. This will write to standard output if there are lines that are out of order.
+
+-u option : To sort and remove duplicates pass the -u option to sort.
+
+-M Option : To sort by month pass the -M option to sort. 
+
+
+
+
+sort -k 2n employee.txt

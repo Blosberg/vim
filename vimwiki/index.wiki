@@ -23,6 +23,7 @@ Use at your own risk.
     * [[shell/Profile|Profile]] -- change look/colorscheme/etc. of terminal
         - [[shell/prompt_values|prompt_values]] --PS1, PS2, etc. the characters that appear before the "$" prompt on terminal
     * [[shell/awk_sed_grep_cut|awk_sed_grep_cut]] -- one-liners sum column
+    * [[shell/sort|sort]]  -- sort files by column -k options, etc.
     * [[shell/wc|wc]] -- count line numbers/ char numbers
     * [[shell/batch_rename|batch_rename]] -- change the names of multiple files/folders
     * [[shell/Parameter_expansion|Parameter_expansion]]: variable referencing, indirect referencing, etc.
@@ -84,7 +85,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          * [[R_language/plotting|plotting]] -- smoothScatter, regular plot, histograms, transparent,  options
          * [[R_language/split|split]] -- split arrays into lists of arrays
 	 * [[R_language/GRanges|GRanges]] -- setdiff, GRL_ overlaps, etc., sort order
-	 * [[R_language/biostrings|biostrings]] --biostrings, read in and inspect reference genomes.
+	 * [[R_language/biostrings|biostrings]] --biostrings, read in and inspect reference genomes read fasta.
 
     = python =
     Ternary op:
