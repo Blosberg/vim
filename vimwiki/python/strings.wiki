@@ -10,7 +10,16 @@
 >>> astring.index("w")
 6
 
- = Some convenient functions: =
+= strip, replace characters in string =
+
+>>> sentence = 'Python is cool!'
+>>> str_1 = sentence.strip()
+>>> str_2 = sentence.replace('','')
+>>> str_2 = sentence.replace('oo','-')
+>>> str_2
+'Python is c-l!'
+
+ = Startswith endswith: =
 >>> print(astring.startswith("Hello"))
 True
 >>> print(astring.endswith("asdfasdfasdf"))
