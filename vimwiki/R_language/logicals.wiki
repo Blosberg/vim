@@ -1,7 +1,11 @@
-n.b. X = ifelse( bool, 
-                 "trueval", 
-                 "falseval"
-               )
+n.b.
+
+X = ifelse( bool,
+            "trueval",
+            "falseval"
+            )
+
+# X becomes "trueval", "falseval" if bool is true, false, respectively.
 These next two operate on vectors of bools as you would expect
 any
 

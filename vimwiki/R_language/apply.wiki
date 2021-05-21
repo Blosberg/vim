@@ -13,3 +13,4 @@ apply(X, 2, sum)
 lapply( list, function(x)  [some operation on x as x goes through each member of the list](x) )
 # returns a list
 
+# sapply returns a vector
