@@ -7,6 +7,15 @@ A should be a table where
   # Then pca$rotation will be an orthonormal rotation matrix.
   # and  pca$x        will be the rotated data, with the same dimensionality as A
 
+# to plot the components
+#
+plot(  pca$x[,1],
+         pca$x[,2], col=rgb(0,0,0,0.15 ),
+         xlab="PC1",
+         ylab="PC2",
+         main="PC-rotated promoter methylome profiles [+/- 2kb]."
+       )
+
   # You can then do the following:
 
   # A_copy <- pca`$`rotation %*% t(pca$x)
