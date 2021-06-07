@@ -11,7 +11,7 @@ Use at your own risk.
 
 = Notes:  =
 
-= shell + packaging =
+= shell/bash + packaging =
 
     * [[shell/conda|conda]] -- Conda: manage environments, recipes.
 
