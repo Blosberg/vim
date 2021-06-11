@@ -86,6 +86,18 @@ else
   echo "No diff"
 fi
 
+= Compare strings =
+
+VAR1="Linuxize"
+VAR2="Linuxize"
+
+if [ ! "$VAR1" = "$VAR2" ]; then
+    echo "Strings are equal."
+else
+    echo "Strings are not equal."
+fi
+
+
 = ARRAYS; command line args =
 # check num of comand line args
 if [ $# -ne 1 ]; then
