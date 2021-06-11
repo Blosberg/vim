@@ -11,29 +11,34 @@ while in diff
 HEAD^ shows the parent of head
 <SHA>^ is the parent of the commit <SHA>
 # Grandparents: ^^==~2; ^^^==~3, etc
-HEAD^^ = HEAD~2 
+HEAD^^ = HEAD~2
 
 = Review =
 
 git show [commit] --> changes
 git ls-tree [tree-ish ob] [pattern matching]
 
+   == tracking specific file ==
+   see all commits that changed a specific file
+
+   git log --follow -- filename
+
    == blame ==
 # show an annotated version of the file with
 # who editted this section of code
-git blame -L 100,110 filename.txt 
+git blame -L 100,110 filename.txt
 git blame -L 100,+4  filename.txt
 
    == bisect ==
-   
-   # track down where problems started 
+
+   # track down where problems started
    # through binary search and checking problems
    $git bisect start
    $git bisect bad/old <treeish>
    $git bisect good/new <>
    # set things back to the HEAD from before you started bisect
-   $git bisect reset  
-   
+   $git bisect reset
+
    == log ==
 
 git log --since(after)=YYYY-MM-DD --until(before)=YYYY-MM-DD
@@ -42,14 +47,14 @@ git log --since(after)=YYYY-MM-DD --until(before)=YYYY-MM-DD
         --grep="stringtomatch"
         134hva..HEAD # from commit 1234hva up to HEAD
         README # (just changes that affected README)
-        --stat #(stats on changes) 
+        --stat #(stats on changes)
 git log --oneline --graph --all --decorate
 
 # Show "patch" changes
 git log -p |--patch
 
 # show commits that affect certain lines in file filename.txt
-git log -L 100,150:filename.txt 
+git log -L 100,150:filename.txt
 
 
 = clean =
