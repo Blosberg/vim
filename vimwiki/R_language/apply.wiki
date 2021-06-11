@@ -9,8 +9,17 @@ apply(X, 2, sum)
 
 # Add extra arguments to the function with a comma.
 # (e.g. if you want to run median(x, na.rm=TRUE), then:
-medianVals = apply( data_someFinite, 2, median, na.rm=TRUE ) 
-  
+medianVals = apply( data_someFinite, 2, median, na.rm=TRUE )
+
+
+ModeB <- function( x ){
+  Srt_table <- as.numeric( rownames( sort( table( x ), decreasing=T) ) )
+
+  result=ifelse( Srt_table[1]==0, Srt_table[2], Srt_table[1])
+
+  return( result )
+}
+ModeCov=apply( Cov2, 2, ModeB )
 
 =lapply -- lists =
 
