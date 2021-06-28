@@ -11,9 +11,23 @@ EFGHIJK
 $echo ${var:4:3}
 EFG
 
-# Get length of string
+= Get length of string=
 $echo ${#var}
 26
+
+= Number of words or entries in a variable =
+
+input="Count from this String   "
+words=( $input )
+echo ${#words[@]}
+4
+
+
+N.b. you need the extra parenthesis here (to set it as an array?)
+
+var=( $( ls files_matching_pattern* ) )
+#   ^                                 ^
+#   otherwise ${#var[@]} will always be 1
 
 = string var substitution =
 

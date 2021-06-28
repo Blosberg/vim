@@ -102,6 +102,9 @@ grep -E '^(^chr[0-9]{1,2}\s|chrM\s|^chrX\s|^chrY\s)' chrTestSet.bed
 cut -f[n] -d"[x]"
 assumes your string is limited by characters "X", and you want to extract field n from it.
 
+# or cut "from fields 4 onward", e.g.:
+head -1 Union_cov.bed | cut -d "    "  -f4-
+#                               ^ ctrl-V tab
 
 $echo "THIS_IS_A_STRING_OF_CHARACTERS " | cut -f1 -d"_"
 

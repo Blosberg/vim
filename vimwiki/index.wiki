@@ -79,7 +79,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          * [[R_language/eval|eval]]       -- evaluate strings as expressions
          * [[R_language/sorting|sorting]] -- sort, rank, order, etc.
          * [[R_language/dataframes|dataframes]]   -- dplyer, filter, select, mutate, boxplot,  table unique values (how many of each)
-         * [[R_language/plotting|plotting]] -- hist
+         * [[R_language/plotting|plotting]] -- hist, trendline, title, multiple plots mf par
          * [[R_language/apply|apply]] -- sweep-like operations on extended datasets lapply, sapply, mapply, etc.
          * [[R_language/prcomp|prcomp]]   -- the usual principle-components script (pca/PCA)
          * [[R_language/plotting|plotting]] -- smoothScatter, regular plot, histograms, transparent,  options
@@ -110,7 +110,7 @@ Mon 25 Jan 2021 10:56:52 CET (date stamp inserted with :r !date )
          - [[python/random|random]]
          - [[python/pandas|pandas]] -- tidy rearrange melt
 	 == visualizaiont, plotting: pca, matplotlib ==
-         - [[python/PCA|PCA]] : principle components in python pca 
+         - [[python/PCA|PCA]] : principle components in python pca
          - [[python/matplotlib|matplotlib]] : plot examples: beeswarm, 3d, histogram, Dendrogram (hierarchical clustering), heatmap, Venn
 
          == structs and functions: Classes, functions  datetime ==

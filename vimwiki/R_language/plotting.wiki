@@ -5,6 +5,7 @@ plot( x, y,
       xlim=c(1,maxcov), ylim=c(1,maxcov),
       xlab="x-axis",
       ylab="y-axis",
+      lwd=3, # Make lines thicker
 #       col.lab="green",
 #       cex.lab=0.75
 #
@@ -13,6 +14,33 @@ plot( x, y,
 #       sub = "subtitle, col.sub="blue",
 #
 # )
+
+# add points on top:
+points(mCfrac_E145[,"DKO"],  pch=5, lwd=3, col="red" )
+
+= add legend =
+legend( 3.0,
+        0.1, 
+	legend=c("E14.5-CreCtrl", "E14.5-DKO", "E13.5-CreCtrl", "E13.5-DKO"),
+	col=c("black", "red", "blue","green"), 
+	pch=c(1,5,6,7), 
+	lty=1:2, 
+	cex=1.0, 
+	lwd=3 )
+ 
+= Set custom tic marks =
+plot(..., 
+     xaxt="n", 
+     )
+
+axis(1,                         # Define x-axis manually, y=2
+     at = 1:5,                  # positions 
+     labels = row.names( mCfrac_E145 ) ) # labels
+
+      
+= multiple plots, mfrow par =
+
+par(mfrow=c(1,2))    # set the plotting area into a 1*2 array
 
 = hist : transparent histograms =
 
